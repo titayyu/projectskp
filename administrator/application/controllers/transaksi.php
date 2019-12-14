@@ -343,20 +343,16 @@ class Transaksi extends CI_Controller
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
 		}
-	
-        $row = $this->Pelanggan_model->get_by_id($id);
-		
 
-		//jika id id_pelanggan yang dipilih tersedia maka akan dihapus
-        if ($row) {
-			// menghapus data berdasarkan id-nya yaitu id_pelanggan
-			if($this->Pelanggan_model->delete('transaksi',array('id_transaksi'->$id))){
-				
-				// menampilkan informasi 'Delete Record Success' setelah data pelanggan dihapus 
+		$row = $this->Transaksi_model->get_by_id($id);
+
+		//jika id id_detail_transaksi yang dipilih tersedia maka akan dihapus
+		if ($row) {
+			// menghapus data berdasarkan id-nya yaitu id_detail_transaksi
+			if ($this->Transaksi_model->delete($id) > 0) {
+
+				// menampilkan informasi 'Delete Record Success' setelah data detailTransaksi dihapus 
 				$this->session->set_flashdata('message', 'Delete Record Success');
-				
-				// menghapus file photo
-				unlink("./images/".$row->photo);
 			}
 			// jika data tidak ada yang dihapus maka akan menampilkan 'Can not Delete This Record !'
 			else {

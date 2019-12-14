@@ -5,10 +5,9 @@ if (!defined('BASEPATH'))
 // Deklarasi pembuatan class Transaksi_model
 class Transaksi_model extends CI_Model
 {
-	// Property yang bersifat public   
-	public $table = 'transaksi';
-	public $id = 'id_detail_transaksi';
-	public $order = 'DESC';
+	private $table = 'detail_transaksi';
+	private $id = 'id_detail_transaksi';
+	private $order = 'DESC';
 
 	// Konstrutor    
 	function __construct()
@@ -22,7 +21,7 @@ class Transaksi_model extends CI_Model
 	function json()
 	{
 		$this->datatables->select("id_detail_transaksi, id_transaksi,tanggal,id_pelanggan,id_kategori, deskripsi_transaksi, quantity, harga,total");
-		$this->datatables->from('detail_transaksi');
+		$this->datatables->from($this->table);
 		$this->datatables->add_column('action', anchor(site_url('transaksi/read/$1'), '<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>') . "  " . anchor(site_url('transaksi/update/$1'), '<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>') . "  " . anchor(site_url('transaksi/delete/$1'), '<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_detail_transaksi');
 		return $this->datatables->generate();
 	}
@@ -96,6 +95,9 @@ class Transaksi_model extends CI_Model
 	{
 		$this->db->where($this->id, $id);
 		$this->db->delete($this->table);
+
+		// mengembalikan nilai 1 jika berhasil dan 0 jika gagal
+		return $this->db->affected_rows();
 	}
 }
 
