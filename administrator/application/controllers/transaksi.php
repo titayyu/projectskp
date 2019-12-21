@@ -219,7 +219,7 @@ class Transaksi extends CI_Controller
 		);
 
 		// Menampilkan data berdasarkan id-nya yaitu id_transaksi
-		$row = $this->Pelanggan_model->get_by_id($id);
+		$row = $this->Transaksi_model->get_by_id($id);
 
 		// Jika id-nya dipilih maka data transaksi ditampilkan ke form edit pelanggan
 		if ($row) {
@@ -308,7 +308,7 @@ class Transaksi extends CI_Controller
 						'id_jenis' => $this->input->post('id_jenis', TRUE),
 					);
 
-					$this->Pelanggan_model->update($this->input->post('id_pelanggan', TRUE), $data);
+					$this->Transaksi_model->update($this->input->post('id_pelanggan', TRUE), $data);
 				}
 
 				$this->session->set_flashdata('message', 'Update Record Success');
@@ -329,7 +329,7 @@ class Transaksi extends CI_Controller
 					'total' => $this->input->post('total', TRUE),
 				);
 
-				$this->Pelanggan_model->update($this->input->post('id_transaksi', TRUE), $data);
+				$this->Transaksi_model->update($this->input->post('id_transaksi', TRUE), $data);
 				$this->session->set_flashdata('message', 'Update Record Success');
 				redirect(site_url('transaksi'));
 			}
