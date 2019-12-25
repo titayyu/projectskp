@@ -32,8 +32,10 @@
         <table class="table table-bordered table-striped" id="mytable">
             <thead>
                 <tr>
-                    <th width="80px">No</th>		    
-					<th>Nama Kategori</th>		  
+                    <th width="80px">No</th>
+                    <th>ID Kategori</th>		    
+                    <th>Nama Kategori</th>	
+                    <th width="200px">Action</th>	  
                 </tr>
             </thead>
 	    
@@ -78,8 +80,9 @@
                             "data": "id_kategori",
                             "orderable": false
                         },						
-						{"data": "nama_kategori"},						
-						{"data": "status"},
+                        {"data": "id_kategori"},
+                        {"data": "nama_kategori"},						
+						
                         {
                             "data" : "action",
                             "orderable": false,

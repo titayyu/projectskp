@@ -18,7 +18,7 @@ class Beranda extends CI_Controller {
 	// Fungsi untuk menampilkan halaman utama Beranda
 	public function index()
 	{	
-		// Query identitas kampus
+		// Query identitas 
 		$queryTitle = "SELECT judul_website, nama_pemilik, alamat, telp, email, facebook, twitter FROM identitas";		
 		$tampilTitle = $this->db->query($queryTitle)->result();
 		
@@ -26,7 +26,7 @@ class Beranda extends CI_Controller {
 		$queryFasilitas = "SELECT nama_fasilitas, icon_fasilitas FROM fasilitas";
 		$tampilFasilitas = $this->db->query($queryFasilitas)->result();
 		
-		// Query tentang tentang perusahaan
+		// Query tentang tentang 
 		$queryTentang = "SELECT judul_tentang, isi_tentang, keterangan_tambahan, gambar FROM tentang WHERE aktif = 'Y'";
 		$tampilTentang = $this->db->query($queryTentang)->result();
 		
@@ -39,7 +39,7 @@ class Beranda extends CI_Controller {
 		$tampilModel = $this->db->query($queryModel)->result();
 		
 		// Query tentang informasi terkini
-		$queryInformasikampus1 = "SELECT informasi.id_informasi, 
+		$queryInformasi1 = "SELECT informasi.id_informasi, 
 		                                 informasi.username, 
 										 informasi.judul_informasi, 
 										 informasi.isi_informasi, 
@@ -52,10 +52,10 @@ class Beranda extends CI_Controller {
 								  AND informasi.aktif='Y' 
 								  ORDER BY id_informasi 
 								  DESC LIMIT 0,1";
-		$tampilInformasikampus1 = $this->db->query($queryInformasikampus1)->result();
+		$tampilInformasi1 = $this->db->query($queryInformasi1)->result();
 		
 		// Query tentang informasi terkini
-		$queryInformasikampus2 = "SELECT informasi.id_informasi, 
+		$queryInformasi2 = "SELECT informasi.id_informasi, 
 		                                 informasi.username, 
 										 informasi.judul_informasi, 
 										 informasi.isi_informasi, 
@@ -68,7 +68,7 @@ class Beranda extends CI_Controller {
 								  AND informasi.aktif='Y' 
 								  ORDER BY id_informasi 
 								  DESC LIMIT 1,1";
-		$tampilInformasikampus2 = $this->db->query($queryInformasikampus2)->result();
+		$tampilInformasi2 = $this->db->query($queryInformasi2)->result();
 		
 		// Query gallery
 		$queryGallery = "SELECT judul_gallery, gambar FROM gallery WHERE aktif='Y'";
@@ -79,8 +79,8 @@ class Beranda extends CI_Controller {
 						'fasilitas_data' => $tampilFasilitas,	
 						'tentang_data' => $tampilTentang,						
 						'kategori_data' => $tampilKategori,
-						'tampilinformasi1_data' => $tampilInformasikampus1,
-						'tampilinformasi2_data' => $tampilInformasikampus2,
+						'tampilinformasi1_data' => $tampilInformasi1,
+						'tampilinformasi2_data' => $tampilInformasi2,
 						'tampilgallery_data' => $tampilGallery,
 						'model_data' => $tampilModel,
 						'action' => site_url('beranda/create_action'), // untuk melakukan aksi memanggil create_action

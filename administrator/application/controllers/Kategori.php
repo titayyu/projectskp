@@ -2,12 +2,14 @@
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
-class Model extends CI_Controller
+// Deklarasi pembuatan class Kategori
+class Kategori extends CI_Controller //dilihat dari sini letaknya di folder controller
 {
+	// Konstruktor			
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Model_model'); // Memanggil Model_model yang terdapat pada models
+		$this->load->model('Kategori_model'); // Memanggil kategori_model yang terdapat pada models
 		$this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada models
 		$this->load->library('form_validation'); // Memanggil form_validation yang terdapat pada library
 		$this->load->helper(array('form', 'url')); // Memanggil form dan url yang terdapat pada helper
@@ -15,7 +17,7 @@ class Model extends CI_Controller
 		$this->load->library('datatables'); // Memanggil datatables yang terdapat pada library
 	}
 
-	// Fungsi untuk menampilkan halaman utama Model
+	// Fungsi untuk menampilkan halaman kategori
 	public function index()
 	{
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
@@ -34,7 +36,7 @@ class Model extends CI_Controller
 		);
 
 		$this->load->view('header_list', $dataAdm); // Menampilkan bagian header dan object data users 
-		$this->load->view('model/model_list');
+		$this->load->view('kategori/kategori_list'); // Menampilkan halaman utama kategori
 		$this->load->view('footer_list'); // Menampilkan bagian footer
 	}
 
@@ -42,10 +44,10 @@ class Model extends CI_Controller
 	public function json()
 	{
 		header('Content-Type: application/json');
-		echo $this->Model_model->json();
+		echo $this->Kategori_model->json();
 	}
 
-	// Fungsi untuk menampilkan halaman model secara detail
+	// Fungsi untuk menampilkan halaman kategori secara detail
 	public function read($id)
 	{
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
@@ -57,37 +59,39 @@ class Model extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(
 			'wa'       => 'Web administrator',
-			'tita_jaya' => 'Tita Jaya',
+			'tita_jaya' => 'Tita_Jaya',
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
 		);
 
-		// Menampilkan data model yang ada di database berdasarkan id-nya yaitu id_model
-		$row = $this->Model_model->get_by_id($id);
+		// Menampilkan data kategori yang ada di database berdasarkan id-nya yaitu id_kategori
+		$row = $this->Kategori_model->get_by_id($id);
+
+		// Jika data kategori tersedia maka akan ditampilkan
 		if ($row) {
 			$data = array(
 				'button' => 'Read',
-				'back'   => site_url('model'),
-				'id_model' => $row->id_model,
-				'nama_model' => $row->nama_model,
-				'photo' => $row->photo,
+				'back'   => site_url('kategori'),
+				'id_kategori' => $row->id_kategori,
+				'nama_kategori' => $row->nama_kategori,
 			);
-
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users
-			$this->load->view('model/model_read', $data); // Menampilkan halaman detail model
+			$this->load->view('kategori/kategori_read', $data); // Menampilkan halaman detail kategori
 			$this->load->view('footer'); // Menampilkan bagian footer
-		} else {
+		}
+		// Jika data kategori tidak tersedia maka akan ditampilkan informasi 'Record Not Found'
+		else {
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users
 			$this->session->set_flashdata('message', 'Record Not Found');
 			$this->load->view('footer'); // Menampilkan bagian footer
-			redirect(site_url('model'));
+			redirect(site_url('kategori'));
 		}
 	}
 
+	// Fungsi menampilkan form Create kategori
 	public function create()
 	{
-
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
@@ -97,54 +101,48 @@ class Model extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(
 			'wa'       => 'Web administrator',
-			'tita_jaya' => 'Tita Jaya',
+			'tita_jaya' => 'tita_jaya',
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
 		);
 
+		// Menampung data yang diinputkan
 		$data = array(
 			'button' => 'Create',
-			'action' => site_url('model/create_action'),
-			'back'   => site_url('model'),
-			'id_model' => set_value('id_model'),
-			'nama_model' => set_value('nama_model'),
-			'photo' => set_value('photo'),
+			'back'   => site_url('kategori'),
+			'action' => site_url('kategori/create_action'),
+			'id_kategori' => set_value('id_kategori'),
+			'nama_kategori' => set_value('nama_kategori'),
 		);
-
-		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
-		$this->load->view('model/model_form', $data); // Menampilkan halaman form model
+		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 	 
+		$this->load->view('kategori/kategori_form', $data); // Menampilkan halaman form kategori
 		$this->load->view('footer'); // Menampilkan bagian footer
 	}
 
+	// Fungsi untuk melakukan aksi simpan data
 	public function create_action()
 	{
+
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
 		}
 
-		// Menampilkan data berdasarkan id-nya yaitu username
-		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
-		$dataAdm = array(
-			'wa'       => 'Web administrator',
-			'tita_jaya' => 'Tita Jaya',
-			'username' => $rowAdm->username,
-			'email'    => $rowAdm->email,
-			'level'    => $rowAdm->level,
-		);
+		$this->_rules(); // Rules atau aturan bahwa setiap form harus diisi
 
-		$this->_rules();
-
-		// Menampung data yang diinputkan
+		// Jika form kategori belum diisi dengan benar 
+		// maka sistem akan meminta user untuk menginput ulang
 		if ($this->form_validation->run() == FALSE) {
 			$this->create();
-		} else {
-
+		}
+		// Jika form kategori telah diisi dengan benar 
+		// maka sistem akan menyimpan kedalam database
+		else {
 			// konfigurasi untuk melakukan upload photo
-			$config['upload_path']   = '../images/model/';    //path folder image
+			$config['upload_path']   = './images/';    //path folder image
 			$config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diupload jpg|png|jpeg			
-			$config['file_name']     = url_title($this->input->post('nidn')); //nama file photo dirubah menjadi nama berdasarkan nidn	
+			$config['file_name']     = url_title($this->input->post('id_kategori')); //nama file photo dirubah menjadi nama berdasarkan id_kategori
 			$this->upload->initialize($config);
 
 			// Jika file photo ada 
@@ -156,30 +154,32 @@ class Model extends CI_Controller
 					$this->load->library('upload', $config);
 
 					$data = array(
-						'nama_model' => $this->input->post('nama_model', TRUE),
-						'photo' => $dataphoto,
+						'id_kategori' => $this->input->post('id_kategori', TRUE),
+						'nama_kategori' => $this->input->post('nama_kategori', TRUE),
 					);
 
-					$this->Model_model->insert($data);
+					$this->Kategori_model->insert($data);
 				}
 
 				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('model'));
+				redirect(site_url('kategori'));
 			}
 			// Jika file photo kosong 
 			else {
 
 				$data = array(
-					'nama_model' => $this->input->post('nama_model', TRUE),
+					'id_kategori' => $this->input->post('id_kategori', TRUE),
+					'nama_kategori' => $this->input->post('nama_kategori', TRUE),
 				);
 
-				$this->Model_model->insert($data);
+				$this->Kategori_model->insert($data);
 				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('model'));
+				redirect(site_url('kategori'));
 			}
 		}
 	}
 
+	// Fungsi menampilkan form Update kategori
 	public function update($id)
 	{
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
@@ -197,132 +197,97 @@ class Model extends CI_Controller
 			'level'    => $rowAdm->level,
 		);
 
-		// Menampilkan data berdasarkan id-nya yaitu id_model
-		$row = $this->Model_model->get_by_id($id);
+		// Menampilkan data berdasarkan id-nya yaitu id_kategori
+		$row = $this->Kategori_model->get_by_id($id);
 
-		// Jika id-nya dipilih maka data model ditampilkan ke form edit model
+		// Jika id-nya dipilih maka data kategori ditampilkan ke form edit kategori
 		if ($row) {
 			$data = array(
 				'button' => 'Update',
-				'action' => site_url('model/update_action'),
-				'back'   => site_url('model'),
-				'id_model' => set_value('id_model', $row->id_model),
-				'nama_model' => set_value('nama_model', $row->nama_model),
-				'photo' => set_value('photo', $row->photo),
+				'back'   => site_url('kategori'),
+				'action' => site_url('kategori/update_action'),
+				'id_kategori' => set_value('id_kategori', $row->id_kategori),
+				'nama_kategori' => set_value('nama_kategori', $row->nama_kategori),
 			);
-
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
-			$this->load->view('model/model_form', $data); // Menampilkan form model
+			$this->load->view('kategori/kategori_form', $data); // Menampilkan form kategori
 			$this->load->view('footer'); // Menampilkan bagian footer
-		} else {
+		}
+		// Jika id-nya yang dipilih tidak ada maka akan menampilkan pesan 'Record Not Found'
+		else {
 			$this->session->set_flashdata('message', 'Record Not Found');
-			redirect(site_url('model'));
+			redirect(site_url('kategori'));
 		}
 	}
 
-	public function update_action()
-	{
-
+	// Fungsi untuk melakukan aksi update data
+	public function update_action(){
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
 		}
-
-		$this->_rules(); // Rules atau aturan bahwa setiap form harus diisi	 	
-
-		// Jika form  belum diisi dengan benar 
-		// maka sistem akan meminta user untuk menginput ulang
-		if ($this->form_validation->run() == FALSE) {
-			$this->update($this->input->post('id_model', TRUE));
-		}
-		// Jika form telah diisi dengan benar 
-		// maka sistem akan melakukan update data  kedalam database
+	
+        $this->_rules(); // Rules atau aturan bahwa setiap form harus diisi	
+		
+		// Jika form kategori belum diisi dengan benar 
+		// maka sistem akan meminta user untuk menginput ulang       
+        if ($this->form_validation->run() == FALSE) {
+            $this->update($this->input->post('id_kategori', TRUE));
+        } 
+		// Jika form kategori telah diisi dengan benar 
+		// maka sistem akan melakukan update data kategori kedalam database
 		else {
+            $data = array(
+		'id_kategori' => $this->input->post('id_kategori',TRUE),
+		'nama_kategori' => $this->input->post('nama_kategori',TRUE),
+	    );
 
-			// Konfigurasi untuk melakukan upload photo
-			$config['upload_path']   = '../images/model/';    //path folder
-			$config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diupload jpg|png|jpeg			
-			$config['file_name']     = url_title($this->input->post('')); //nama file photo dirubah menjadi nama berdasarkan nidn	
-			$this->upload->initialize($config);
-
-			// Jika file photo ada 
-			if (!empty($_FILES['photo']['name'])) {
-
-				// Menghapus file image lama
-				unlink("../images/model/" . $this->input->post('photo'));
-
-
-				// Upload file image baru
-				if ($this->upload->do_upload('photo')) {
-					$photo = $this->upload->data();
-					$dataphoto = $photo['file_name'];
-					$this->load->library('upload', $config);
-
-					$data = array(
-						'id_model' => $this->input->post('id_model', TRUE),
-						'nama_model' => $this->input->post('nama_model', TRUE),
-						'photo' => $dataphoto,
-					);
-
-					$this->Model_model->update($this->input->post('id_model', TRUE), $data);
-				}
-
-				$this->session->set_flashdata('message', 'Update Record Success');
-				redirect(site_url('model'));
-			}
-			// Jika file photo kosong 
-			else {
-				$data = array(
-					'id_model' => $this->input->post('id_model', TRUE),
-					'nama_model' => $this->input->post('nama_model', TRUE),
-				);
-
-				$this->Model_model->update($this->input->post('id_model', TRUE), $data);
-				$this->session->set_flashdata('message', 'Update Record Success');
-				redirect(site_url('model'));
-			}
-		}
-	}
-
+            $this->Kategori_model->update($this->input->post('id_kategori', TRUE), $data);
+            $this->session->set_flashdata('message', 'Update Record Success');
+            redirect(site_url('kategori'));
+        }
+    }
 	// Fungsi untuk melakukan aksi delete data berdasarkan id yang dipilih
 	public function delete($id)
 	{
-
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
 		}
 
-		$row = $this->Model_model->get_by_id($id);
+		$row = $this->Kategori_model->get_by_id($id);
 
-		//jika id id_model yang dipilih tersedia maka akan dihapus
+		//jika id id_detail_transaksi yang dipilih tersedia maka akan dihapus
 		if ($row) {
+			// menghapus data berdasarkan id-nya yaitu id_detail_transaksi
+			if ($this->Kategori_model->delete($id) > 0) {
 
-			// menghapus file photo
-			unlink("../images/model/" . $row->photo);
+				// menampilkan informasi 'Delete Record Success' setelah data detailTransaksi dihapus 
+				$this->session->set_flashdata('message', 'Delete Record Success');
+			}
+			// jika data tidak ada yang dihapus maka akan menampilkan 'Can not Delete This Record !'
+			else {
 
-			$this->Model_model->delete($id);
-			$this->session->set_flashdata('message', 'Delete Record Success');
-			redirect(site_url('model'));
+				$this->session->set_flashdata('message', 'Can not Delete This Record !');
+			}
+			redirect(site_url('kategori'));
 		}
-		//jika id nim yang dipilih tidak tersedia maka akan muncul pesan 'Record Not Found'
+		//jika id_detail_transaksi yang dipilih tidak tersedia maka akan muncul pesan 'Record Not Found'
 		else {
 			$this->session->set_flashdata('message', 'Record Not Found');
-			redirect(site_url('model'));
+			redirect(site_url('kategori'));
 		}
 	}
 
 	// Fungsi rules atau aturan untuk pengisian pada form (create/input dan update)
 	public function _rules()
 	{
-		$this->form_validation->set_rules('nama_model', 'nama model', 'trim|required');
-		$this->form_validation->set_rules('id_model', 'id_model', 'trim');
+		$this->form_validation->set_rules('id_kategori', 'id_kategori', 'trim|required');
+		$this->form_validation->set_rules('nama_kategori', 'nama_kategori', 'trim|required');
 		$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
 	}
 }
 
-/* End of file Model.php */
-/* Location: ./application/controllers/Model.php */
+/* End of file Kategori.php */
+/* Location: ./application/controllers/Kategori.php */
 /* Please DO NOT modify this information : */
-/* Generated by Harviacode Codeigniter CRUD Generator 2018-04-23 06:06:55 */
-/* http://harviacode.com */

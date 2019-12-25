@@ -33,10 +33,10 @@
         <table class="table table-bordered table-striped" id="mytable">
             <thead>
                 <tr>
-                    <th width="80px">No</th>					
-					<th>Nama</th>
-					<th>Deskripsi</th>
-					<th>Icon</th>
+                    <th width="80px">No</th>
+                    <th>ID Produk</th>	
+                    <th>Kategori</th>	
+                    <th>Nama Produk</th>
 					<th width="200px">Action</th>
                 </tr>
             </thead>
@@ -82,9 +82,15 @@
                             "data": "id_produk",
                             "orderable": false
                         },						
-						{"data": "nama_produk"},
-						{"data": "deskripsi_produk"},
-						{"data": "icon"},
+                        {   
+                            "data": "id_produk"
+                        },
+                        {   
+                            "data": "id_kategori"
+                        },
+                        {   
+                            "data": "nama_produk"
+                        },
                         {
                             "data" : "action",
                             "orderable": false,

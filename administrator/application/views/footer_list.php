@@ -1,7 +1,7 @@
 	</div>
 			<!-- /.box-body -->
 			<div class="box-footer">
-				<center>CRM <a href="http://www.langitinspirasi.co.id"><strong>Tita Jaya</strong></a> - 2019</center>
+				<center>CRM <a href="http://www.titajaya.co.id"><strong>Tita Jaya</strong></a> - 2019</center>
 			</div>
 			<!-- /.box-footer-->
 		  </div>

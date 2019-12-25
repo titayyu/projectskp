@@ -17,19 +17,19 @@
         <div class="box-body">
 		
 			<!-- Tampil Data items -->   
-			<legend><?php echo $button ?> Daftar Items</legend>
+			<legend><?php echo $button ?> Produk</legend>
 			<!-- Button untuk melakukan update -->
 			<a href="<?php echo site_url('items/update/'.$kode_items) ?>" class="btn btn-primary">Update</a>
-			<!-- Button cancel untuk kembali ke halaman mahasiswa list -->
+			<!-- Button cancel untuk kembali ke halaman  list -->
 			<a href="<?php echo site_url('items') ?>" class="btn btn-warning">Cancel</a>
 			<p></p>
 			<table class="table table-striped table-bordered">
-				<tr><td>Kode Produk</td><td><?php echo $kode_items; ?></td></tr>
+				<tr><td>ID Produk</td><td><?php echo $kode_items; ?></td></tr>
 				<tr><td>Nama Produk</td><td><?php echo $nama_items; ?></td></tr>
 				<tr>
-					<td>Jenis</td>
-					<td><?php echo $nama_jenis; ?></td>
+					<td>Kategori</td>
+					<td><?php echo $id_kategori; ?></td>
 				</tr>
 					<tr><td></td><td><a href="<?php echo site_url('items') ?>" class="btn btn-default">Cancel</a></td></tr>
 			</table>
-			<!--// Tampil Data items -->  
+			<!--// Tampil Data Produk -->  

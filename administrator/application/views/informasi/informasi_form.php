@@ -41,12 +41,12 @@
 				<div>
 					<?php
 						if($gambar==""){
-							echo"<p class='help-block'>Silahkan upload gambar pendukung informasi kampus </p>";
+							echo"<p class='help-block'>Silahkan upload gambar pendukung informasi </p>";
 						}
 						else{
 					?>
 						<div>			
-							<img width="280px" src="../../../images/info_kampus/<?php echo $gambar; ?>">
+							<img width="280px" src="../../../images/<?php echo $gambar; ?>">
 						</div><br />
 					<?php
 								}

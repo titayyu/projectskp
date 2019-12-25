@@ -19,7 +19,6 @@
 			<!-- Form input dan edit Pelanggan-->
 			<legend><?php echo $button ?> Pelanggan</legend>		 
 			<form role="form" class="form-horizontal"  action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
-				<input type="hidden"  class="form-control" name="photo" id="photo" value="<?php echo $photo; ?>" />
 				<div class="form-group">
 					<label class="col-sm-2" for="char">ID Pelanggan</label>
 					<div class="col-sm-4">
@@ -53,47 +52,6 @@
 						<?php echo form_error('telp') ?>
 					</div>
 				</div>
-					
-				
-					 
-				<div class="form-group"> 
-					<label class="col-sm-2" for="int">Jenis Pelanggan</label>
-					<div class="col-sm-4">
-						 <?php 
-							   $query = $this->db->query('SELECT id_jenis,nama_jenis FROM jenis'); 
-							   $dropdowns = $query->result();
-							//    print_r($dropdowns);
-							   foreach($dropdowns as $dropdown) {
-								//    print_r($dropdown);
-									   $dropDownList[$dropdown->id_jenis] = $dropdown->nama_jenis;
-									} 
-								  $finalDropDown = $dropDownList; 
-							  echo  form_dropdown('id_jenis',$finalDropDown , $id_jenis, 
-									'class="form-control" id="id_jenis"'); 	
-									// print_r($finalDropDown);
-									// print_r($id_jenis);
-							  echo form_error('id_jenis') 
-						  ?> 
-					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-sm-2" for="photo">Photo</label>
-						<div class="col-sm-4">
-							<?php
-								if($photo==""){
-									echo"<p class='help-block'>Silahkan upload foto pelanggan </p>";
-								}
-								else{
-							?>
-									<div>			
-										<img src="<?php echo base_url()?>images/<?php echo $photo; ?>">
-									</div><br />
-							<?php
-								}
-							?>
-							<input type="file" name="photo" id="photo">							
-						</div>
-				</div>	
 				<button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 					<a href="<?php echo site_url('pelanggan') ?>" class="btn btn-default">Cancel</a>
 				</form>  

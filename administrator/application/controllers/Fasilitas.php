@@ -144,8 +144,8 @@ class Fasilitas extends CI_Controller
         if ($row) {
             $data = array(
                 'button' => 'Update',
+				'back'   => site_url('fasilitas'),
                 'action' => site_url('fasilitas/update_action'),
-				'back'   => site_url('informasi'),
 				'id_fasilitas' => set_value('id_fasilitas', $row->id_fasilitas),
 				'nama_fasilitas' => set_value('nama_fasilitas', $row->nama_fasilitas),
 				'icon_fasilitas' => set_value('icon_fasilitas', $row->icon_fasilitas),

@@ -3,7 +3,6 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-// Deklarasi pembuatan class Mahasiswa_model
 class Informasi_model extends CI_Model
 {
    

@@ -31,7 +31,7 @@ class Informasi extends CI_Controller
 		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$data = array(	
 			'wa'       => 'Web administrator',
-			'univ'     => 'Universitas Langit Inspirasi',
+			'tita_jaya'     => 'Tita Jaya',
 			'username' => $row->username,
 			'email'    => $row->email,
 			'level'    => $row->level,
@@ -85,7 +85,7 @@ class Informasi extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 				'wa'       => 'Web administrator',
-				'univ'     => 'Universitas Langit Inspirasi',
+				'tita_jaya'     => 'Tita Jaya',
 				'back'   => site_url('informasi'),
 				'username' => $rowAdm->username,
 				'email'    => $rowAdm->email,
@@ -128,7 +128,7 @@ class Informasi extends CI_Controller
 		else {
 			
 			// konfigurasi untuk melakukan upload gambar
-			$config['upload_path']   = '../images/info_kampus/';    //path folder image
+			$config['upload_path']   = '../images/';    //path folder image
 			$config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diupload jpg|png|jpeg			
 			$config['file_name']     = url_title($this->input->post('judul_informasi')); //nama file gambar dirubah menjadi nama berdasarkan id_informasi	
 			$this->upload->initialize($config);
@@ -201,7 +201,7 @@ class Informasi extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 				'wa'       => 'Web administrator',
-				'univ'     => 'Universitas Langit Inspirasi',
+				'tita_jaya'     => 'Tita Jaya',
 				'back'   => site_url('informasi'),
 				'username' => $rowAdm->username,
 				'email'    => $rowAdm->email,
@@ -256,7 +256,7 @@ class Informasi extends CI_Controller
 		else {
 			
 			// Konfigurasi untuk melakukan upload gambar
-			$config['upload_path']   = '../images/info_kampus/';    //path folder image
+			$config['upload_path']   = '../images/';    //path folder image
 			$config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diupload jpg|png|jpeg			
 			$config['file_name']     = url_title($this->input->post('judul_informasi')); //nama file gambar dirubah menjadi nama berdasarkan judul_informasi	
 			$this->upload->initialize($config);
@@ -265,7 +265,7 @@ class Informasi extends CI_Controller
 			if(!empty($_FILES['gambar']['name'])){	
 				
 				// Menghapus file image lama
-				unlink("../images/info_kampus/".$this->input->post('gambar'));	
+				unlink("../images/".$this->input->post('gambar'));	
 				
 				// Upload file image baru
 				if ($this->upload->do_upload('gambar')){
@@ -329,7 +329,7 @@ class Informasi extends CI_Controller
             $this->session->set_flashdata('message', 'Delete Record Success');
 			
 			// menghapus file photo
-			unlink("../images/info_kampus/".$row->gambar);
+			unlink("../images/".$row->gambar);
 			
             redirect(site_url('informasi'));
         } 

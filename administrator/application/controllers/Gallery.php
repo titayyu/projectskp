@@ -189,7 +189,7 @@ class Gallery extends CI_Controller
 				'aktif' => set_value('aktif', $row->aktif),
 				);
 			$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 	
-            $this->load->view('gallery/gallery_form', $data); // Menampilkan form mahasiswa
+            $this->load->view('gallery/gallery_form', $data); // Menampilkan form 
 			$this->load->view('footer'); // Menampilkan bagian footer
         } 
 		else {

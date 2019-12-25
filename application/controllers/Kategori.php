@@ -150,7 +150,7 @@ class Kategori extends CI_Controller
 				);
 							
 			$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 	
-            $this->load->view('kategori/kategori_form', $data); // Menampilkan form mahasiswa
+            $this->load->view('kategori/kategori_form', $data); // Menampilkan form 
 			$this->load->view('footer'); // Menampilkan bagian footer
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');

@@ -77,8 +77,6 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 				'nama' => $row->nama,
 				'alamat' => $row->alamat,
 				'telp' => $row->telp,
-				'photo' => $row->photo,
-				'id_jenis' => $row->id_jenis
 			);
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users
 			$this->load->view('pelanggan/pelanggan_read', $data); // Menampilkan halaman detail pelanggan
@@ -120,8 +118,6 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 			'nama' => set_value('nama'),
 			'alamat' => set_value('alamat'),
 			'telp' => set_value('telp'),
-			'photo' => set_value('photo'),
-			'id_jenis' => set_value('id_jenis'),
 		);
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 	 
 		$this->load->view('pelanggan/pelanggan_form', $data); // Menampilkan halaman form pelanggan
@@ -147,50 +143,6 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		// Jika form pelanggan telah diisi dengan benar 
 		// maka sistem akan menyimpan kedalam database
 		else {
-			// konfigurasi untuk melakukan upload photo
-			$config['upload_path']   = './images/';    //path folder image
-			$config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diupload jpg|png|jpeg			
-			$config['file_name']     = url_title($this->input->post('id_pelanggan')); //nama file photo dirubah menjadi nama berdasarkan id_pelanggan
-			$this->upload->initialize($config);
-
-			// Jika file photo ada 
-			if (!empty($_FILES['photo']['name'])) {
-
-				if ($this->upload->do_upload('photo')) {
-					$photo = $this->upload->data();
-					$dataphoto = $photo['file_name'];
-					$this->load->library('upload', $config);
-
-					$data = array(
-						'id_pelanggan' => $this->input->post('id_pelanggan', TRUE),
-						'nama' => $this->input->post('nama', TRUE),
-						'alamat' => $this->input->post('alamat', TRUE),
-						'telp' => $this->input->post('telp', TRUE),
-						'photo' => $dataphoto,
-						'id_jenis' => $this->input->post('id_jenis', TRUE),
-					);
-
-					$this->Pelanggan_model->insert($data);
-				}
-
-				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('pelanggan'));
-			}
-			// Jika file photo kosong 
-			else {
-
-				$data = array(
-					'id_pelanggan' => $this->input->post('id_pelanggan', TRUE),
-					'nama' => $this->input->post('nama', TRUE),
-					'alamat' => $this->input->post('alamat', TRUE),
-					'telp' => $this->input->post('telp', TRUE),
-					'id_jenis' => $this->input->post('id_jenis', TRUE),
-				);
-
-				$this->Pelanggan_model->insert($data);
-				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('pelanggan'));
-			}
 		}
 	}
 
@@ -225,8 +177,6 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 				'nama' => set_value('nama', $row->nama),
 				'alamat' => set_value('alamat', $row->alamat),
 				'telp' => set_value('telp', $row->telp),
-				'photo' => set_value('photo', $row->photo),
-				'id_jenis' => set_value('id_jenis', $row->id_jenis),
 			);
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
 			$this->load->view('pelanggan/pelanggan_form', $data); // Menampilkan form pelanggan
@@ -282,8 +232,6 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 						'nama' => $this->input->post('nama', TRUE),
 						'alamat' => $this->input->post('alamat', TRUE),
 						'telp' => $this->input->post('telp', TRUE),
-						'photo' => $dataphoto,
-						'id_jenis' => $this->input->post('id_jenis', TRUE),
 					);
 
 					$this->Pelanggan_model->update($this->input->post('id_pelanggan', TRUE), $data);
@@ -300,8 +248,6 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 					'nama' => $this->input->post('nama', TRUE),
 					'alamat' => $this->input->post('alamat', TRUE),
 					'telp' => $this->input->post('telp', TRUE),
-					'photo' => $dataphoto,
-					'id_jenis' => $this->input->post('id_jenis', TRUE),
 				);
 
 				$this->Pelanggan_model->update($this->input->post('id_pelanggan', TRUE), $data);
@@ -349,12 +295,11 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 	// Fungsi rules atau aturan untuk pengisian pada form (create/input dan update)
 	public function _rules()
 	{
-		$this->form_validation->set_rules('id_pelanggan', 'id_pelanggan', 'trim|required');
+		$this->form_validation->set_rules('id_pelanggan', 'id pelanggan', 'trim|required');
 		$this->form_validation->set_rules('nama', 'nama', 'trim|required');
 		$this->form_validation->set_rules('alamat', 'alamat', 'trim|required');
 		$this->form_validation->set_rules('telp', 'telp', 'trim|required');
-		$this->form_validation->set_rules('id_jenis', 'id_jenis', 'trim|required');
-		$this->form_validation->set_rules('id_pelanggan', 'id_pelanggan', 'trim');
+		$this->form_validation->set_rules('id_pelanggan', 'id pelanggan', 'trim');
 		$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
 	}
 }

@@ -2,7 +2,6 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-// Fungsi untuk membuat tanggal dengan format Indonesia
 function tgl_indo($tgl){
 	$tanggal = substr($tgl,8,2);
 	$bulan = getBulan(substr($tgl,5,2));

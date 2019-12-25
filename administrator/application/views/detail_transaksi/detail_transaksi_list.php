@@ -5,7 +5,7 @@
 	</h1>
 	<ol class="breadcrumb">
 		<li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
-		<li class="active">Jadwal</li>
+		<li class="active">Transaksi</li>
 	</ol>
 </section>
 <!-- Main content -->
@@ -15,10 +15,10 @@
 	<div class="box">
 		<div class="box-body">
 
-			<!-- Menampilkan Data Jadwal -->
+			<!-- Menampilkan Data transaksi -->
 			<div class="row" style="margin-bottom: 10px">
 				<div class="col-md-4">
-					<h2 style="margin-top:0px">Jadwal</h2>
+					<h2 style="margin-top:0px">Transaksi</h2>
 				</div>
 				<div class="col-md-4 text-center">
 					<div style="margin-top: 4px" id="message">
@@ -26,16 +26,25 @@
 					</div>
 				</div>
 				<div class="col-md-4 text-right">
-					<?php echo anchor(site_url('jadwal/create'), '<i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;Create', 'class="btn btn-primary"'); ?>
+					<?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;Create', 'class="btn btn-primary"'); ?>
+				</div>
+				<div class="col-md-4 text-right">
+					<?php echo anchor(site_url('transaksi/analisis'), '<i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;Analisis', 'class="btn btn-primary"'); ?>
 				</div>
 			</div>
 			<table class="table table-bordered table-striped" id="mytable">
 				<thead>
 					<tr>
 						<th width="80px">No</th>
-						<th>Nama Jadwal</th>
-						<th>Alamat Jadwal</th>
-						<th>Telp</th>
+						<th>ID Detail Transaksi</th>
+						<th>ID Transaksi</th>
+						<th>Tanggal</th>
+						<th>Nama Pelanggan</th>
+						<th>Nama Kategori</th>
+						<th>Deskripsi Transaksi</th>
+						<th>Quantity</th>
+						<th>Harga</th>
+						<th>Total</th>
 						<th width="200px">Action</th>
 					</tr>
 				</thead>
@@ -48,7 +57,7 @@
 			<!-- Memanggil Bootstrap data tables -->
 			<script src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js') ?>"></script>
 
-			<!-- JavaScript yang berfungsi untuk menampilkan data dari tabel jadwal dengan AJAX -->
+			<!-- JavaScript yang berfungsi untuk menampilkan data dari tabel transaksi dengan AJAX -->
 			<script type="text/javascript">
 				$(document).ready(function() {
 					$.fn.dataTableExt.oApi.fnPagingInfo = function(oSettings) {
@@ -80,21 +89,35 @@
 						processing: true,
 						serverSide: true,
 						ajax: {
-							"url": "jadwal/json",
+							"url": "transaksi/json",
 							"type": "POST"
 						},
 						columns: [{
-								"data": "nama_jadwal",
+								"data": "id_detail_transaksi",
 								"orderable": false
 							},
 							{
-								"data": "nama_jadwal"
+								"data": "id_detail_transaksi"
+							}, {
+								"data": "id_transaksi"
+							}, {
+								"data": "tanggal"
+							}, {
+								"data": "id_pelanggan"
+							}, {
+								"data": "id_kategori"
 							},
 							{
-								"data": "alamat_jadwal"
+								"data": "deskripsi_transaksi"
 							},
 							{
-								"data": "telp_jadwal"
+								"data": "quantity"
+							},
+							{
+								"data": "harga"
+							},
+							{
+								"data": "total"
 							},
 							{
 								"data": "action",
@@ -115,4 +138,4 @@
 					});
 				});
 			</script>
-			<!--// Tampil Jadwal Jadwal Pelanggan -->
+			<!--// Tampil Data transaksi -->

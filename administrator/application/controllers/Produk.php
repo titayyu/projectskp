@@ -65,9 +65,8 @@ class Produk extends CI_Controller
             'action' => site_url('produk/create_action'),
 			'back'   => site_url('produk'),
 			'id_produk' => set_value('id_produk'),
+			'id_kategori' => set_value('id_kategori'),
 			'nama_produk' => set_value('nama_produk'),
-			'deskripsi_produk' => set_value('deskripsi_produk'),
-			'icon' => set_value('icon'),
 		);
 		$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 
         $this->load->view('produk/produk_form', $data); // Menampilkan halaman form produk
@@ -94,9 +93,8 @@ class Produk extends CI_Controller
 		else {
             $data = array(
 		'id_produk' => $this->input->post('id_produk',TRUE),
+		'id_kategori' => $this->input->post('id_kategori',TRUE),
 		'nama_produk' => $this->input->post('nama_produk',TRUE),
-		'deskripsi_produk' => $this->input->post('deskripsi_produk',TRUE),
-		'icon' => $this->input->post('icon',TRUE),
 	    );
            
             $this->Produk_model->insert($data);
@@ -133,9 +131,8 @@ class Produk extends CI_Controller
                 'action' => site_url('produk/update_action'),
 				'back'   => site_url('produk'),
 				'id_produk' => set_value('id_produk', $row->id_produk),
-				'nama_produk' => set_value('nama_produk', $row->judul_nama_produk),
-				'deskripsi_produk' => set_value('deskripsi_produk', $row->deskripsi_produk),
-				'icon' => set_value('icon', $row->icon),
+				'id_kategori'=> set_value('id_kategori', $row->id_kategori),
+				'nama_produk' => set_value('nama_produk', $row->nama_produk),
 				);
 			$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 
             $this->load->view('produk/produk_form', $data); // Menampilkan form produk
@@ -167,9 +164,8 @@ class Produk extends CI_Controller
 		else {
             $data = array(
 		'id_produk' => $this->input->post('id_produk',TRUE),
+		'id_kategori'=> $this->input->post('id_kategori',TRUE),
 		'nama_produk' => $this->input->post('nama_produk',TRUE),
-		'isi_produk' => $this->input->post('deskripsi_produk',TRUE),
-		'icon' => $this->input->post('icon',TRUE),
 	    );
 
             $this->Produk_model->update($this->input->post('id_produk', TRUE), $data);
@@ -204,9 +200,8 @@ class Produk extends CI_Controller
 	// Fungsi rules atau aturan untuk pengisian pada form (create/input dan update)
     public function _rules(){
 	$this->form_validation->set_rules('id_produk', 'id produk', 'trim|required');
+	$this->form_validation->set_rules('id_kategori', 'id katgeori', 'trim|required');
 	$this->form_validation->set_rules('nama_produk', 'nama produk', 'trim|required');
-	$this->form_validation->set_rules('deskripsi_produk', 'deskripsi_produk', 'trim|required');
-	$this->form_validation->set_rules('icon', 'icon', 'trim|required');
 
 	$this->form_validation->set_rules('id_produk', 'id_produk', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');

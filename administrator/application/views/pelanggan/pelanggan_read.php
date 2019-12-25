@@ -25,11 +25,9 @@
 			<p></p>
 			 <!-- Menampilkan data pelanggan secara detail -->
 			 <table class="table table-striped table-bordered">
-				<tr><td>Photo</td><td><img src="../../images/<?php echo $photo; ?>"></td></tr>
 				<tr><td>ID Pelanggan</td><td><?php echo $id_pelanggan; ?></td></tr>
 				<tr><td>Nama</td><td><?php echo $nama; ?></td></tr>
 				<tr><td>Alamat</td><td><?php echo $alamat; ?></td></tr>
 				<tr><td>Telp</td><td><?php echo $telp; ?></td></tr>
-				<tr><td>Jenis Pelanggan</td><td><?php echo inputtext('id_jenis','jenis','nama_jenis','id_jenis',$id_jenis); ?></td></tr>
 			 </table>
 	  

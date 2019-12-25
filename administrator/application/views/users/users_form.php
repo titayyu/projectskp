@@ -51,7 +51,7 @@
 							else{
 						?>
 							<option value="admin">Admin</option>
-							<option value="mahasiswa">Manager</option>
+							<option value="manager">Manager</option>
 						<?php
 							}
 						?>

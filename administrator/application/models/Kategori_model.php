@@ -20,7 +20,7 @@ class Kategori_model extends CI_Model
 
     // Tabel data dengan nama kategori
     function json() {
-        $this->datatables->select("id_kategori,nama_kategori, IF(aktif = 'Y', 'Ya', 'Tidak') as status");
+        $this->datatables->select("id_kategori,nama_kategori");
         $this->datatables->from('kategori');
         $this->datatables->add_column('action', anchor(site_url('kategori/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('kategori/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_kategori');
 	   return $this->datatables->generate();

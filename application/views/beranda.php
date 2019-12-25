@@ -127,7 +127,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			foreach ($tentang_data as $tentang){
 		?>	
 			<div class="col-md-5 w3l_banner_bottom_right">
-				<img src="<?php echo base_url('/images/tentang_kampus/'. $tentang->gambar) ?>" alt=" " class="img-responsive" />
+				<img src="<?php echo base_url('/images/'. $tentang->gambar) ?>" alt=" " class="img-responsive" />
 			</div>
 			<div class="col-md-7 w3l_banner_bottom_left">
 				<h3><?php echo $tentang->judul_tentang; ?></h3>
@@ -272,7 +272,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		?>
 	</div>
 </div>
-<!-- //Informasi Kampus -->
+<!-- //Informasi -->
 <br /><br />
 <!-- gallery -->
 	<div class="gallery" id="gallery">
@@ -490,7 +490,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			   <div class="clearfix"> </div>
 			</div>
 			<div class="copyrights">
-				<p>&copy; <?php echo date("Y"); ?> <?php foreach ($identitas_data as $identitas){ echo "<a href='http://langitinspirasi.co.id/' target='_blank'>".$identitas->judul_website."</a>"; }?>. All Rights Reserved</p>
+				<p>&copy; <?php echo date("Y"); ?> <?php foreach ($identitas_data as $identitas){ echo "<a href='http://titajaya.co.id/' target='_blank'>".$identitas->judul_website."</a>"; }?>. All Rights Reserved</p>
 			</div>
 		</div>
 	</div>

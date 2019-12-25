@@ -30,7 +30,7 @@ class Identitas extends CI_Controller
 		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$data = array(	
 			'wa'       => 'Web administrator',
-			'univ'     => 'Universitas Langit Inspirasi',
+			'tita_jaya'     => 'Tita Jaya',
 			'username' => $row->username,
 			'email'    => $row->email,
 			'level'    => $row->level,

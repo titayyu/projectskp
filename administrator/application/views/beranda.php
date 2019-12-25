@@ -208,23 +208,16 @@
 				</div>
 				<!-- /.col -->
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Daftar Items</span></h4>
+				  <h4 class="text-center"><span class="info-box-text">Produk</span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('items') ?>"><center><i class="fa fa-edit" style="font-size:48px;color:#3c8dbc"></i><center></a>	
+					<a href="<?php echo site_url('produk') ?>"><center><i class="fa fa-edit" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
 				</div>
 				<!-- /.col -->
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Jenis Pelanggan</span></h4>
+				  <h4 class="text-center"><span class="info-box-text">Jadwal</span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('jenis') ?>"><center><i class="fa fa-file-text-o" style="font-size:48px;color:#3c8dbc"></i><center></a>	
-				  </div>
-				</div>
-				<!-- /.col -->
-				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Cetak Laporan</span></h4>
-				  <div class="color-palette-set">
-					<a href="<?php echo site_url('nilai/buatTranskrip') ?>"><center><i class="fa fa-sort-numeric-asc" style="font-size:48px;color:#3c8dbc"></i><center></a>	
+					<a href="<?php echo site_url('jadwal') ?>"><center><i class="fa fa-file-text-o" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
 				</div>
 				<!-- /.col -->
@@ -232,6 +225,13 @@
 				  <h4 class="text-center"><span class="info-box-text">Transaksi</span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('transaksi') ?>"><center><i class="fa fa-print" style="font-size:48px;color:#3c8dbc"></i><center></a>	
+				  </div>
+        </div>
+        	<!-- /.col -->
+				<div class="col-sm-4 col-md-2">
+				  <h4 class="text-center"><span class="info-box-text">Detail Transaksi</span></h4>
+				  <div class="color-palette-set">
+					<a href="<?php echo site_url('nilai/buatTranskrip') ?>"><center><i class="fa fa-sort-numeric-asc" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
 				</div>
 				<!-- /.col -->
@@ -263,7 +263,7 @@
 				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text">Tentang Tita Jaya</span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('tentang_kampus') ?>"><center><i class="fa fa-info" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php echo site_url('tentang') ?>"><center><i class="fa fa-info" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 				<!-- /.col -->
@@ -288,7 +288,7 @@
 		  </div>        
         <!-- /.box-body -->
         <div class="box-footer">
-         <center>CRM Application <a href="http://www.langitinspirasi.co.id"><strong>Tita Ayu</strong></a> - 2019</center>
+         <center>CRM Application <a href="http://www.titajaya.co.id"><strong>Tita Ayu</strong></a> - 2019</center>
         </div>
         <!-- /.box-footer-->
       </div>

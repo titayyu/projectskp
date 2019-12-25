@@ -20,7 +20,11 @@
 		<legend><?php echo $button ?> Kategori</legend>
         <form action="<?php echo $action; ?>" method="post">
 		<input type="hidden" class="form-control" name="id_kategori" id="id_kategori" value="<?php echo $id_kategori; ?>" />
-	    <div class="form-group">
+    <div class="form-group" hidden>
+            <label for="varchar">ID Kategori <?php echo form_error('id_kategori') ?></label>
+            <input type="text" class="form-control" name="id_kategori" id="id_kategori" placeholder="ID Kategori" value="<?php echo $id_kategori; ?>" />
+        </div>  
+    <div class="form-group">
             <label for="varchar">Nama Kategori <?php echo form_error('nama_kategori') ?></label>
             <input type="text" class="form-control" name="nama_kategori" id="nama_kategori" placeholder="Nama Kategori" value="<?php echo $nama_kategori; ?>" />
         </div>	

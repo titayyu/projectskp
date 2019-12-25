@@ -1,5 +1,4 @@
 <?php
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -20,7 +19,7 @@ class Produk_model extends CI_Model
 
     // Tabel data dengan nama produk
     function json() {
-        $this->datatables->select('id_produk,nama_produk,deskripsi_produk,icon');
+        $this->datatables->select("id_produk, id_kategori, nama_produk");
         $this->datatables->from('produk');
         $this->datatables->add_column('action', anchor(site_url('produk/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('produk/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_produk');
 		return $this->datatables->generate();
@@ -44,10 +43,9 @@ class Produk_model extends CI_Model
     // menampilkan jumlah data	
     function total_rows($q = NULL) {
         $this->db->like('id_produk', $q);
-		$this->db->or_like('id_produk', $q);
+        $this->db->or_like('id_produk', $q);
+        $this->db->or_like('id_kategori', $q);
 		$this->db->or_like('nama_produk', $q);
-		$this->db->or_like('deskripsi_produk', $q);
-		$this->db->or_like('icon', $q);
 		$this->db->from($this->table);
 			return $this->db->count_all_results();
 	}
@@ -56,10 +54,9 @@ class Produk_model extends CI_Model
     function get_limit_data($limit, $start = 0, $q = NULL) {
         $this->db->order_by($this->id, $this->order);
         $this->db->like('id_produk', $q);
-		$this->db->or_like('id_produk', $q);
+        $this->db->or_like('id_produk', $q);
+        $this->db->or_like('id_kategori', $q);
 		$this->db->or_like('nama_produk', $q);
-		$this->db->or_like('deskripsi_produk', $q);
-		$this->db->or_like('icon', $q);
 		$this->db->limit($limit, $start);
 			return $this->db->get($this->table)->result();
 	}
