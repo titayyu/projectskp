@@ -18,7 +18,7 @@
 			<!-- Menampilkan Data Jadwal -->
 			<div class="row" style="margin-bottom: 10px">
 				<div class="col-md-4">
-					<h2 style="margin-top:0px">Jadwal</h2>
+					<h2 style="margin-top:0px">Jadwal Pertemuan</h2>
 				</div>
 				<div class="col-md-4 text-center">
 					<div style="margin-top: 4px" id="message">
@@ -33,9 +33,10 @@
 				<thead>
 					<tr>
 						<th width="80px">No</th>
-						<th>Nama Jadwal</th>
-						<th>Alamat Jadwal</th>
+						<th>Nama</th>
+						<th>Alamat</th>
 						<th>Telp</th>
+						<th>Tanggal</th>
 						<th width="200px">Action</th>
 					</tr>
 				</thead>
@@ -95,6 +96,9 @@
 							},
 							{
 								"data": "telp_jadwal"
+							},
+							{
+								"data": "tanggal_jadwal"
 							},
 							{
 								"data": "action",

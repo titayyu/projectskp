@@ -72,6 +72,7 @@ class Transaksi extends CI_Controller
 				'back'   => site_url('transaksi'),
 				'id_transaksi' => $row->id_transaksi,
 				'id_pelanggan' => $row->id_pelanggan,
+				'id_produk' => $row->id_produk,
 				'tanggal' => $row->tanggal,
 			);
 
@@ -118,6 +119,7 @@ class Transaksi extends CI_Controller
 			'back'   => site_url('transaksi'),
 			'id_transaksi' => set_value('id_transaksi'),
 			'id_pelanggan' => set_value('id_pelanggan'),
+			'id_produk' => set_value('id_produk'),
 			'tanggal' => set_value('tanggal'),
 		);
 
@@ -217,6 +219,7 @@ class Transaksi extends CI_Controller
 				'back'   => site_url('transaksi'),
 				'id_transaksi' => set_value('id_transaksi', $row->id_transaksi),
 				'id_pelanggan' => set_value('id_pelanggan', $row->id_pelanggan),
+				'id_produk' => set_value('id_produk', $row->id_produk),
 				'tanggal' => set_value('tanggal', $row->tanggal),
 			);
 

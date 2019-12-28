@@ -17,12 +17,12 @@
         <div class="box-body">
 		
 			<!-- Form input dan edit Pelanggan-->
-			<legend><?php echo $button ?> Pelanggan</legend>		 
+			<legend><?php echo $button ?>Pelanggan</legend>		 
 			<form role="form" class="form-horizontal"  action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label class="col-sm-2" for="char">ID Pelanggan</label>
 					<div class="col-sm-4">
-						<input type="text"   class="form-control" name="id_pelanggan" id="id_pelanggan" placeholder="id_pelanggan" value="<?php echo $id_pelanggan; ?>" />
+						<input type="text"   class="form-control" name="id_pelanggan" id="id_pelanggan" placeholder="ID pelanggan" value="<?php echo $id_pelanggan; ?>" />
 						<?php echo form_error('id_pelanggan'); ?>
 					</div>
 				</div>

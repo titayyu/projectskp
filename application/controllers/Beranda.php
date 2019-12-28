@@ -19,7 +19,7 @@ class Beranda extends CI_Controller {
 	public function index()
 	{	
 		// Query identitas 
-		$queryTitle = "SELECT judul_website, nama_pemilik, alamat, telp, email, facebook, twitter FROM identitas";		
+		$queryTitle = "SELECT judul_website, nama_pemilik, alamat_website, telp_website, email_website, facebook, twitter FROM identitas";		
 		$tampilTitle = $this->db->query($queryTitle)->result();
 		
 		// Query benefit

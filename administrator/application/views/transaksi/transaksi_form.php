@@ -49,10 +49,10 @@
       </div>
       <br>
     <div class="form-group"> 
-			<label class="col-sm-2" for="int">Barang</label>
+			<label class="col-sm-2" for="int">Produk</label>
 			<div class="col-sm-4">
 				<?php 
-					$query = $this->db->query('SELECT * FROM produk'); 
+					$query = $this->db->query('SELECT id_produk, nama_produk FROM produk'); 
 					$dropdowns = $query->result();
 					//    print_r($dropdowns);
 					foreach($dropdowns as $dropdown) {

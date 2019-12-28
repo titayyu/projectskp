@@ -25,7 +25,7 @@ class Informasi_model extends CI_Model
 		 //add this line for join
         $this->datatables->join('kategori as k','k.id_kategori= i.id_kategori');
         //$this->datatables->add_column('action', anchor(site_url('informasi/read/$1'),'Read')." | ".anchor(site_url('informasi/update/$1'),'Update')." | ".anchor(site_url('informasi/delete/$1'),'Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_informasi');
-        $this->datatables->add_column('action', anchor(site_url('informasi/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('informasi/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_informasi');
+        $this->datatables->add_column('action', anchor(site_url('informasi/read/$1'), '<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>') . "  " . anchor(site_url('informasi/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('informasi/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_informasi');
 		return $this->datatables->generate();
     }
 

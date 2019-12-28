@@ -16,14 +16,13 @@ class Kontak extends CI_Controller
 		$this->load->library('datatables'); // Memanggil datatables yang terdapat pada library
     }
 	
-	// Fungsi untuk menampilkan halaman kontak
+	
     public function index(){
-		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
+			
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
 		}
 		
-		// Menampilkan data berdasarkan id-nya yaitu username
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 			'wa'       => 'Web administrator',
@@ -33,9 +32,9 @@ class Kontak extends CI_Controller
 			'level'    => $rowAdm->level,
 		);
 		
-		$this->load->view('header_list', $dataAdm); // Menampilkan bagian header dan object data users 
-        $this->load->view('kontak/kontak_list'); // Menampilkan halaman utama kontak
-		$this->load->view('footer_list'); // Menampilkan bagian footer
+		$this->load->view('header_list', $dataAdm); 
+        $this->load->view('kontak/kontak_list'); 
+		$this->load->view('footer_list'); 
     } 
     
     public function json() {

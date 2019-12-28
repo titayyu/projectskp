@@ -25,9 +25,7 @@
                     <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                 </div>
             </div>
-            <div class="col-md-4 text-right">
-                <?php echo anchor(site_url('kontak/create'), 'Create', 'class="btn btn-primary"'); ?>
-	    </div>
+            
         </div>
         <table class="table table-bordered table-striped" id="mytable">
             <thead>

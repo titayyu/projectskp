@@ -107,13 +107,11 @@ class Identitas extends CI_Controller
 				'url' => set_value('url', $row->url),
 				'meta_deskripsi' => set_value('meta_deskripsi', $row->meta_deskripsi),
 				'meta_keyword' => set_value('meta_keyword', $row->meta_keyword),
-				'alamat' => set_value('alamat', $row->alamat),
-				'email' => set_value('email', $row->email),
-				'telp' => set_value('telp', $row->telp),
+				'alamat_website' => set_value('alamat', $row->alamat),
+				'email_website' => set_value('email', $row->email),
+				'telp_website' => set_value('telp', $row->telp),
 				'facebook' => set_value('facebook', $row->facebook),
 				'twitter' => set_value('twitter', $row->twitter),
-				'twitter_widget' => set_value('twitter_widget', $row->twitter_widget),
-				'google_map' => set_value('google_map', $row->google_map),
 				'favicon' => set_value('favicon', $row->favicon),
 				);
 			$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 
@@ -170,13 +168,11 @@ class Identitas extends CI_Controller
 								'url' => $this->input->post('url',TRUE),
 								'meta_deskripsi' => $this->input->post('meta_deskripsi',TRUE),
 								'meta_keyword' => $this->input->post('meta_keyword',TRUE),
-								'alamat' => $this->input->post('alamat',TRUE),
-								'email' => $this->input->post('email',TRUE),
-								'telp' => $this->input->post('telp',TRUE),
+								'alamat_website' => $this->input->post('alamat',TRUE),
+								'email_website' => $this->input->post('email',TRUE),
+								'telp_website' => $this->input->post('telp',TRUE),
 								'facebook' => $this->input->post('facebook',TRUE),
 								'twitter' => $this->input->post('twitter',TRUE),
-								'twitter_widget' => $this->input->post('twitter_widget',TRUE),
-								'google_map' => $this->input->post('google_map',TRUE),
 								'favicon' => $datafavicon,
 								);
 					
@@ -198,13 +194,11 @@ class Identitas extends CI_Controller
 					'url' => $this->input->post('url',TRUE),
 					'meta_deskripsi' => $this->input->post('meta_deskripsi',TRUE),
 					'meta_keyword' => $this->input->post('meta_keyword',TRUE),
-					'alamat' => $this->input->post('alamat',TRUE),
-					'email' => $this->input->post('email',TRUE),
-					'telp' => $this->input->post('telp',TRUE),
+					'alamat_website' => $this->input->post('alamat',TRUE),
+					'email_website' => $this->input->post('email',TRUE),
+					'telp_website' => $this->input->post('telp',TRUE),
 					'facebook' => $this->input->post('facebook',TRUE),
-					'twitter' => $this->input->post('twitter',TRUE),
-					'twitter_widget' => $this->input->post('twitter_widget',TRUE),
-					'google_map' => $this->input->post('google_map',TRUE),					
+					'twitter' => $this->input->post('twitter',TRUE),			
 					);
 				print_r($data);
 					exit();
@@ -224,13 +218,11 @@ class Identitas extends CI_Controller
 	$this->form_validation->set_rules('url', 'url', 'trim|required');
 	$this->form_validation->set_rules('meta_deskripsi', 'meta deskripsi', 'trim|required');
 	$this->form_validation->set_rules('meta_keyword', 'meta keyword', 'trim|required');
-	$this->form_validation->set_rules('alamat', 'alamat', 'trim|required');
-	$this->form_validation->set_rules('email', 'email', 'trim|required');
-	$this->form_validation->set_rules('telp', 'telp', 'trim|required');
+	$this->form_validation->set_rules('alamat_website', 'alamat', 'trim|required');
+	$this->form_validation->set_rules('email_website', 'email', 'trim|required');
+	$this->form_validation->set_rules('telp_website', 'telp', 'trim|required');
 	$this->form_validation->set_rules('facebook', 'facebook', 'trim|required');
 	$this->form_validation->set_rules('twitter', 'twitter', 'trim|required');
-	$this->form_validation->set_rules('twitter_widget', 'twitter widget', 'trim|required');
-	$this->form_validation->set_rules('google_map', 'google map', 'trim|required');	
 	$this->form_validation->set_rules('id_identitas', 'id_identitas', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }

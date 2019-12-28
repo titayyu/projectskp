@@ -15,13 +15,11 @@ class Jadwal extends CI_Controller
 		$this->load->library('datatables'); // Memanggil datatables yang terdapat pada library
     }
 
-    public function index(){
-		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
+    public function index(){		
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
 		}
 		
-		// Menampilkan data berdasarkan id-nya yaitu username
 		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$data = array(	
 			'wa'       => 'Web administrator',
@@ -30,6 +28,7 @@ class Jadwal extends CI_Controller
 			'email'    => $row->email,
 			'level'    => $row->level,
 		);		
+	
 		$this->load->view('header_list',$data); // Menampilkan bagian header dan object data users 
         $this->load->view('jadwal/jadwal_list'); // Menampilkan halaman utama jadwal
 		$this->load->view('footer_list'); // Menampilkan bagian footer
@@ -69,6 +68,7 @@ class Jadwal extends CI_Controller
 			'nama_jadwal' => set_value('nama_jadwal'),
 			'alamat_jadwal' => set_value('alamat_jadwal'),
 			'telp_jadwal' => set_value('telp_jadwal'),
+			'tanggal_jadwal' => set_value('tanggal_jadwal'),
 		);
 		$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 
         $this->load->view('jadwal/jadwal_form', $data); // Menampilkan form  jadwal
@@ -98,6 +98,7 @@ class Jadwal extends CI_Controller
 					'nama_jadwal' => $this->input->post('nama_jadwal',TRUE),
 					'alamat_jadwal' => $this->input->post('alamat_jadwal',TRUE),
 					'telp_jadwal' => $this->input->post('telp_jadwal',TRUE),
+					'tanggal_jadwal' => $this->input->post('tanggal_jadwal',TRUE),
 					);
            
             $this->Jadwal_model->insert($data);
@@ -136,6 +137,7 @@ class Jadwal extends CI_Controller
 				'nama_jadwal' => set_value('nama_jadwal', $row->nama_jadwal),
 				'alamat_jadwal' => set_value('alamat_jadwal', $row->alamat_jadwal),
 				'telp_jadwal' => set_value('telp_jadwal', $row->telp_jadwal),
+				'tanggal_jadwal' => set_value('tanggal_jadwal', $row->tanggal_jadwal),
 			);
 			$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 
             $this->load->view('jadwal/jadwal_form', $data); // Menampilkan form  jadwal
@@ -169,6 +171,7 @@ class Jadwal extends CI_Controller
 						'nama_jadwal' => $this->input->post('nama_jadwal',TRUE),
 						'alamat_jadwal' => $this->input->post('alamat_jadwal', TRUE),
 						'telp_jadwal' => $this->input->post('telp_jadwal', TRUE),
+						'tanggal_jadwal' => $this->input->post('tanggal_jadwal', TRUE),
 						);
 
             $this->Jadwal_model->update($this->input->post('id_jadwal', TRUE), $data);
@@ -206,6 +209,7 @@ class Jadwal extends CI_Controller
 	$this->form_validation->set_rules('nama_jadwal', 'nama jadwal', 'trim|required');
 	$this->form_validation->set_rules('alamat_jadwal', 'alamat jadwal', 'trim|required');
 	$this->form_validation->set_rules('telp_jadwal', 'telp jadwal', 'trim|required');
+	$this->form_validation->set_rules('tanggal_jadwal', 'tanggal jadwal', 'trim|required');
 
 	$this->form_validation->set_rules('id_jadwal', 'id_jadwal', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');

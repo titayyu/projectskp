@@ -28,7 +28,7 @@ class Identitas_model extends CI_Model
 
     // Tabel data dengan nama identitas	
     function json() {
-        $this->datatables->select('id_identitas,nama_pemilik,judul_website,url,alamat,email,telp');
+        $this->datatables->select('id_identitas,nama_pemilik,judul_website,url,alamat_website,email_website,telp_website');
         $this->datatables->from('identitas');        
         $this->datatables->add_column('action', anchor(site_url('identitas/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>'), 'id_identitas');
 		return $this->datatables->generate();
@@ -57,13 +57,11 @@ class Identitas_model extends CI_Model
 	$this->db->or_like('url', $q);
 	$this->db->or_like('meta_deskripsi', $q);
 	$this->db->or_like('meta_keyword', $q);
-	$this->db->or_like('alamat', $q);
-	$this->db->or_like('email', $q);
-	$this->db->or_like('telp', $q);
+	$this->db->or_like('alamat_website', $q);
+	$this->db->or_like('email_website', $q);
+	$this->db->or_like('telp_website', $q);
 	$this->db->or_like('facebook', $q);
 	$this->db->or_like('twitter', $q);
-	$this->db->or_like('twitter_widget', $q);
-	$this->db->or_like('google_map', $q);	
 	$this->db->from($this->table);
         return $this->db->count_all_results();
     }
@@ -78,13 +76,11 @@ class Identitas_model extends CI_Model
 	$this->db->or_like('url', $q);
 	$this->db->or_like('meta_deskripsi', $q);
 	$this->db->or_like('meta_keyword', $q);
-	$this->db->or_like('alamat', $q);
-	$this->db->or_like('email', $q);
-	$this->db->or_like('telp', $q);
+	$this->db->or_like('alamat_website', $q);
+	$this->db->or_like('email_website', $q);
+	$this->db->or_like('telp_website', $q);
 	$this->db->or_like('facebook', $q);
 	$this->db->or_like('twitter', $q);
-	$this->db->or_like('twitter_widget', $q);
-	$this->db->or_like('google_map', $q);	
 	$this->db->limit($limit, $start);
         return $this->db->get($this->table)->result();
     }

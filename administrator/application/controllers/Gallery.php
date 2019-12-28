@@ -16,7 +16,6 @@ class Gallery extends CI_Controller
 		$this->load->library('datatables'); // Memanggil datatables yang terdapat pada library
     }
 	
-	// Fungsi untuk menampilkan halaman gallery
     public function index(){
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
 		if (!isset($this->session->userdata['username'])) {

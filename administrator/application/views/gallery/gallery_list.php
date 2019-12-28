@@ -35,7 +35,6 @@
                     <th width="80px">No</th>
 					<th>Judul</th>
 					<th>Gambar</th>
-					<th>Aktif</th>
 					<th width="200px">Action</th>
                 </tr>
             </thead>
@@ -83,7 +82,6 @@
                         },						
 						{"data": "judul_gallery"},
 						{"data": "gambar"},
-						{"data": "aktif"},
                         {
                             "data" : "action",
                             "orderable": false,

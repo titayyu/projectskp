@@ -19,7 +19,7 @@ class Jadwal_model extends CI_Model
 	// Tabel data dengan nama jadwal
 	function json()
 	{
-		$this->datatables->select("nama_jadwal, alamat_jadwal, telp_jadwal, id_jadwal");
+		$this->datatables->select("nama_jadwal, alamat_jadwal, telp_jadwal, tanggal_jadwal, id_jadwal");
 		$this->datatables->from('jadwal');
 		$this->datatables->add_column('action', anchor(site_url('jadwal/update/$1'), '<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>') . "  " . anchor(site_url('jadwal/delete/$1'), '<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_jadwal');
 		return $this->datatables->generate();
@@ -47,6 +47,7 @@ class Jadwal_model extends CI_Model
 		$this->db->or_like('nama_jadwal', $q);
 		$this->db->or_like('alamat_jadwal', $q);
 		$this->db->or_like('telp_jadwal', $q);
+		$this->db->or_like('tanggal_jadwal', $q);
 		$this->db->from($this->table);
 		return $this->db->count_all_results();
 	}
@@ -60,13 +61,14 @@ class Jadwal_model extends CI_Model
 		$this->db->or_like('nama_jadwal', $q);
 		$this->db->or_like('alamat_jadwal', $q);
 		$this->db->or_like('telp_jadwal', $q);
+		$this->db->or_like('telp_jadwal', $q);
 		$this->db->limit($limit, $start);
 		return $this->db->get($this->table)->result();
 	}
 
 	// Menambahkan data kedalam database
 	function insert($data)
-	{
+	{ 
 		$this->db->insert($this->table, $data);
 	}
 

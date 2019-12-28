@@ -337,7 +337,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								foreach ($identitas_data as $identitas){
 							?>
 							<p><?php echo $identitas->judul_website ?><br>
-								<span><?php echo $identitas->alamat ?></span>
+								<span><?php echo $identitas->alamat_website ?></span>
 							</p>
 							<?php
 								}
@@ -355,7 +355,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<?php
 									foreach ($identitas_data as $identitas){
 								?>
-								<li><?php echo $identitas->telp ?></li>
+								<li><?php echo $identitas->telp_website ?></li>
 								<?php
 									}
 								?>
@@ -373,7 +373,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<?php
 									foreach ($identitas_data as $identitas){
 								?>
-								<li><a href="mailto:<?php echo $identitas->email ?>"><?php echo $identitas->email ?></a></li>
+								<li><a href="mailto:<?php echo $identitas->email_website ?>"><?php echo $identitas->email_website ?></a></li>
 								<?php
 									}
 								?>
@@ -422,7 +422,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<?php
 									foreach ($identitas_data as $identitas){
 										
-										echo $identitas->alamat;
+										echo $identitas->alamat_website;
 									}
 								?>
 							</p>
@@ -438,7 +438,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								<?php
 									foreach ($identitas_data as $identitas){
 										
-										echo $identitas->telp;
+										echo $identitas->telp_website;
 									}
 								?>
 							</p>
@@ -455,7 +455,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									foreach ($identitas_data as $identitas){								
 										
 								?>	
-								<a href="mailto:<?php echo $identitas->email; ?>"><?php echo $identitas->email; ?></a>
+								<a href="mailto:<?php echo $identitas->email_website; ?>"><?php echo $identitas->email_website; ?></a>
 								<?php
 									}
 								?>

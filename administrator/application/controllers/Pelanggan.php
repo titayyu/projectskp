@@ -17,7 +17,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		$this->load->library('datatables'); // Memanggil datatables yang terdapat pada library
 	}
 
-	// Fungsi untuk menampilkan halaman pelanggan
+	
 	public function index()
 	{
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
@@ -104,6 +104,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		$dataAdm = array(
 			'wa'       => 'Web administrator',
 			'tita_jaya' => 'tita_jaya',
+			'back'   => site_url('pelanggan'),
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
@@ -112,7 +113,6 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		// Menampung data yang diinputkan
 		$data = array(
 			'button' => 'Create',
-			'back'   => site_url('pelanggan'),
 			'action' => site_url('pelanggan/create_action'),
 			'id_pelanggan' => set_value('id_pelanggan'),
 			'nama' => set_value('nama'),
@@ -125,27 +125,35 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 	}
 
 	// Fungsi untuk melakukan aksi simpan data
-	public function create_action()
-	{
-
+	public function create_action(){
+		
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
-		if (!isset($this->session->userdata['username'])) {
-			redirect(base_url("login"));
-		}
-
-		$this->_rules(); // Rules atau aturan bahwa setiap form harus diisi
-
-		// Jika form pelanggan belum diisi dengan benar 
-		// maka sistem akan meminta user untuk menginput ulang
-		if ($this->form_validation->run() == FALSE) {
-			$this->create();
-		}
-		// Jika form pelanggan telah diisi dengan benar 
-		// maka sistem akan menyimpan kedalam database
-		else {
-		}
-	}
-
+		 if (!isset($this->session->userdata['username'])) {
+			 redirect(base_url("login"));
+		 }
+		 
+		 $this->_rules(); // Rules atau aturan bahwa setiap form harus diisi
+		 
+		 // Jika form jadwal belum diisi dengan benar 
+		 // maka sistem akan meminta admin untuk menginput ulang
+		 if ($this->form_validation->run() == FALSE) {
+			 $this->create();
+		 } 
+		 // Jika form jadwal telah diisi dengan benar 
+		 // maka sistem akan menyimpan kedalam database
+		 else {
+			 $data = array(
+					 'id_pelanggan' => $this->input->post('id_pelanggan',TRUE),
+					 'nama' => $this->input->post('nama',TRUE),
+					 'alamat' => $this->input->post('alamat',TRUE),
+					 'telp' => $this->input->post('telp',TRUE),
+					 );
+			
+			 $this->Pelanggan_model->insert($data);
+			 $this->session->set_flashdata('message', 'Create Record Success');
+			 redirect(site_url('pelanggan'));
+		 }
+	 }
 	// Fungsi menampilkan form Update Pelanggan
 	public function update($id)
 	{
@@ -269,27 +277,15 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 
 		//jika id id_pelanggan yang dipilih tersedia maka akan dihapus
 		if ($row) {
-			// menghapus data berdasarkan id-nya yaitu id_pelanggan
-			if ($this->Pelanggan_model->delete('pelanggan', array('id_pelanggan'->$id))) {
-
-				// menampilkan informasi 'Delete Record Success' setelah data pelanggan dihapus 
-				$this->session->set_flashdata('message', 'Delete Record Success');
-
-				// menghapus file photo
-				unlink("./images/" . $row->photo);
-			}
-			// jika data tidak ada yang dihapus maka akan menampilkan 'Can not Delete This Record !'
-			else {
-
-				$this->session->set_flashdata('message', 'Can not Delete This Record !');
-			}
-			redirect(site_url('pelanggan'));
-		}
-		//jika id_pelanggan yang dipilih tidak tersedia maka akan muncul pesan 'Record Not Found'
+            $this->Pelanggan_model->delete($id);
+            $this->session->set_flashdata('message', 'Delete Record Success');
+            redirect(site_url('pelanggan'));
+        } 
+		// jika data tidak ada yang dihapus maka akan menampilkan 'Can not Delete This Record !'
 		else {
-			$this->session->set_flashdata('message', 'Record Not Found');
-			redirect(site_url('pelanggan'));
-		}
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect(site_url('pelanggan'));
+        }
 	}
 
 	// Fungsi rules atau aturan untuk pengisian pada form (create/input dan update)

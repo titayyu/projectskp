@@ -43,16 +43,16 @@
             <input type="text" class="form-control" name="meta_keyword" id="meta_keyword" placeholder="Meta Keyword" value="<?php echo $meta_keyword; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar">Alamat <?php echo form_error('alamat') ?></label>
-            <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Alamat" value="<?php echo $alamat; ?>" />
+            <label for="varchar">Alamat <?php echo form_error('alamat_website') ?></label>
+            <input type="text" class="form-control" name="alamat_website" id="alamat_website" placeholder="Alamat" value="<?php echo $alamat_website; ?>" />
         </div>
 	    <div class="form-group">
-            <label for="varchar">Email <?php echo form_error('email') ?></label>
-            <input type="text" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo $email; ?>" />
+            <label for="varchar">Email <?php echo form_error('email_website') ?></label>
+            <input type="text" class="form-control" name="email_website" id="email_website" placeholder="Email" value="<?php echo $email_website; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">Telp <?php echo form_error('telp') ?></label>
-            <input type="text" class="form-control" name="telp" id="telp" placeholder="Telp" value="<?php echo $telp; ?>" />
+            <input type="text" class="form-control" name="telp_website" id="telp_website" placeholder="Telp" value="<?php echo $telp_website; ?>" />
         </div>
 	    <div class="form-group">
             <label for="varchar">Facebook <?php echo form_error('facebook') ?></label>
@@ -62,14 +62,7 @@
             <label for="varchar">Twitter <?php echo form_error('twitter') ?></label>
             <input type="text" class="form-control" name="twitter" id="twitter" placeholder="Twitter" value="<?php echo $twitter; ?>" />
         </div>
-	    <div class="form-group">
-            <label for="twitter_widget">Twitter Widget <?php echo form_error('twitter_widget') ?></label>
-            <textarea class="form-control" rows="3" name="twitter_widget" id="twitter_widget" placeholder="Twitter Widget"><?php echo $twitter_widget; ?></textarea>
-        </div>
-	    <div class="form-group">
-            <label for="google_map">Google Map <?php echo form_error('google_map') ?></label>
-            <textarea class="form-control" rows="3" name="google_map" id="google_map" placeholder="Google Map"><?php echo $google_map; ?></textarea>
-        </div>	    
+	
 		<div class="form-group">
 			<label for="varchar">Favicon <?php echo form_error('favicon') ?></label>
 

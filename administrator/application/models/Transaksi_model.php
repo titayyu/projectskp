@@ -45,6 +45,7 @@ class Transaksi_model extends CI_Model
         $this->db->like('id_transaksi', $q);
         $this->db->or_like('id_transaksi', $q);
         $this->db->or_like('id_pelanggan', $q);
+        $this->db->or_like('id_produk', $q);
 		$this->db->or_like('tanggal', $q);
 		$this->db->from($this->table);
 			return $this->db->count_all_results();
@@ -56,6 +57,7 @@ class Transaksi_model extends CI_Model
         $this->db->like('id_transaksi', $q);
         $this->db->or_like('id_transaksi', $q);
         $this->db->or_like('id_pelanggan', $q);
+        $this->db->or_like('id_produk', $q);
 		$this->db->or_like('tanggal', $q);
 		$this->db->limit($limit, $start);
 			return $this->db->get($this->table)->result();

@@ -3,7 +3,7 @@ if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
 // Deklarasi pembuatan class Kategori
-class Kategori extends CI_Controller //dilihat dari sini letaknya di folder controller
+class Kategori extends CI_Controller 
 {
 	// Konstruktor			
 	function __construct()
@@ -17,15 +17,14 @@ class Kategori extends CI_Controller //dilihat dari sini letaknya di folder cont
 		$this->load->library('datatables'); // Memanggil datatables yang terdapat pada library
 	}
 
-	// Fungsi untuk menampilkan halaman kategori
+	
 	public function index()
 	{
-		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
+			
 		if (!isset($this->session->userdata['username'])) {
 			redirect(base_url("login"));
 		}
 
-		// Menampilkan data berdasarkan id-nya yaitu username
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(
 			'wa'       => 'Web administrator',
@@ -35,9 +34,9 @@ class Kategori extends CI_Controller //dilihat dari sini letaknya di folder cont
 			'level'    => $rowAdm->level,
 		);
 
-		$this->load->view('header_list', $dataAdm); // Menampilkan bagian header dan object data users 
-		$this->load->view('kategori/kategori_list'); // Menampilkan halaman utama kategori
-		$this->load->view('footer_list'); // Menampilkan bagian footer
+		$this->load->view('header_list', $dataAdm); 
+		$this->load->view('kategori/kategori_list'); 
+		$this->load->view('footer_list'); 
 	}
 
 	// Fungsi JSON
@@ -60,6 +59,7 @@ class Kategori extends CI_Controller //dilihat dari sini letaknya di folder cont
 		$dataAdm = array(
 			'wa'       => 'Web administrator',
 			'tita_jaya' => 'Tita_Jaya',
+			'back'     => site_url('kategori'),
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
@@ -102,6 +102,7 @@ class Kategori extends CI_Controller //dilihat dari sini letaknya di folder cont
 		$dataAdm = array(
 			'wa'       => 'Web administrator',
 			'tita_jaya' => 'tita_jaya',
+			'back'   => site_url('kategori'),
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
@@ -110,7 +111,6 @@ class Kategori extends CI_Controller //dilihat dari sini letaknya di folder cont
 		// Menampung data yang diinputkan
 		$data = array(
 			'button' => 'Create',
-			'back'   => site_url('kategori'),
 			'action' => site_url('kategori/create_action'),
 			'id_kategori' => set_value('id_kategori'),
 			'nama_kategori' => set_value('nama_kategori'),
@@ -121,63 +121,33 @@ class Kategori extends CI_Controller //dilihat dari sini letaknya di folder cont
 	}
 
 	// Fungsi untuk melakukan aksi simpan data
-	public function create_action()
-	{
-
+    public function create_action(){
+		
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
-		if (!isset($this->session->userdata['username'])) {
-			redirect(base_url("login"));
-		}
-
-		$this->_rules(); // Rules atau aturan bahwa setiap form harus diisi
-
-		// Jika form kategori belum diisi dengan benar 
-		// maka sistem akan meminta user untuk menginput ulang
-		if ($this->form_validation->run() == FALSE) {
-			$this->create();
-		}
-		// Jika form kategori telah diisi dengan benar 
-		// maka sistem akan menyimpan kedalam database
-		else {
-			// konfigurasi untuk melakukan upload photo
-			$config['upload_path']   = './images/';    //path folder image
-			$config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diupload jpg|png|jpeg			
-			$config['file_name']     = url_title($this->input->post('id_kategori')); //nama file photo dirubah menjadi nama berdasarkan id_kategori
-			$this->upload->initialize($config);
-
-			// Jika file photo ada 
-			if (!empty($_FILES['photo']['name'])) {
-
-				if ($this->upload->do_upload('photo')) {
-					$photo = $this->upload->data();
-					$dataphoto = $photo['file_name'];
-					$this->load->library('upload', $config);
-
-					$data = array(
-						'id_kategori' => $this->input->post('id_kategori', TRUE),
-						'nama_kategori' => $this->input->post('nama_kategori', TRUE),
-					);
-
-					$this->Kategori_model->insert($data);
-				}
-
-				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('kategori'));
-			}
-			// Jika file photo kosong 
-			else {
-
-				$data = array(
-					'id_kategori' => $this->input->post('id_kategori', TRUE),
-					'nama_kategori' => $this->input->post('nama_kategori', TRUE),
-				);
-
-				$this->Kategori_model->insert($data);
-				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('kategori'));
-			}
-		}
-	}
+		 if (!isset($this->session->userdata['username'])) {
+			 redirect(base_url("login"));
+		 }
+		 
+		 $this->_rules(); // Rules atau aturan bahwa setiap form harus diisi
+		 
+		 // Jika form jadwal belum diisi dengan benar 
+		 // maka sistem akan meminta admin untuk menginput ulang
+		 if ($this->form_validation->run() == FALSE) {
+			 $this->create();
+		 } 
+		 // Jika form jadwal telah diisi dengan benar 
+		 // maka sistem akan menyimpan kedalam database
+		 else {
+			 $data = array(
+					 'id_kategori' => $this->input->post('id_kategori',TRUE),
+					 'nama_kategori' => $this->input->post('nama_kategori',TRUE),
+					 );
+			
+			 $this->Kategori_model->insert($data);
+			 $this->session->set_flashdata('message', 'Create Record Success');
+			 redirect(site_url('kategori'));
+		 }
+	 }
 
 	// Fungsi menampilkan form Update kategori
 	public function update($id)

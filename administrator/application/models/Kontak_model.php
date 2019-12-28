@@ -28,7 +28,7 @@ class Kontak_model extends CI_Model
         $this->datatables->from('kontak');
         //add this line for join
         //$this->datatables->join('table2', 'kontak.field = table2.field');
-        $this->datatables->add_column('action', anchor(site_url('kontak/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('kontak/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_kontak');
+        $this->datatables->add_column('action', anchor(site_url('kontak/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_kontak');
 		return $this->datatables->generate();
     }
 
