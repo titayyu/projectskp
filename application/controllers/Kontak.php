@@ -3,19 +3,16 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-// Deklarasi pembuatan class Kontak
 class Kontak extends CI_Controller
 {
-     // Konstruktor	
 	function __construct()
     {
         parent::__construct();
-        $this->load->model('Kontak_model'); // Memanggil Users_model yang terdapat pada models
-		$this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada models
-        $this->load->library('form_validation'); // Memanggil form_validation yang terdapat pada library           
-		$this->load->library('datatables'); // Memanggil datatables yang terdapat pada library
+        $this->load->model('Kontak_model');
+		$this->load->model('Users_model'); 
+        $this->load->library('form_validation');           
+		$this->load->library('datatables'); 
     }
-		
     public function create(){
         $data = array(
             'button' => 'Create',

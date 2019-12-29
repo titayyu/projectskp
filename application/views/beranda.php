@@ -403,7 +403,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <div class="footer w3ls">
 	<div class="container">
 	<div class="newsletter-agile">
-		disini diisi banner iklan atau parner
+		
 	</div>
 		<div class="footer-main">
 			<div class="footer-top">

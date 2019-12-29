@@ -393,7 +393,7 @@ class Transaksi extends CI_Controller
 
 	public function currentdir()
 	{
-		return $isRunning = system('py -m notebook');
+		return $isRunning = exec("py -m notebook");
 		// return $tita;
 	} 
 }
