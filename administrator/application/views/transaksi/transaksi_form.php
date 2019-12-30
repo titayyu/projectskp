@@ -48,30 +48,12 @@
 			</div>
       </div>
       <br>
-    <div class="form-group"> 
-			<label class="col-sm-2" for="int">Produk</label>
-			<div class="col-sm-4">
-				<?php 
-					$query = $this->db->query('SELECT id_produk, nama_produk FROM produk'); 
-					$dropdowns = $query->result();
-					//    print_r($dropdowns);
-					foreach($dropdowns as $dropdown) {
-					//    print_r($dropdown);
-					$dropDownList[$dropdown->id_produk] = $dropdown->nama_produk;
-									} 
-					$finalDropDown = $dropDownList; 
-					echo  form_dropdown('id_produk',$finalDropDown , $id_produk, 
-					'class="form-control" id="id_produk"'); 	
-					// print_r($finalDropDown);
-					echo form_error('id_produk') 
-						  ?> 
-			</div>
-    </div>
 
     <div class="form-group">
             <label for="varchar">Tanggal <?php echo form_error('tanggal') ?></label>
             <input type="text" class="form-control" name="tanggal" id="tanggal" placeholder="Tanggal" value="<?php echo $tanggal; ?>" />
         </div>
+				<div class="pull-right"><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new"> Tambah Rincian</a></div>  
         <table class="table table-bordered table-striped" id="mytable">
 				<thead>
 					<tr>
@@ -102,3 +84,66 @@
 	    <a href="<?php echo site_url('transaksi') ?>" class="btn btn-default">Cancel</a>
 	</form>
     <!-- // Form input dan edit transaksi-->  
+		
+		
+			<!-- ============ MODAL ADD BARANG =============== -->
+        <div class="modal fade" id="modal_add_new" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h3 class="modal-title" id="myModalLabel">Tambah Detail Transaksi</h3>
+            </div>
+            <form class="form-horizontal" method="post" action="<?php echo base_url().'index.php/transaksi/simpan_detail_transaksi'?>">
+                <div class="modal-body">
+ 
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" >ID Detail Transaksi</label>
+                        <div class="col-xs-8">
+                            <input name="id_detail_transaksi" class="form-control" type="text" placeholder="ID Detail Transaksi..." required>
+                        </div>
+                    </div>
+                     <div class="form-group">
+                        <label class="control-label col-xs-3" >Nama Barang</label>
+                        <div class="col-xs-8">
+                            <input name="nama_barang" class="form-control" type="text" placeholder="Nama Barang..." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" >Quantity</label>
+                        <div class="col-xs-8">
+                            <input name="quantity" class="form-control" type="text" placeholder="Quantity..." required>
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" >Ukuran</label>
+                        <div class="col-xs-8">
+                            <input name="ukuran" class="form-control" type="text" placeholder="Ukuran..." required>
+                        </div>
+                    </div>
+ 
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" >Harga</label>
+                        <div class="col-xs-8">
+                            <input name="harga" class="form-control" type="text" placeholder="Harga..." required>
+                        </div>
+                    </div>
+										<div class="form-group">
+                        <label class="control-label col-xs-3" >Total</label>
+                        <div class="col-xs-8">
+                            <input name="total" class="form-control" type="text" placeholder="Total..." required>
+                        </div>
+                    </div>
+ 
+                </div>
+ 
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Tutup</button>
+                    <button class="btn btn-info">Simpan</button>
+                </div>
+            </form>
+            </div>
+            </div>
+        </div>
+        <!--END MODAL ADD BARANG-->
