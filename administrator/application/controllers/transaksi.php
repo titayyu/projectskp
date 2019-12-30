@@ -325,6 +325,14 @@ class Transaksi extends CI_Controller
 		}
 	}
 
+	public function currentdir()
+	{
+		$isRunning = exec('py -m notebook', $output);
+		echo $isRunning;
+		return $output;
+		// return $tita;
+	} 
+
 	// Fungsi rules atau aturan untuk pengisian pada form (create/input dan update)
 	public function _rules()
 	{
