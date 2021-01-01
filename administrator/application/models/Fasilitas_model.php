@@ -18,11 +18,16 @@ class Fasilitas_model extends CI_Model
     }
 
     // datatables
-    function json() {
+    function json($level) {
         $this->datatables->select('id_fasilitas,nama_fasilitas,icon_fasilitas');
-        $this->datatables->from('fasilitas');        
+        $this->datatables->from('fasilitas');  
+        if ($level=='manager'){
+            $this->datatables->add_column('action', '-', 'id_fasilitas');
+		}
+    else { 
 		$this->datatables->add_column('action', anchor(site_url('fasilitas/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('fasilitas/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_fasilitas');
-	   return $this->datatables->generate();
+    }
+        return $this->datatables->generate();
     }
 
    

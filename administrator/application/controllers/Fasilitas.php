@@ -37,8 +37,10 @@ class Fasilitas extends CI_Controller
     
 	// Fungsi JSON
     public function json() {
+		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
+
         header('Content-Type: application/json');
-        echo $this->Fasilitas_model->json();
+        echo $this->Fasilitas_model->json($row->level);
     }
 	
 	/*

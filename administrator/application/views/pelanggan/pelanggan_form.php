@@ -22,7 +22,8 @@
 				<div class="form-group">
 					<label class="col-sm-2" for="char">ID Pelanggan</label>
 					<div class="col-sm-4">
-						<input type="text"   class="form-control" name="id_pelanggan" id="id_pelanggan" placeholder="ID pelanggan" value="<?php echo $id_pelanggan; ?>" />
+						<input type="text"   class="form-control" name="id_pelanggan" id="id_pelanggan" 
+						value="<?php if($button == "Create"){echo $a; }else{ echo $id_pelanggan ;} ?>" readonly/>
 						<?php echo form_error('id_pelanggan'); ?>
 					</div>
 				</div>

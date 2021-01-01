@@ -42,8 +42,10 @@ class Kategori extends CI_Controller
 	// Fungsi JSON
 	public function json()
 	{
+		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
+
 		header('Content-Type: application/json');
-		echo $this->Kategori_model->json();
+		echo $this->Kategori_model->json($rowAdm->level);
 	}
 
 	// Fungsi untuk menampilkan halaman kategori secara detail
@@ -115,6 +117,11 @@ class Kategori extends CI_Controller
 			'id_kategori' => set_value('id_kategori'),
 			'nama_kategori' => set_value('nama_kategori'),
 		);
+
+		$this->db->select_max('id_kategori');
+		$data['b'] = $this->db->get('kategori')->row_array();
+		$data['a'] = intval($data['b']['id_kategori']) + 1;
+
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 	 
 		$this->load->view('kategori/kategori_form', $data); // Menampilkan halaman form kategori
 		$this->load->view('footer'); // Menampilkan bagian footer

@@ -43,8 +43,11 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 	// Fungsi JSON
 	public function json()
 	{
+		// Menampilkan data berdasarkan id-nya yaitu username
+		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
+		
 		header('Content-Type: application/json');
-		echo $this->Pelanggan_model->json();
+		echo $this->Pelanggan_model->json($rowAdm->level);
 	}
 
 	// Fungsi untuk menampilkan halaman pelanggan secara detail
@@ -119,6 +122,11 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 			'alamat' => set_value('alamat'),
 			'telp' => set_value('telp'),
 		);
+		$this->db->select_max('id_pelanggan');
+		$data['b'] = $this->db->get('pelanggan')->row_array();
+		$data['a'] = intval($data['b']['id_pelanggan']) + 1;
+		// var_dump($data['a']);
+
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 	 
 		$this->load->view('pelanggan/pelanggan_form', $data); // Menampilkan halaman form pelanggan
 		$this->load->view('footer'); // Menampilkan bagian footer
@@ -171,6 +179,8 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
 		);
+		$this->db->select_max('id_pelanggan');
+		$data['b'] = $this->db->get('pelanggan')->row_array();
 
 		// Menampilkan data berdasarkan id-nya yaitu id_pelanggan
 		$row = $this->Pelanggan_model->get_by_id($id);

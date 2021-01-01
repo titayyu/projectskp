@@ -2,8 +2,8 @@
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
-// Deklarasi pembuatan class Transaksi_model
-class Transaksi_model extends CI_Model
+// Deklarasi pembuatan class Detail_Transaksi_model
+class Detail_Transaksi_model extends CI_Model
 {
 	private $table = 'detail_transaksi';
 	private $id = 'id_detail_transaksi';

@@ -18,8 +18,9 @@
 		
 		<!-- Tampil Data Model -->  
 		<legend><?php echo $button ?> Model</legend>		
-		<!-- Button untuk melakukan update -->
-		<a href="<?php echo site_url('model/update/'.$id_model) ?>" class="btn btn-primary">Update</a>
+    <!-- Button untuk melakukan update -->
+    
+		<?php if($_SESSION['level'] == 'manager'){}else{echo site_url('model/update/'.$id_model);} ?>
 		<!-- Button cancel untuk kembali ke halaman model list --> 
 		<a href="<?php echo site_url('model') ?>" class="btn btn-warning">Cancel</a>
 		<p></p> 

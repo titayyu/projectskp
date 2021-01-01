@@ -124,6 +124,15 @@ class Transaksi extends CI_Controller
 			'jumlah' => set_value('jumlah'),
 			'total' => set_value('total'),
 		);
+
+		$this->db->select_max('id_detail_transaksi');
+		$data['b'] = $this->db->get('detail_transaksi');
+		if($data['b']->num_rows() == 0){
+			$data['abc'] = 1000;
+		}
+		else{
+			$data['abc'] = intval($data['b']->row_array()['id_detail_transaksi']) + 1;
+		}
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 	 
 		$this->load->view('transaksi/transaksi_form', $data); // Menampilkan halaman form transaksi
 		$this->load->view('footer'); // Menampilkan bagian footer

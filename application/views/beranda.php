@@ -87,7 +87,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- banner -->	
 	<div class="w3ls_banner_section">
 		<div class="container">
-			<h2>SELAMAT WELCOME <span><?php foreach ($identitas_data as $identitas){ echo strtoupper($identitas->nama_pemilik); }?></span></h2>
+			<h2>WELCOME TO <span><?php foreach ($identitas_data as $identitas){ echo strtoupper($identitas->nama_pemilik); }?></span></h2>
 			<p> Our Customer is Our Number One Priority</p>			
 			 <div class="wthree-counter-agile">
 			   <!--timer-->

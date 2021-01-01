@@ -43,8 +43,9 @@ class Informasi extends CI_Controller
     
 	// Fungsi JSON
     public function json() {
+		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
         header('Content-Type: application/json');
-        echo $this->Informasi_model->json();
+        echo $this->Informasi_model->json($row->level);
     }
 	
 	/*

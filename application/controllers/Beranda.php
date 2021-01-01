@@ -18,27 +18,21 @@ class Beranda extends CI_Controller {
 	// Fungsi untuk menampilkan halaman utama Beranda
 	public function index()
 	{	
-		// Query identitas 
 		$queryTitle = "SELECT judul_website, nama_pemilik, alamat_website, telp_website, email_website, facebook, twitter FROM identitas";		
 		$tampilTitle = $this->db->query($queryTitle)->result();
 		
-		// Query benefit
 		$queryFasilitas = "SELECT nama_fasilitas, icon_fasilitas FROM fasilitas";
 		$tampilFasilitas = $this->db->query($queryFasilitas)->result();
 		
-		// Query tentang tentang 
 		$queryTentang = "SELECT judul_tentang, isi_tentang, keterangan_tambahan, gambar FROM tentang WHERE aktif = 'Y'";
 		$tampilTentang = $this->db->query($queryTentang)->result();
 		
-		// Query tentang produk
 		$queryKategori = "SELECT nama_kategori, deskripsi_kategori, icon FROM kategori";
 		$tampilKategori = $this->db->query($queryKategori)->result();
 		
-		// Query tentang model
 		$queryModel = "SELECT nama_model, photo FROM model";
 		$tampilModel = $this->db->query($queryModel)->result();
 		
-		// Query tentang informasi terkini
 		$queryInformasi1 = "SELECT informasi.id_informasi, 
 		                                 informasi.username, 
 										 informasi.judul_informasi, 
@@ -83,12 +77,12 @@ class Beranda extends CI_Controller {
 						'tampilinformasi2_data' => $tampilInformasi2,
 						'tampilgallery_data' => $tampilGallery,
 						'model_data' => $tampilModel,
-						'action' => site_url('beranda/create_action'), // untuk melakukan aksi memanggil create_action
-						'id_kontak' => set_value('id_kontak'), // memberi nilai pada id_kontak
-						'nama' => set_value('nama'), // memberi nilai pada nama
-						'email' => set_value('email'), // memberi nilai pada email
-						'telp' => set_value('telp'), // memberi nilai pada telp
-						'pesan' => set_value('pesan'), // memberi nilai pada pesan
+						'action' => site_url('beranda/create_action'), 
+						'id_kontak' => set_value('id_kontak'), 
+						'nama' => set_value('nama'), 
+						'email' => set_value('email'), 
+						'telp' => set_value('telp'), 
+						'pesan' => set_value('pesan'), 
 					  );
 							
 		$this->load->view('beranda',$data);

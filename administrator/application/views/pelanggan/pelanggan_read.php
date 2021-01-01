@@ -19,7 +19,7 @@
 			<!-- Tampil Data Pelanggan -->  
 			<legend><?php echo $button ?> Pelanggan</legend>
 			<!-- Button untuk melakukan update -->
-			<a href="<?php echo site_url('pelanggan/update/'.$id_pelanggan) ?>" class="btn btn-primary">Update</a>	
+			<?php if($_SESSION['level'] == 'manager'){}else{ echo site_url('pelanggan/update/'.$id_pelanggan);} ?>	
 			<!-- Button cancel untuk kembali ke halaman pelanggan list -->	
 			<a href="<?php echo site_url('pelanggan') ?>" class="btn btn-warning">Cancel</a>
 			<p></p>

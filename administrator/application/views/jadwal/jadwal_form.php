@@ -20,9 +20,10 @@
 			<legend><?php echo $button ?> Jadwal Pelanggan</legend>		 
 			<form role="form" class="form-horizontal"  action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
 				<div class="form-group">
-					<label class="col-sm-2" for="char">ID Jadwal Pelanggan</label>
+					<!-- <label class="col-sm-2" for="char">ID Jadwal Pelanggan</label> -->
+					
 					<div class="col-sm-4">
-						<input type="text"   class="form-control" name="id_jadwal" id="id_jadwal" placeholder="ID jadwal" value="<?php echo $id_jadwal; ?>" />
+						<input type="hidden"   class="form-control" name="id_jadwal" id="id_jadwal" placeholder="ID jadwal" value="<?php if($button == "Create"){echo $uuid; }else{ echo $id_jadwal ;} ?>"/>
 						<?php echo form_error('id_jadwal'); ?>
 					</div>
 				</div>
@@ -55,7 +56,7 @@
 				<div class="form-group">
 					<label class="col-sm-2" for="varchar">Tanggal </label>
 					<div class="col-sm-8">
-						<input type="text" class="form-control" name="tanggal_jadwal" id="tanggal_jadwal" placeholder="Tanggal" value="<?php echo $tanggal_jadwal; ?>" />
+						<input type="date" class="form-control" name="tanggal_jadwal" id="tanggal_jadwal" placeholder="Tanggal" value="<?php echo $tanggal_jadwal; ?>" />
 						<?php echo form_error('telp_jadwal'); ?>
 					</div>
 				</div>

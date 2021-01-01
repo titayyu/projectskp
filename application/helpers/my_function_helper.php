@@ -99,40 +99,7 @@ function skorNilai($nilai,$sks)
 	return $SksDiambil;			
  }
  
-// Fungsi untuk melakukan cek nilai 
-function cekNilai($nim, $kode, $nilKhs){
-  $ci = get_instance();	 
-  $ci->load->model('Transkrip_model');
-  
-  $ci->db->select('*');
-  $ci->db->from('transkrip');
-  $ci->db->where('nim', $nim);
-  $ci->db->where('kode_matakuliah',$kode);
-  $query=$ci->db->get()->row();  
-  // Jika nilai tidak kosong atau isi
-  if ($query!=null) 
-  {   
-	 // Membandingkan jika terdapat nilai sebelumnya di matakuliah yang sama
-	 // jika nilai yang diinputkan lebih besar dari nilai sebelumnya
-	 // secara otomatis nilai lama yg lebih kecil akan diganti dengan nilai yang lebih besar
-     if ($nilKhs < $query->nilai) 
-	 {      
-	  $ci->db->set('nilai',$nilKhs)
-         ->where('nim',$nim)
-		 ->where('kode_matakuliah',$kode)		 
-         ->update('transkrip');	 
-	 }	
-  }	 
-  // Jika nilai belum ada maka tambahkan nilai baru
-  else 
-  { 
-	 $data =array('nim'=>$nim,
-                  'nilai'=>$nilKhs,
-                  'kode_matakuliah'=>$kode);
-	 $ci->Transkrip_model->insert($data);	  
-  }	 
-  
- }
+
 //fungsi SEO
 function seo_title($s) {
     $c = array (' ');

@@ -69,7 +69,7 @@
 
                 <p>
                   <?php echo $username; ?> - <?php echo $wa; ?>
-                  <small><?php echo $univ; ?></small>
+                  <small><?php echo $tita_jaya; ?></small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -87,9 +87,7 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="users" class="btn btn-default btn-flat">Profile</a>
-                </div>
+                
                 <div class="pull-right">
                   <a href="admin/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
@@ -122,7 +120,7 @@
          <br />
 		<?php
             // Data main menu
-            $main_menu = $this->db->get_where('menu', array('main_menu' => 0));
+            $main_menu = $this->db->get_where('menu', array('main_menu' => 0,'level' => $level));
             foreach ($main_menu->result() as $main) {
                 // Query untuk mencari data sub menu
                 $sub_menu = $this->db->get_where('menu', array('main_menu' => $main->id_menu));
@@ -165,11 +163,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        HII..
+        HALO..
 		<?php
 			echo strtoupper($username); 
 		?>
-		SELAMAT DATANG DI CV TITA JAYA
+		SELAMAT DATANG DI 
 		<?php		
       echo strtoupper($tita_jaya);
       
@@ -192,7 +190,7 @@
 			</div>
 			<div class="box-body">
 			  <div class="row">
-				<div class="col-sm-4 col-md-2">
+				<div class="col-sm-4 col-md-3">
 				  <h4 class="text-center"><span class="info-box-text">Pelanggan</span></h4>
 				 
 				  <div class="color-palette-set">
@@ -215,7 +213,7 @@
 				</div>
 				<!-- /.col -->
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Jadwal</span></h4>
+				  <h4 class="text-center"><span class="info-box-text">Jadwal Pertemuan Client</span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('jadwal') ?>"><center><i class="fa fa-file-text-o" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
@@ -228,18 +226,12 @@
 				  </div>
         </div>
         	<!-- /.col -->
-				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Detail Transaksi</span></h4>
-				  <div class="color-palette-set">
-					<a href="<?php echo site_url('nilai/buatTranskrip') ?>"><center><i class="fa fa-sort-numeric-asc" style="font-size:48px;color:#3c8dbc"></i><center></a>	
-				  </div>
-				</div>
 				<!-- /.col -->
 			  </div>
 			  <br /><br />
 			  <!-- /.row -->
 			  <div class="row">
-				<div class="col-sm-4 col-md-2">
+				<div class="col-sm-4 col-md-3">
 				  <h4 class="text-center"><span class="info-box-text">Kategori Produk</span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('kategori') ?>"><center><i class="fa fa-server" style="font-size:48px;color:#3c8dbc"></i><center></a>	
@@ -257,13 +249,6 @@
 				  <h4 class="text-center"><span class="info-box-text">Kontak</span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('kontak') ?>"><center><i class="fa fa-vcard-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
-				  </div>
-				</div>
-				<!-- /.col -->
-				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Tentang Tita Jaya</span></h4>
-				  <div class="color-palette-set">
-					<a href="<?php echo site_url('tentang') ?>"><center><i class="fa fa-info" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 				<!-- /.col -->

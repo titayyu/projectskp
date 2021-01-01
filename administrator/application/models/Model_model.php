@@ -16,11 +16,16 @@ class Model_model extends CI_Model
     }
 
     // datatables
-    function json() {
+    function json($level) {
         $this->datatables->select('id_model,nama_model,photo');
         $this->datatables->from('model');
-        $this->datatables->add_column('action', anchor(site_url('model/read/$1'),'<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>')."  ".anchor(site_url('model/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('model/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_model');
-		return $this->datatables->generate();
+
+        if ($level=='manager'){
+        $this->datatables->add_column('action', anchor(site_url('model/read/$1'),'<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>'), 'id_model');
+        }
+        else {$this->datatables->add_column('action', anchor(site_url('model/read/$1'),'<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>')."  ".anchor(site_url('model/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('model/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_model');
+        }
+        return $this->datatables->generate();
     }
 
     // get all

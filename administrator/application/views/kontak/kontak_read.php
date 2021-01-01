@@ -13,7 +13,7 @@
         <h2 style="margin-top:0px">Kontak Read</h2>
 		
 		
-		 <a href="<?php echo site_url('kontak/update/'.$id_kontak) ?>" class="btn btn-primary">Update</a>
+        <?php if($_SESSION['level'] == 'manager'){}else{echo site_url('kontak/update/'.$id_kontak); }?>
 		 
 		 <a href="<?php echo site_url('kontak') ?>" class="btn btn-warning">Cancel</a>
 		 

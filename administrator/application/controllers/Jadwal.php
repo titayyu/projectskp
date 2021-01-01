@@ -36,8 +36,11 @@ class Jadwal extends CI_Controller
     
 	// Fungsi JSON
     public function json() {
+
+		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
+		
         header('Content-Type: application/json');
-        echo $this->Jadwal_model->json();
+        echo $this->Jadwal_model->json($row->level);
     }
 	
 	
@@ -70,11 +73,19 @@ class Jadwal extends CI_Controller
 			'telp_jadwal' => set_value('telp_jadwal'),
 			'tanggal_jadwal' => set_value('tanggal_jadwal'),
 		);
+		
+		$data['uuid'] = sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+        mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+        mt_rand(0, 0xffff),
+        mt_rand(0, 0x0fff) | 0x4000,
+        mt_rand(0, 0x3fff) | 0x8000,
+		mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+	);
 		$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 
         $this->load->view('jadwal/jadwal_form', $data); // Menampilkan form  jadwal
 		$this->load->view('footer'); // Menampilkan bagian footer
     }
-    
+
 	// Fungsi untuk melakukan aksi simpan data
     public function create_action(){
 		

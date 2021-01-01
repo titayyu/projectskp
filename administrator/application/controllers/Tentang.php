@@ -41,8 +41,10 @@ class Tentang extends CI_Controller
     
 	// Fungsi JSON
     public function json() {
+		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
+
         header('Content-Type: application/json');
-        echo $this->Tentang_model->json();
+        echo $this->Tentang_model->json($rowAdm->level);
     }
 	
 	/*

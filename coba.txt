@@ -1,0 +1,8 @@
+<?php
+//$command = escapeshellcmd('C:/Users/TITAAYU/PERCOBAAN TERAKHIR.ipynb');
+//$output = shell_exec($command);
+//echo $output;
+$lines = file('E:\SKRIPSI TITA\clustering\RFM_CUY.txt');
+foreach ($lines as $line_nim=>$line){
+print " . $line . "<br />\n;
+?>

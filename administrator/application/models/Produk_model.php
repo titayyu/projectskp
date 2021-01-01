@@ -18,11 +18,17 @@ class Produk_model extends CI_Model
     }
 
     // Tabel data dengan nama produk
-    function json() {
+    function json($level) {
         $this->datatables->select("id_produk, id_kategori, nama_produk");
         $this->datatables->from('produk');
+        if ($level=='manager'){
+            $this->datatables->add_column('action', '-', 'id_produk');
+		}
+    else { 
+
         $this->datatables->add_column('action', anchor(site_url('produk/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('produk/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_produk');
-		return $this->datatables->generate();
+    }
+        return $this->datatables->generate();
     }
 
    

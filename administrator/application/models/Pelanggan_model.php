@@ -17,12 +17,17 @@ class Pelanggan_model extends CI_Model
 	}
 
 	// Tabel data dengan nama pelanggan
-	function json()
+	function json($level)
 	{
 		$this->datatables->select("id_pelanggan, nama, alamat, telp");
 		$this->datatables->from('pelanggan');
-		$this->datatables->add_column('action', anchor(site_url('pelanggan/read/$1'), '<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>') . "  " . anchor(site_url('pelanggan/update/$1'), '<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>') . "  " . anchor(site_url('pelanggan/delete/$1'), '<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_pelanggan');
-		return $this->datatables->generate();
+
+		if ($level=='manager'){
+			$this->datatables->add_column('action', anchor(site_url('pelanggan/read/$1'), '<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>'), 'id_pelanggan');
+		}
+		else {$this->datatables->add_column('action', anchor(site_url('pelanggan/read/$1'), '<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>') . "  " . anchor(site_url('pelanggan/update/$1'), '<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>') . "  " . anchor(site_url('pelanggan/delete/$1'), '<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>', 'onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_pelanggan');
+		}
+			return $this->datatables->generate();
 	}
 
 	// Menampilkan semua data 

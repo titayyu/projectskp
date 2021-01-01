@@ -39,8 +39,10 @@ class Gallery extends CI_Controller
     
 	// Fungsi JSON
     public function json() {
+		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
+
         header('Content-Type: application/json');
-        echo $this->Gallery_model->json();
+        echo $this->Gallery_model->json($rowAdm->level);
     }
 	
 	// Fungsi untuk menampilkan halaman gallery secara detail

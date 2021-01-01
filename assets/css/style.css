@@ -242,7 +242,7 @@ nav.navbar.navbar-default {
     letter-spacing: 3px;
 }
 .w3ls_banner_section h2 span{
-	color: #008080;
+	color: #ffffff;
 }
 .w3ls_banner_section p{
     color: #f5af02;
@@ -2634,6 +2634,15 @@ ul.top-links li {
 	.right-w3-2 {
 		float: right;
 		width: 83%;
+	}
+	.table1 {
+		font-family: sans-serif;
+		color: #232323;
+		border-collapse: collapse;
+	}
+	.table1, th, td {
+		border: 1px solid #999;
+		padding: 8px 20px;
 	}
 }
 /*-- //Responsive--*/

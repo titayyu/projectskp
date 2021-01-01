@@ -24,12 +24,18 @@ class Kontak_model extends CI_Model
 
     // datatables
     function json() {
+        $level=$_SESSION['level'];
         $this->datatables->select('id_kontak,nama,email,telp,pesan');
         $this->datatables->from('kontak');
         //add this line for join
         //$this->datatables->join('table2', 'kontak.field = table2.field');
+        
+        if ($level=='manager'){
+       $this->datatables->add_column('action', '-', 'id_kontak');
+        } else {
         $this->datatables->add_column('action', anchor(site_url('kontak/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_kontak');
-		return $this->datatables->generate();
+        }
+       return $this->datatables->generate();
     }
 
    

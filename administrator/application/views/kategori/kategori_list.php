@@ -26,7 +26,8 @@
                 </div>
             </div>
             <div class="col-md-4 text-right">
-                <?php echo anchor(site_url('kategori/create'), 'Create', 'class="btn btn-primary"'); ?>
+
+                <?php if($_SESSION['level'] == 'manager'){}else{echo anchor(site_url('kategori/create'), 'Create', 'class="btn btn-primary"');} ?>
 	    </div>
         </div>
         <table class="table table-bordered table-striped" id="mytable">
@@ -36,7 +37,8 @@
                     <th>ID Kategori</th>		    
                     <th>Nama Kategori</th>	
                     <th width="200px">Action</th>	  
-                </tr>
+                    
+                    </tr>
             </thead>
 	    
         </table>
@@ -84,6 +86,7 @@
                         {"data": "nama_kategori"},						
 						
                         {
+                            
                             "data" : "action",
                             "orderable": false,
                             "className" : "text-center"

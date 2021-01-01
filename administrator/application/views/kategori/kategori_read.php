@@ -1,19 +1,8 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Detail kategori</title>
-        <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
-        <style>
-            body{
-                padding: 15px;
-            }
-        </style>
-    </head>
-    <body>
+
         <h2 style="margin-top:0px">Kategori Read</h2>
 		
 		
-		 <a href="<?php echo site_url('kategori/update/'.$id_kategori) ?>" class="btn btn-primary">Update</a>
+		 <?php if($_SESSION['level'] == 'manager'){}else{echo site_url('kategori/update/'.$id_kategori); }?>
 		 
 		 <a href="<?php echo site_url('kategori') ?>" class="btn btn-warning">Cancel</a>
 		 
@@ -22,5 +11,3 @@
 	    <tr><td>Nama Kategori</td><td><?php echo $nama_kategori; ?></td></tr>
 	    <tr><td></td><td><a href="<?php echo site_url('kategori') ?>" class="btn btn-default">Cancel</a></td></tr>
 	</table>
-        </body>
-</html>

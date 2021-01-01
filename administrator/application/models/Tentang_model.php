@@ -17,11 +17,16 @@ class Tentang_model extends CI_Model
     }
 
     // datatables
-    function json() {
+    function json($level) {
         $this->datatables->select("id_tentang,judul_tentang, IF(aktif = 'Y', 'Aktif', 'Tidak') as status");
-        $this->datatables->from('tentang');        
+        $this->datatables->from('tentang');    
+        if ($level=='manager'){
+            $this->datatables->add_column('action', '-', 'id_tentang');
+		}
+    else {    
         $this->datatables->add_column('action', anchor(site_url('tentang/aktif_action/$1'),'<button type="button" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i></button>')." ".anchor(site_url('tentang/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('tentang/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_tentang');
-		return $this->datatables->generate();
+    }
+        return $this->datatables->generate();
     }
 
    

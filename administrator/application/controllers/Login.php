@@ -62,7 +62,10 @@ class Login extends CI_Controller {
         if($sess_data['level'] == 'admin'){
 			$this->session->set_flashdata('success', 'Login Berhasil !');
 			redirect(base_url('admin'));
-		}
+		}else if($sess_data['level'] == 'manager'){
+      $this->session->set_flashdata('success', 'Login Manager Berhasil');
+      redirect(base_url('manager'));
+    }
 		else{
 			$this->session->set_flashdata('result_login', '<br>Username atau Password yang anda masukkan salah.');
 			redirect(base_url('login'));

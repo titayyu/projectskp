@@ -78,7 +78,7 @@
                   <small>
 					<?php 
 						// Menampilkan nama tita jaya
-						echo $univ; 
+						echo $tita_jaya; 
 					?>
 				  </small>
                 </p>
@@ -99,9 +99,7 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="users" class="btn btn-default btn-flat">Profile</a>
-                </div>
+                
                 <div class="pull-right">
                   <a href="admin/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
@@ -132,7 +130,7 @@
          <li class="header">MENU ADMINISTRATOR</li>
 		<?php
             // Data main menu
-            $main_menu = $this->db->get_where('menu', array('main_menu' => 0));
+            $main_menu = $this->db->get_where('menu', array('main_menu' => 0, 'level' =>$level));
             foreach ($main_menu->result() as $main) {
                 // Query untuk mencari data sub menu
                 $sub_menu = $this->db->get_where('menu', array('main_menu' => $main->id_menu));

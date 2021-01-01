@@ -18,11 +18,16 @@ class Gallery_model extends CI_Model
     }
 
     // Tabel data dengan nama gallery
-    function json() {
+    function json($level) {
         $this->datatables->select('id_gallery,judul_gallery,gambar,aktif');
         $this->datatables->from('gallery');
+        if ($level=='manager'){
+            $this->datatables->add_column('action', '-', 'id_tentang');
+		}
+    else { 
         $this->datatables->add_column('action', anchor(site_url('gallery/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('gallery/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_gallery');
-		return $this->datatables->generate();
+    }
+        return $this->datatables->generate();
     }
 
    

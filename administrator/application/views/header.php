@@ -23,9 +23,10 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js' defer></script> -->
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css'/>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -78,7 +79,7 @@
                   <small>
 					<?php 
 						// Menampilkan nama tita jaya
-						echo $univ; 
+						echo $tita_jaya; 
 					?>
 				  </small>
                 </p>
@@ -99,9 +100,7 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="users" class="btn btn-default btn-flat">Profile</a>
-                </div>
+                
                 <div class="pull-right">
                   <a href="admin/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
@@ -132,7 +131,7 @@
         <li class="header">MENU ADMINISTRATOR</li>
 		<?php
             // Data main menu
-            $main_menu = $this->db->get_where('menu', array('main_menu' => 0));
+            $main_menu = $this->db->get_where('menu', array('main_menu' => 0, 'level' =>$level));
             foreach ($main_menu->result() as $main) {
                 // Query untuk mencari data sub menu
                 $sub_menu = $this->db->get_where('menu', array('main_menu' => $main->id_menu));

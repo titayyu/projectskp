@@ -1,0 +1,9 @@
+login 
+
+admin
+username: admin
+pass: admin
+
+manager
+username: manager
+pass: admin

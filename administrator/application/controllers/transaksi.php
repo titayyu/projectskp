@@ -8,8 +8,13 @@ class Transaksi extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Transaksi_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
+		$this->load->model('Produk_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
+		$this->load->model('Pelanggan_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
+		$this->load->model('Detail_Transaksi_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
+		$this->load->model('SalesTrend_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada transaksi
-		$this->load->library('session');
+		$this->load->library('cart');
+		$this->load->library('session'); //memanggil session untuk menyimpan data sementara
 		$this->load->library('form_validation'); // Memanggil form_validation yang terdapat pada library
 		$this->load->helper(array('form', 'url')); // Memanggil form dan url yang terdapat pada helper
 		$this->load->library('upload'); // Memanggil upload yang terdapat pada helper
@@ -18,6 +23,26 @@ class Transaksi extends CI_Controller
 
 	// Fungsi untuk menampilkan halaman utama transaksi
 	public function index()
+	{		
+		if (!isset($this->session->userdata['username'])) {
+			redirect(base_url("login"));
+		}
+
+		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
+		$dataAdm = array(
+			'wa'       => 'Web administrator',
+			'tita_jaya' => 'Tita Jaya',
+			'username' => $rowAdm->username,
+			'email'    => $rowAdm->email,
+			'level'    => $rowAdm->level,
+		);
+
+		$this->load->view('header_list', $dataAdm); 
+		$this->load->view('transaksi/transaksi_list');
+		$this->load->view('footer_list');
+	}
+
+	public function cetak($id)
 	{
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
 		if (!isset($this->session->userdata['username'])) {
@@ -34,16 +59,26 @@ class Transaksi extends CI_Controller
 			'level'    => $rowAdm->level,
 		);
 
+		$produk = $this->Transaksi_model->get_list_produk_transaksi_id($id);
+		$pelanggan = $this->Transaksi_model->get_pelanggan_info_by_transaksi_id($id);
+
+		$data = array(
+			'produk' => $produk,
+			'pelanggan' => $pelanggan,
+		);
+
 		$this->load->view('header_list', $dataAdm); // Menampilkan bagian header dan object data users 
-		$this->load->view('transaksi/transaksi_list');
+		$this->load->view('transaksi/transaksi_invoice', $data);
 		$this->load->view('footer_list'); // Menampilkan bagian footer
 	}
 
 	// Fungsi JSON
 	public function json()
 	{
+		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
+
 		header('Content-Type: application/json');
-		echo $this->Transaksi_model->json();
+		echo $this->Transaksi_model->json($rowAdm->level);
 	}
 
 	// Fungsi untuk menampilkan halaman transaksi secara detail
@@ -95,6 +130,9 @@ class Transaksi extends CI_Controller
 			redirect(base_url("login"));
 		}
 
+		//menampilkan data session berisi rincian transaksi
+		$rincian = $this->session->userdata('rincian');
+
 		// Menampilkan data berdasarkan id-nya yaitu username
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(
@@ -105,12 +143,15 @@ class Transaksi extends CI_Controller
 			'level'    => $rowAdm->level,
 		);
 
-		
-		$dataTransaksiBarang = array(
-			'id_produk' => set_value('id_produk'),
-			'jumlah' => set_value('jumlah'),
-			'total' => set_value('total'),
-		);
+		// $detail_transaksi = $this->Transaksi_model->get_transaksi();	
+		$pelanggan = $this->Pelanggan_model->get_all();
+		$produk = $this->Produk_model->get_all();
+		// echo json_encode($detail_transaksi);die;	
+		// $dataTransaksiBarang = array(
+		// 	'id_produk' => set_value('id_produk'),
+		// 	'jumlah' => set_value('jumlah'),
+		// 	'total' => set_value('total'),
+		// );
 		// $this->session->barang_transaksi($dataTransaksiBarang);
 		
 		$data = array(
@@ -121,13 +162,62 @@ class Transaksi extends CI_Controller
 			'id_pelanggan' => set_value('id_pelanggan'),
 			'id_produk' => set_value('id_produk'),
 			'tanggal' => set_value('tanggal'),
+			'transaksi' => $rincian,
+			'pelanggan' => $pelanggan,
+			'produk' => $produk,
 		);
+		$this->db->select_max('id_transaksi');
+		$data['b'] = $this->db->get('transaksi');
+		if($data['b']->num_rows() == ''){
+			$data['a'] = 1;
+		}
+		else{
+			$data['a'] = intval($data['b']->row_array()['id_transaksi']) + 1;
+		}
+
+		$data['uuid'] = sprintf('%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+        mt_rand(0, 0xffff), mt_rand(0, 0xffff),
+        mt_rand(0, 0xffff),
+        mt_rand(0, 0x0fff) | 0x4000,
+        mt_rand(0, 0x3fff) | 0x8000,
+        mt_rand(0, 0xffff), mt_rand(0, 0xffff), mt_rand(0, 0xffff)
+    );
 
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
 		$this->load->view('transaksi/transaksi_form', $data); // Menampilkan halaman form transaksi
-		$this->load->view('footer'); // Menampilkan bagian footer
+		// $this->load->view('footer'); // Menampilkan bagian footer
 	}
 
+
+	function tambah_rincian(){
+		// var_dump($_POST);
+		// exit();
+		//id detail transaksi
+		$id = $this->input->post('id');
+		//deskripsi
+		$deskripsi = $this->input->post('deskripsi');
+		$produk = $this->input->post('produk');
+		$qty = $this->input->post('qty');
+		$ukuran = $this->input->post('ukuran');
+		$harga = $this->input->post('harga');
+		$total = $this->input->post('total');
+
+		$data = array('id'=> $id, 'deskripsi' => $deskripsi, 'name'=>$produk, 'ukuran' =>$ukuran, 'qty' => $qty,'price'=>$harga, 'total' => $total);
+		$list_detail_transaksi = array($data);
+		//simpan data rincian ke dalam session
+		$rincian_sementara = $this->cart->insert($list_detail_transaksi);
+
+		
+		if($rincian_sementara){
+			$return = 1;
+		}
+		else{
+			$return = 0;
+		}
+		echo json_encode($return);
+	}
+
+	
 	public function create_action()
 	{
 		// Jika session data username tidak ada maka akan dialihkan kehalaman login			
@@ -151,45 +241,35 @@ class Transaksi extends CI_Controller
 		if ($this->form_validation->run() == FALSE) {
 			$this->create();
 		} else {
-
-			// konfigurasi untuk melakukan upload photo
-			$config['upload_path']   = '../images/';    //path folder image
-			$config['allowed_types'] = 'jpg|png|jpeg'; //type yang dapat diupload jpg|png|jpeg			
-			$config['file_name']     = url_title($this->input->post('')); //nama file photo dirubah menjadi nama berdasarkan nidn	
-			$this->upload->initialize($config);
-
-			// Jika file photo ada 
-			if (!empty($_FILES['photo']['name'])) {
-
-				if ($this->upload->do_upload('photo')) {
-					$photo = $this->upload->data();
-					$dataphoto = $photo['file_name'];
-					$this->load->library('upload', $config);
-
-					$data = array(
-						'nama_model' => $this->input->post('nama_model', TRUE),
-						'photo' => $dataphoto,
-					);
-
-					$this->Transaksi_model->insert($data);
+				//-------------------------Input data transaksi--------------------------
+				$id_transaksi = $this->input->post('id_transaksi');
+				$data_transaksi = array('id_transaksi' => $this->input->post('id_transaksi'),
+				'id_pelanggan' => $this->input->post('pelanggan'),
+				'tanggal' => $this->input->post('tanggal'));
+				$transaksi =  $this->Transaksi_model->insert($data_transaksi);
+				//-------------------------Input data detail transaksi-----------------------
+				if ($cart = $this->cart->contents())
+				{
+					foreach ($cart as $item)
+				{
+				$data_detail = array('id_transaksi' =>$id_transaksi,
+							'id_detail_transaksi' => $item['id'],
+							'id_produk' => $item['name'],
+							'quantity' => $item['qty'],
+							'deskripsi_transaksi' => $item['deskripsi'],
+							'ukuran' => $item['ukuran'],
+							'harga' => $item['price'],
+							'total' => $item['subtotal']);
+				$proses = $this->Detail_Transaksi_model->insert($data_detail);
 				}
-
-				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('transaksi'));
+				}
+				//-------------------------Hapus shopping cart--------------------------
+				$this->cart->destroy();
+				redirect(site_url("transaksi"));
 			}
-			// Jika file photo kosong 
-			else {
-
-				$data = array(
-					'nama_model' => $this->input->post('nama_model', TRUE),
-				);
-
-				$this->Model_model->insert($data);
-				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('model'));
-			}
+			
 		}
-	}
+	
 
 	public function update($id)
 	{
@@ -297,6 +377,35 @@ class Transaksi extends CI_Controller
 		}
 	}
 
+	public function analisa()
+	{
+		if (!isset($this->session->userdata['username'])) {
+			redirect(base_url("login"));
+		}
+
+		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
+		$dataAdm = array(
+			'wa'       => 'Web administrator',
+			'tita_jaya' => 'Tita Jaya',
+			'username' => $rowAdm->username,
+			'email'    => $rowAdm->email,
+			'level'    => $rowAdm->level,
+		);
+		$sales_trend = $this->SalesTrend_model->getByYears(); 
+
+		$callback = function ($value) {
+			return array('y' => $value['jumlah_transaksi'],'label' => $value['tanggal']);
+		  };
+		$arr = array_map( $callback, $sales_trend);
+
+		$data = array("sales_trend"=> $arr);
+
+
+		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
+			$this->load->view('transaksi/transaksi_analisa',$data); // Menampilkan form transaksi
+			$this->load->view('footer'); // Menampilkan bagian footer
+	}
+
 	// Fungsi untuk melakukan aksi delete data berdasarkan id yang dipilih
 	public function delete($id)
 	{
@@ -327,9 +436,15 @@ class Transaksi extends CI_Controller
 
 	public function currentdir()
 	{
-		$isRunning = exec('py -m notebook', $output);
-		echo $isRunning;
-		return $output;
+//		$isRunning = exec('py -m notebook', $output);
+//		echo $isRunning;
+//		return $output;
+//		$command = escapeshellcmd('C:/Users/TITAAYU/PERCOBAAN TERAKHIR.ipynb');
+//		$output = shell_exec($command);
+//		echo $output;
+$lines = file('E:\SKRIPSI TITA\clustering\RFM_CUY.txt');
+foreach ($lines as $line_nim=>$line){
+print" " . $line . "<br />\n";}
 		// return $tita;
 	} 
 

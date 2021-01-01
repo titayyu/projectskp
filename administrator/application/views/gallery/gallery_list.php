@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-md-4 text-right">
-                <?php echo anchor(site_url('gallery/create'), 'Create', 'class="btn btn-primary"'); ?>
+            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), 'Create', 'class="btn btn-primary"'); }?>
 	    </div>
         </div>
         <table class="table table-bordered table-striped" id="mytable">

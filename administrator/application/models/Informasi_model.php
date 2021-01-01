@@ -19,14 +19,19 @@ class Informasi_model extends CI_Model
     }
 
     // Tabel data dengan nama informasi
-    function json() {
+    function json($level) {
         $this->datatables->select("i.id_informasi,i.judul_informasi, DATE_FORMAT(i.tanggal,'%d %M %Y') as tanggal,IF(i.aktif = 'Y', 'Ya', 'Tidak') as aktif, k.nama_kategori");
         $this->datatables->from('informasi as i');   
 		 //add this line for join
         $this->datatables->join('kategori as k','k.id_kategori= i.id_kategori');
         //$this->datatables->add_column('action', anchor(site_url('informasi/read/$1'),'Read')." | ".anchor(site_url('informasi/update/$1'),'Update')." | ".anchor(site_url('informasi/delete/$1'),'Delete','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_informasi');
-        $this->datatables->add_column('action', anchor(site_url('informasi/read/$1'), '<button type="button" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i></button>') . "  " . anchor(site_url('informasi/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('informasi/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_informasi');
-		return $this->datatables->generate();
+        if ($level=='manager'){
+            $this->datatables->add_column('action', '-', 'id_informasi');
+		}
+        else{
+            $this->datatables->add_column('action', anchor(site_url('informasi/update/$1'),'<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>')."  ".anchor(site_url('informasi/delete/$1'),'<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'), 'id_informasi');
+        }
+        return $this->datatables->generate();
     }
 
    

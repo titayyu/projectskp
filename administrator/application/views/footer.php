@@ -29,11 +29,11 @@
 	<script src="<?php echo base_url('assets/bower_components/fastclick/lib/fastclick.js') ?>"></script>
 	<!-- AdminLTE App -->
 	<script src="<?php echo base_url('assets/js/adminlte.min.js') ?>"></script>
-	<!-- AdminLTE for demo purposes -->
-	<script src="<?php echo base_url('assets/js/demo.js') ?>"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js' defer></script>
 	<script>
 	  $(document).ready(function () {
-		$('.sidebar-menu').tree()
+		$('.sidebar-menu').tree();
+		$('#analisaTable').DataTable();
 	  })
 	</script>
 	</body>
