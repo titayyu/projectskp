@@ -1,7 +1,7 @@
 
 <section class="content-header">
       <h1>
-        E-KINERJA
+        E-KINERJA SKP
         <small>Politeknik Negeri Pangkajene Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
