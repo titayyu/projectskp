@@ -220,7 +220,7 @@
 				</div>
 				<!-- /.col -->
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Transaksi</span></h4>
+				  <h4 class="text-center"><span class="info-box-text">SKP</span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('transaksi') ?>"><center><i class="fa fa-print" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
@@ -260,7 +260,7 @@
 				</div>
 				<!-- /.col -->
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Gallery</span></h4>
+				  <h4 class="text-center"><span class="info-box-text">Persetujuan SKP</span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('gallery') ?>"><center><i class="fa fa-photo" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>

@@ -33,29 +33,33 @@
             <thead>
                 <tr>
                     <th class="col-md-1"><center>No</th>
-                    <th><center>Periode</th>	
+                    <th><center>Periode</th>
+                    <th><center>Keterangan</th>		
 					<th class="col-md-2"><center>Action</th>
                 </tr>
             </thead>
             <thead class="">
                       <td class="col-md-1"><center>1</td>
                       <td><center>2019</td>
+                      <td><center>Tidak Aktif</td>
                       <td class="col-md-2"><center>
-                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-primary"'); ?>
+                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
                       </td>
             </thead>
             <thead class="">
                       <td class="col-md-1"><center>2</td>
                       <td><center>2020</td>
-                      <td class="col-md-2"><center>
-                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-primary"'); ?>
+                      <td><center>Tidak Aktif</td>
+                     <td class="col-md-2"><center>
+                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
                       </td>
           </thead>
           <thead class="">
                       <td><center>3</td>
                       <td><center>2021</td>
+                      <td><center>Aktif</td>
                       <td class="col-md-2"><center>
-                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-warning"'); ?>
+                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
                       </td>
           </thead>	    
         </table>

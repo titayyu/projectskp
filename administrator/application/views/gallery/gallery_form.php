@@ -14,7 +14,6 @@
 
       <!-- Default box -->
       <div class="box">        
-        <div class="box-body">
 		
 		<div class="box-body">
             <label class="col-sm-2" for="char">Pegawai</label>
@@ -175,18 +174,8 @@
     </div>
     
     <div class="box-body">
-        <div class="pull-right">
-	    <a href="<?php echo site_url('gallery') ?>" class="btn btn-primary">Setujui</a>
-
+	    <center><a href="<?php echo site_url('gallery') ?>" class="btn btn-primary">Approve</a>
         </div>
-    </div>
-
-    <div class="box-body">
-        <div class="">
-            <div class="col-sm-13">
-                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
-                value="Belum Disetujui" readonly/>
-                </div> 
     </div>
 	</form>				
     </body>
