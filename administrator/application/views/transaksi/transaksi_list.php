@@ -39,44 +39,20 @@
             </thead>
             <thead class="">
                       <td><center>1</td>
-                      <td><center>2015</td>
-                      <td class="col-md-2"><center>
-                          <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-eye"></i></a>  
-                      </td>
-                      <thead class="">
-                      <td><center>2</td>
-                      <td><center>2016</td>
-                      <td class="col-md-2"><center>
-                          <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-eye"></i></a>  
-                      </td>
-            <thead class="">
-                      <td><center>3</td>
-                      <td><center>2017</td>
-                      <td class="col-md-2"><center>
-                          <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-eye"></i></a>  
-                      </td>
-            <thead class="">
-                      <td><center>4</td>
-                      <td><center>2018</td>
-                      <td class="col-md-2"><center>
-                          <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-eye"></i></a>  
-                      </td>
-            <thead class="">
-                      <td><center>5</td>
                       <td><center>2019</td>
                       <td class="col-md-2"><center>
                           <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-eye"></i></a>  
                       </td>
             </thead>
             <thead class="">
-                      <td><center>6</td>
+                      <td><center>2</td>
                       <td><center>2020</td>
                       <td class="col-md-2"><center>
                           <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-eye"></i></a>  
                       </td>
           </thead>
           <thead class="">
-                      <td><center>7</td>
+                      <td><center>3</td>
                       <td><center>2021</td>
                       <td class="col-md-2"><center>
                         <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-danger"'); ?>
