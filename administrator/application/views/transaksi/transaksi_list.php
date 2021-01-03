@@ -1,12 +1,12 @@
 
 <section class="content-header">
       <h1>
-        E-KINERJA SKP UHUY2
+        E-KINERJA
         <small>Politeknik Negeri Pangkajene Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Transaksi</li>
+        <li class="active">Periode SKP</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -19,7 +19,7 @@
 		<!-- Tampil Data transaksi -->
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
-                <h2 style="margin-top:0px">Transaksi </h2>
+                <h2 style="margin-top:0px">Periode SKP</h2>
             </div>
             <div class="col-md-4 text-center">
                 <div style="margin-top: 4px"  id="message">
