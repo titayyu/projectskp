@@ -3,7 +3,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 // Deklarasi pembuatan class Fasilitas_model
-class Fasilitas_model extends CI_Model
+class Rekap_model extends CI_Model
 {
    
    // bagian properti   
