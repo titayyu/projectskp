@@ -275,7 +275,7 @@
         </div>
 			<!-- /.box-body -->
 			<div class="box-footer">
-				<center>E-KINERJA <a href="http://www.polipangkep.ac.id"><strong>Polipangkep</strong></a> - 2020</center>
+				<center>E-Kinerja <a href="http://www.polipangkep.ac.id"><strong>Polipangkep</strong></a> - 2021</center>
 			</div>
 			<!-- /.box-footer-->
 		  </div>
@@ -289,7 +289,7 @@
 		<div class="pull-right hidden-xs">
 		  <b>Version</b> 2.4.0
 		</div>
-		<strong>Copyright &copy; 2020 <a href="https://adminlte.io">Politeknik Negeri Pangkajene Kepulauan</a>.</strong> All rights
+		<strong>Copyright &copy; 2021 <a href="https://adminlte.io">Politeknik Negeri Pangkajene Kepulauan</a>.</strong> All rights
 		reserved.
 	  </footer>  
 	</div>
