@@ -163,15 +163,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        HALO..
+        HALO
 		<?php
 			echo strtoupper($username); 
-		?>
-		SELAMAT DATANG DI 
-		<?php		
-      echo strtoupper($tita_jaya);
-      
-		?>		        
+		?>,
+		SELAMAT DATANG!		        
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>        
@@ -273,7 +269,7 @@
 		  </div>        
         <!-- /.box-body -->
         <div class="box-footer">
-         <center>E-KINERJA APPLICATION <a href="http://www.titajaya.co.id"><strong>Tita Ayu</strong></a> - 2019</center>
+         <center>E-Kinerja <a href="http://www.titajaya.co.id"><strong>Polipangkep</strong></a> - 2021</center>
         </div>
         <!-- /.box-footer-->
       </div>
@@ -288,7 +284,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2019 <a href="https://adminlte.io">Tita Ayu</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Politeknik Negeri Pangkajene Kepulauan</a>.</strong> All rights
     reserved.
   </footer>
 
