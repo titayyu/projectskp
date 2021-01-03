@@ -31,7 +31,7 @@
 <div class="login-box">
   <div class="login-logo">
     <a href="index.php"><b>E-KINERJA</b></a>
-    <h4>Politeknik Negeri Pangkajenne Kepulauan</h4>
+    <h4>Politeknik Negeri Pangkajene Kepulauan</h4>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
