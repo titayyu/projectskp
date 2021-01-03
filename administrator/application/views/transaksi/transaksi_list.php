@@ -34,8 +34,8 @@
                 <tr>
                     <th width="80px">No</th>
                     <th>Tahun Akademik</th>	
-                    <th>Keterangan</th>	
-                    <th>Tanggal</th>
+                    <!--<th>Keterangan</th>	
+                    <th>Tanggal</th>-->
 					<th width="200px">Action</th>
                 </tr>
             </thead>
