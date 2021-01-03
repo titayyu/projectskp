@@ -190,13 +190,7 @@
     </div>
     
     <div class="box-body">
-           <center><button type="submit" class="btn btn-success">Submit</button> 
-
-    <div class="box-body">
-        <div class="">
-            <div class="col-sm-13">
-            <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" value="Belum Diajukan" readonly/>
-            </div> 
+           <center><button type="submit" class="btn btn-primary">Submit</button> 
     </div>
 	</form>
 
