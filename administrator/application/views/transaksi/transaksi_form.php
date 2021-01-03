@@ -149,8 +149,7 @@
                 </thead>
         </tbody>
 		</table>
-        <div class="pull-left"><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new"> Tambah</a></div>
-        </div>
+        <a class="btn btn-social-icon btn-primary" data-toggle="modal" data-target="#modal_add_new"><i class="fa fa-plus"></i></a></div>
         </div>          
 
     <!-- Tabel tugas tambahan -->       
@@ -187,25 +186,17 @@
                       </td>
                 </thead>
         </table>
-
-        <div class="pull-left">
-        <div class="pull-left"><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new"> Tambah</a></div>
-        </div>
+        <a class="btn btn-social-icon btn-primary" data-toggle="modal" data-target="#modal_add_new"><i class="fa fa-plus"></i></a></div>
     </div>
     
     <div class="box-body">
-        <div class="pull-right">
-	       <button type="submit" class="btn btn-primary">Simpan</button>
-           <button type="submit" class="btn btn-success">Ajukan</button> 
-        </div>
-    </div>
+           <center><button type="submit" class="btn btn-success">Submit</button> 
 
     <div class="box-body">
         <div class="">
             <div class="col-sm-13">
-                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
-                value="Belum Diajukan" readonly/>
-                </div> 
+            <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" value="Belum Diajukan" readonly/>
+            </div> 
     </div>
 	</form>
 
@@ -217,7 +208,7 @@
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                <h3 class="modal-title" id="myModalLabel">Tambah Tugas Tambahan</h3>
+                <h3 class="modal-title" id="myModalLabel">Tambah Tugas Jabatan</h3>
             </div>
             <form class="form-horizontal" method="POST">
                 <div class="modal-body">
