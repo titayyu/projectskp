@@ -1,4 +1,3 @@
-
 <section class="content-header">
       <h1>
         E-KINERJA
@@ -19,7 +18,7 @@
 		<!-- Tampil Data transaksi -->
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
-                <h4 style="margin-top:0px">Periode SKP</h4>
+                <!--<h4 style="margin-top:0px">Periode SKP</h4>-->
             </div>
             <div class="col-md-4 text-center">
                 <div style="margin-top: 4px"  id="message">
