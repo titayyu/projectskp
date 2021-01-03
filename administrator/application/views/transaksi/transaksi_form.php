@@ -190,8 +190,7 @@
     </div>
     
     <div class="box-body">
-           <center><button type="submit" class="btn btn-primary">Submit</button> 
-    </div>
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
 	</form>
 
 
@@ -202,14 +201,14 @@
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                <h3 class="modal-title" id="myModalLabel">Tambah Tugas Jabatan</h3>
+                <h3 class="modal-title" id="myModalLabel">Tambah Tugas Tambahan</h3>
             </div>
             <form class="form-horizontal" method="POST">
                 <div class="modal-body">
                      
                      <div class="form-group">
                         <label class="col-xs-3">Kegiatan</label>
-                        <div class="col-xs-8">
+                        <div class="col-xs-9">
                             <input id="deskripsi_transaksi" name="deskripsi_transaksi" class="form-control" type="text" placeholder="Kegiatan..." required>
                             <?php echo form_error('produk'); ?>
                         </div>
@@ -217,7 +216,7 @@
                     
                     <div class="form-group">
                         <label class="col-xs-3">Deskripsi</label>
-                        <div class="col-xs-8">
+                        <div class="col-xs-9">
                             <input id="deskripsi_transaksi" name="deskripsi_transaksi" class="form-control" type="text" placeholder="Deskripsi kegiatan..." required>
                             <?php echo form_error('deskripsi_transaksi'); ?>
                         </div>
@@ -225,7 +224,7 @@
 
                     <div class="form-group">
                         <label class="col-xs-3" >Angka Kredit</label>
-                        <div class="col-xs-8">
+                        <div class="col-xs-9">
                             <input id="quantity" name="quantity" class="form-control" type="text" placeholder="Angka kredit..." required>
                             <?php echo form_error('quantity'); ?>
                         </div>
@@ -233,7 +232,7 @@
 
                     <div class="form-group">
                         <label class="col-xs-3" >Kuantitas/Output</label>
-                        <div class="col-xs-8">
+                        <div class="col-xs-9">
                             <input id="quantity" name="quantity" class="form-control" type="text" placeholder="Kuantitas..." required>
                             <?php echo form_error('quantity'); ?>
                         </div>
@@ -241,7 +240,7 @@
  
                     <div class="form-group">
                         <label class="col-xs-3" >Kualitas/Mutu</label>
-                        <div class="col-xs-8">
+                        <div class="col-xs-9">
                             <input id="ukuran" name="ukuran" class="form-control" type="text" placeholder="Kualitas..." required>
                             <?php echo form_error('ukuran'); ?>
                         </div>
@@ -249,22 +248,19 @@
 
                     <div class="form-group">
                         <label class="col-xs-3" >Waktu</label>
-                        <div class="col-xs-8">
+                        <div class="col-xs-9">
                             <input id="harga" name="harga" class="form-control" type="text" placeholder="Waktu..." required>
                             <?php echo form_error('harga'); ?>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-xs-3" >Biaya</label>
-                        <div class="col-xs-8">
+                        <div class="col-xs-9">
                             <input id="harga" name="harga" class="form-control" type="text" placeholder="Biaya..." required>
                             <?php echo form_error('harga'); ?>
-                        </div>
-                    </div>
-                </div>
- 
+                        </div></div></div>
                 <div class="modal-footer">
-                    <button class="btn btn-info" id="simpan" aria-hidden="true">Simpan</button>
+                    <button class="btn btn-primary" id="simpan" aria-hidden="true">Simpan</button>
                 </div>
             </form>
             </div>
