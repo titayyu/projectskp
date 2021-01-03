@@ -41,7 +41,7 @@
                       <td><center>Jayadi Pebwanartha, S.Si</td>
                       <td><center>Disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), 'Create', 'class="btn btn-primary"'); }?>
+            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-primary"'); }?>
                       </td>
             </thead>
             
@@ -50,7 +50,7 @@
                       <td><center>Siti Marufah, S.Pd</td>
                       <td><center>Disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), 'Create', 'class="btn btn-primary"'); }?>
+            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-primary"'); }?>
                       </td>
             </thead>
 
@@ -59,7 +59,7 @@
                       <td><center>Abyan Nandana, M.SI</td>
                       <td><center>Belum disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), 'Create', 'class="btn btn-primary"'); }?>
+            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-danger"'); }?>
                       </td>
             </thead>      
         </table>
