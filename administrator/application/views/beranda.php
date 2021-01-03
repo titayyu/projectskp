@@ -40,9 +40,9 @@
     <!-- Logo -->
     <a href="admin" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>Tita</b>Jaya</span>
+      <span class="logo-mini"><b>POLI</b>PANGKEP</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>CRM</b></span>
+      <span class="logo-lg"><b>E-KINERJA</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -273,7 +273,7 @@
 		  </div>        
         <!-- /.box-body -->
         <div class="box-footer">
-         <center>CRM Application <a href="http://www.titajaya.co.id"><strong>Tita Ayu</strong></a> - 2019</center>
+         <center>E-KINERJA APPLICATION <a href="http://www.titajaya.co.id"><strong>Tita Ayu</strong></a> - 2019</center>
         </div>
         <!-- /.box-footer-->
       </div>
