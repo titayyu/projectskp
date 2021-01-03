@@ -1,7 +1,7 @@
 	</div>
 			<!-- /.box-body -->
 			<div class="box-footer">
-				<center>E-Kinerja<a href="http://www.titajaya.co.id"><strong>Polipangkep</strong></a> - 2019</center>
+				<center>E-Kinerja <a href="http://www.titajaya.co.id"><strong>Polipangkep</strong></a> - 2021</center>
 			</div>
 			<!-- /.box-footer-->
 		  </div>
