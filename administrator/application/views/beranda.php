@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Politani Pangkep</title>
+  <title>E-Kinerja Polipangkep</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -163,15 +163,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        HALO..
+        HALO
 		<?php
 			echo strtoupper($username); 
-		?>
-		SELAMAT DATANG DI 
-		<?php		
-      echo strtoupper($tita_jaya);
-      
-		?>		        
+		?>,
+		SELAMAT DATANG!		        
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>        
@@ -222,7 +218,7 @@
 				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text">SKP</span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('transaksi') ?>"><center><i class="fa fa-print" style="font-size:48px;color:#3c8dbc"></i><center></a>	
+					<a href="<?php echo site_url('transaksi') ?>"><center><i class="fa fa-th-list" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
         </div>
         	<!-- /.col -->
@@ -262,7 +258,7 @@
 				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text">Persetujuan SKP</span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('gallery') ?>"><center><i class="fa fa-photo" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php echo site_url('gallery') ?>"><center><i class="fa fa-th-list" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 				<!-- /.col -->
@@ -273,7 +269,7 @@
 		  </div>        
         <!-- /.box-body -->
         <div class="box-footer">
-         <center>E-KINERJA APPLICATION <a href="http://www.titajaya.co.id"><strong>Tita Ayu</strong></a> - 2019</center>
+         <center>E-Kinerja <a href="http://www.titajaya.co.id"><strong>Polipangkep</strong></a> - 2021</center>
         </div>
         <!-- /.box-footer-->
       </div>
@@ -288,7 +284,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2019 <a href="https://adminlte.io">Tita Ayu</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Politeknik Negeri Pangkajene Kepulauan</a>.</strong> All rights
     reserved.
   </footer>
 
