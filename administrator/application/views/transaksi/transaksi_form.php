@@ -1,177 +1,296 @@
-
 <section class="content-header">
       <h1>
-        Tita Jaya
-        <small>My Customer My Number One Priority</small>
+        E-KINERJA
+        <small>Politeknik Negeri Pangkajene Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="<?php echo $back ?>">Transaksi</a></li>
-        <li class="active"><?php echo $button ?> Transaksi</li>
+        <li><a href=""><i class="fa fa-dashboard"></i>Home</a></li>
+        <li><a href="<?php echo $back ?>">SKP</a></li>
+        <li class="active">Create SKP</li>
       </ol>
     </section>
+    
     <!-- Main content -->
     <section class="content">
 
-      <!-- Default box -->
-      <div class="box">        
-        <div class="box-body">
-		<!-- Form input dan edit transaksi-->
-		<legend><?php echo $button ?> Transaksi</legend>
+    <!-- Default box -->
+    <div class="box">        
+		<!-- Pegawai dan Pejabat Penilai-->
         <form action="<?php echo $action; ?>" method="post">
 		<input type="hidden" class="form-control" name="id_transaksi" id="id_transaksi"  value="<?php echo $id_transaksi; ?>" />
 
-      <div class="form-group">
-              <label class="col-sm-2" for="char">ID Transaksi</label>
-              <div class="col-sm-4">
-                <input type="text"   class="form-control" name="id_transaksi" id="transaksi_id" placeholder="transaksi_id" 
-                value="<?= $a; ?>" readonly/>
-                <?php echo form_error('id_transaksi'); ?>
-              </div>
+        <div class="box-body">
+            <label class="col-sm-2" for="char">Pegawai</label>
+                <div class="col-sm-4">
+                </div>
 
-        <label class="col-sm-2" for="int">Pelanggan</label>
-			<div class="col-sm-4">
-				<select class="form-control" id="pelanggan" name="pelanggan">
-                    <option>Pilih Pelanggan</option>
-                    <?php foreach($pelanggan as $row)
-                    {
-                    ?>
-                        <option value="<?php echo $row->id_pelanggan?>"><?php echo $row->nama;?></option>
-                    <?php
-                    }?>
-                </select> 
-            </div>
-      </div>
-      <br>
-
-    <div class="form-group">
-            <label for="varchar">Tanggal <?php echo form_error('tanggal') ?></label>
-            <input type="date" class="form-control" name="tanggal" id="tanggal" placeholder="Tanggal" value="<?php echo $tanggal; ?>" />
+            <label class="col-sm-2" for="char">Pejabat Penilai</label>
+                <div class="col-sm-4">
+                </div>
         </div>
-				<div class="pull-right"><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new"> Tambah Rincian</a></div>  
+
+        <div class="box-body">
+            <div class="col-sm-2">Nama</div>           
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Saifuddin, S.Sos.I., M.Pd" readonly/>
+                </div>
+            <div class="col-sm-2">Nama</div>
+			    <div class="col-sm-4">
+				<input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Drs. Subki" readonly/>
+                </div>
+
+            <div class="col-sm-2">NIP</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="196705222001121001" readonly/>
+                </div>
+            <div class="col-sm-2">NIP</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="196808051993031003" readonly/>
+                </div>
+
+            <div class="col-sm-2">Pangkat/Golongan</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Penata / (IIIc)" readonly/>
+                </div>
+            <div class="col-sm-2">Pangkat/Golongan</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Pembina / (IV/a)" readonly/>
+                </div>
+
+            <div class="col-sm-2">Jabatan</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Kasubbag. Organisasi dan Tata Laksana" readonly/>
+                </div>
+            <div class="col-sm-2">Jabatan</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Kabbag. Organisasi dan Kepegawaian" readonly/>
+                </div>
+
+            <div class="col-sm-2">Unit Kerja</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Bagian Organisasi dan Kepegawaian" readonly/>
+                </div>
+            <div class="col-sm-2">Unit Kerja</div>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Biro AUAK Polipangkep" readonly/>
+                </div>
+      </div>
+
+        <!-- Tabel tugas jabatan -->       
+            <div class="box-body">
+            <label class="col-sm-12" for="char">Tugas Jabatan</center></label>
+
+        <div class="box-body">
         <table class="table table-bordered table-striped" id="mytable">
 				<thead>
 					<tr>
-						<th width="80px">No</th>
-						<th>Nama Barang</th>
-						<th>Deskripsi</th>
-                        <th>Quantity</th>
-                        <th>Ukuran</th>
-						<th>Harga</th>
-						<th width="200px">Total</th>
-					</tr>
-        </thead>
-        <tbody id="detail_cart">
-            <?php
-            $no = 1;
-        foreach ($this->cart->contents() as $items) {
-            echo '
-				<tr>
-					<td>'.$no++.'</td>
-                    <td>'.$items['name'].'</td>
-					<td>'.$items['deskripsi'].'</td>
-                    <td>'.$items['qty'].'</td>
-                    <td>'.$items['ukuran'].'</td>
-                    <td>'.$items['price'].'</td>
-					<td>'.$items['subtotal'].'</td>
-                    <td><button type="button" id="'.$items['rowid'].'" class="hapus_cart btn btn-danger btn-xs">Batal</button></td>
-                </tr>
-            ';
-        }
-        echo '<tr>
-                <th colspan="6">Total</th>
-                <th colspan="3">'.'Rp '.number_format($this->cart->total()).'</th>
-            </tr>';
-        ?>
-
+                        <th><center>No</th>
+                        <th><center>Kegiatan</th>
+                        <th><center>Deskripsi</th>
+                        <th><center>AK</th>
+                        <th><center>Kuantitas</th>
+                        <th><center>Kualitas</th>
+                        <th><center>Waktu</th>
+                        <th><center>Biaya</th>
+                        <th><center>Action</th>
+                    </tr>
+                </thead>
+                <thead class="">
+                        <td><center>1</td>
+                        <td><center>RKT</td>
+                        <td><center>Menyusun Rencana Kegiatan Tahunan (RKT)</td>
+                        <td><center>0</td>
+                        <td><center>1 Kegiatan</td>
+                        <td><center>100</td>
+                        <td><center>1 Bulan</td>
+                        <td><center>0</td>
+                        <td class="col-md-2"><center>
+                        <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-pencil"></i></a>  
+                        <a class="btn btn-social-icon btn-danger" href=""><i class="fa fa-remove"></i></a>  
+                      </td>
+                </thead>
+                <thead class="">
+                        <td><center>2</td>
+                        <td><center>RAB</td>
+                        <td><center>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
+                        <td><center>0</td>
+                        <td><center>1 Kegiatan</td>
+                        <td><center>100</td>
+                        <td><center>1 Bulan</td>
+                        <td><center>0</td>
+                        <td class="col-md-2"><center>
+                        <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-pencil"></i></a>  
+                        <a class="btn btn-social-icon btn-danger" href=""><i class="fa fa-remove"></i></a>  
+                      </td>
+                </thead>
+                <thead class="">
+                        <td><center>3</td>
+                        <td><center>Pengusulan SK</td>
+                        <td><center>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
+                        <td><center>0</td>
+                        <td><center>60 Usulan SK</td>
+                        <td><center>100</td>
+                        <td><center>6 Bulan</td>
+                        <td><center>0</td>
+                        <td class="col-md-2"><center>
+                        <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-pencil"></i></a>  
+                        <a class="btn btn-social-icon btn-danger" href=""><i class="fa fa-remove"></i></a>  
+                      </td>
+                </thead>
         </tbody>
+		</table>
+        <div class="pull-left"><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new"> Tambah</a></div>
+        </div>
+        </div>          
 
-			</table>
-        
-	    <button type="submit" class="btn btn-primary">Create</button> 
-	    <a href="<?php echo site_url('transaksi') ?>" class="btn btn-default">Cancel</a>
+    <!-- Tabel tugas tambahan -->       
+            <div class="box-body">
+            <label class="col-sm-12" for="char">Tugas Tambahan</center></label>
+
+        <div class="box-body">
+        <table class="table table-bordered table-striped" id="mytable">
+                <thead>
+                    <tr>
+                        <th><center>No</th>
+                        <th><center>Kegiatan</th>
+                        <th><center>Deskripsi</th>
+                        <th><center>AK</th>
+                        <th><center>Kuantitas</th>
+                        <th><center>Kualitas</th>
+                        <th><center>Waktu</th>
+                        <th><center>Biaya</th>
+                        <th><center>Action</th>
+                    </tr>
+                </thead>
+                <thead class="">
+                        <td><center>1</td>
+                        <td><center>Anggota kegiatan</td>
+                        <td><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        <td class="col-md-2"><center>
+                        <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-pencil"></i></a>  
+                        <a class="btn btn-social-icon btn-danger" href=""><i class="fa fa-remove"></i></a>  
+                      </td>
+                </thead>
+        </table>
+
+        <div class="pull-left">
+        <div class="pull-left"><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new"> Tambah</a></div>
+        </div>
+    </div>
+    
+    <div class="box-body">
+        <div class="pull-right">
+	       <button type="submit" class="btn btn-primary">Simpan</button>
+           <button type="submit" class="btn btn-success">Ajukan</button> 
+        </div>
+    </div>
+
+    <div class="box-body">
+        <div class="">
+            <div class="col-sm-13">
+                <input type="text" class="form-control" name="id_transaksi" id="transaksi_id" placeholder="" 
+                value="Belum Diajukan" readonly/>
+                </div> 
+    </div>
 	</form>
-    <!-- // Form input dan edit transaksi-->  
-		
-		
+
+
+    <!-- // Form input dan edit transaksi-->  	
 			<!-- ============ MODAL ADD BARANG =============== -->
         <div class="modal fade" id="modal_add_new" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                <h3 class="modal-title" id="myModalLabel">Tambah Detail Transaksi</h3>
+                <h3 class="modal-title" id="myModalLabel">Tambah Tugas Tambahan</h3>
             </div>
             <form class="form-horizontal" method="POST">
                 <div class="modal-body">
- 
-                    <div class="form-group">
-                        <!-- <label class="control-label col-xs-3" >ID Detail Transaksi</label> -->
-                        <div class="col-xs-8"> 
-                            <input id="id_detail_transaksi" name="id_detail_transaksi" class="form-control" value="<?=$uuid?>" type="hidden" placeholder="ID Detail Transaksi..." required>
-                            <?php echo form_error('id_detail_transaksi'); ?>
-                        </div>
-                    </div>
+                     
                      <div class="form-group">
-                        <label class="control-label col-xs-3" >Nama Barang</label>
+                        <label class="col-xs-3">Kegiatan</label>
                         <div class="col-xs-8">
-                        <select class="form-control" id="produk" name="produk" required>
-                            <option>Pilih Produk</option>
-                            <?php foreach($produk as $row)
-                            {
-                            ?>
-                                <option value="<?php echo $row->id_produk?>"><?php echo $row->nama_produk;?></option>
-                            <?php
-                            }?>
-                        </select> 
+                            <input id="deskripsi_transaksi" name="deskripsi_transaksi" class="form-control" type="text" placeholder="Kegiatan..." required>
                             <?php echo form_error('produk'); ?>
                         </div>
                     </div>
+                    
                     <div class="form-group">
-                        <label class="control-label col-xs-3" >Deskripsi</label>
+                        <label class="col-xs-3">Deskripsi</label>
                         <div class="col-xs-8">
-                            <input id="deskripsi_transaksi" name="deskripsi_transaksi" class="form-control" type="text" placeholder="Deskripsi Transaksi..." required>
+                            <input id="deskripsi_transaksi" name="deskripsi_transaksi" class="form-control" type="text" placeholder="Deskripsi kegiatan..." required>
                             <?php echo form_error('deskripsi_transaksi'); ?>
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <label class="control-label col-xs-3" >Quantity</label>
+                        <label class="col-xs-3" >Angka Kredit</label>
                         <div class="col-xs-8">
-                            <input id="quantity" name="quantity" class="form-control" type="text" placeholder="Quantity..." required>
+                            <input id="quantity" name="quantity" class="form-control" type="text" placeholder="Angka kredit..." required>
+                            <?php echo form_error('quantity'); ?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3" >Kuantitas/Output</label>
+                        <div class="col-xs-8">
+                            <input id="quantity" name="quantity" class="form-control" type="text" placeholder="Kuantitas..." required>
                             <?php echo form_error('quantity'); ?>
                         </div>
                     </div>
  
                     <div class="form-group">
-                        <label class="control-label col-xs-3" >Ukuran</label>
+                        <label class="col-xs-3" >Kualitas/Mutu</label>
                         <div class="col-xs-8">
-                            <input id="ukuran" name="ukuran" class="form-control" type="text" placeholder="Ukuran..." required>
+                            <input id="ukuran" name="ukuran" class="form-control" type="text" placeholder="Kualitas..." required>
                             <?php echo form_error('ukuran'); ?>
                         </div>
                     </div>
- 
+
                     <div class="form-group">
-                        <label class="control-label col-xs-3" >Harga</label>
+                        <label class="col-xs-3" >Waktu</label>
                         <div class="col-xs-8">
-                            <input id="harga" name="harga" class="form-control" type="text" placeholder="Harga..." required>
+                            <input id="harga" name="harga" class="form-control" type="text" placeholder="Waktu..." required>
+                            <?php echo form_error('harga'); ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3" >Biaya</label>
+                        <div class="col-xs-8">
+                            <input id="harga" name="harga" class="form-control" type="text" placeholder="Biaya..." required>
                             <?php echo form_error('harga'); ?>
                         </div>
                     </div>
                 </div>
  
                 <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" id="tutup" aria-hidden="true">Tutup</button>
                     <button class="btn btn-info" id="simpan" aria-hidden="true">Simpan</button>
                 </div>
             </form>
             </div>
             </div>
         </div>
+
         <!--END MODAL ADD BARANG-->
         </div>
 			<!-- /.box-body -->
 			<div class="box-footer">
-				<center>E-KINERJA APPLICATION <a href="http://www.titajaya.co.id"><strong>Tita Ayu</strong></a> - 2019</center>
+				<center>E-KINERJA <a href="http://www.polipangkep.ac.id"><strong>Polipangkep</strong></a> - 2020</center>
 			</div>
 			<!-- /.box-footer-->
 		  </div>
@@ -185,7 +304,7 @@
 		<div class="pull-right hidden-xs">
 		  <b>Version</b> 2.4.0
 		</div>
-		<strong>Copyright &copy; 2019 <a href="https://adminlte.io">Tita Ayu</a>.</strong> All rights
+		<strong>Copyright &copy; 2020 <a href="https://adminlte.io">Politeknik Negeri Pangkajene Kepulauan</a>.</strong> All rights
 		reserved.
 	  </footer>  
 	</div>
