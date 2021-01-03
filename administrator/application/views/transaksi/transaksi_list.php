@@ -1,7 +1,7 @@
 
 <section class="content-header">
       <h1>
-        E-KINERJA SKP UHUY
+        E-KINERJA SKP UHUY2
         <small>Politeknik Negeri Pangkajene Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
