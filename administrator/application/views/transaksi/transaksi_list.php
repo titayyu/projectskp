@@ -55,7 +55,7 @@
                       <td><center>3</td>
                       <td><center>2021</td>
                       <td class="col-md-2"><center>
-                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-danger"'); ?>
+                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-folder-open"></i>', 'class="btn btn-warning"'); ?>
                       </td>
           </thead>	    
         </table>
