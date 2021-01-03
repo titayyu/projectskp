@@ -34,13 +34,13 @@
                 <tr>
                     <th width="80px">No</th>
                     <th>Tahun Akademik</th>	
-                    <!--<th>Keterangan</th>	
-                    <th>Tanggal</th>-->
+                    <th>Keterangan</th>	
+                    <th>Tanggal</th>
 					<th width="200px">Action</th>
                 </tr>
-            </thead>
-	    
+            </thead>	    
         </table>
+        
         <script src="<?php echo base_url('assets/js/jquery-1.11.2.min.js') ?>"></script>
         <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js') ?>"></script>
         <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js') ?>"></script>
