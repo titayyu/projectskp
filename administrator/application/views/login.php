@@ -35,7 +35,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-	<center><img width="150px" src="../assets/images/LOGO.png"></center>    	 
+	<center><img width="150px" src="../assets/images/LOGO.png" style="margin-bottom: 2.5rem"></center>    	 
     <form action="<?php echo base_url('login/proses'); ?>" method="post"> 
 	<div class="row">		
 		<?php
