@@ -1,7 +1,7 @@
 <section class="content-header">
       <h1>
-        Tita Jaya
-        <small>My Customer My Number One Priority</small>
+        E-KINERJA
+        <small>Politeknik Negeri Pangkajenne Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
