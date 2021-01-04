@@ -193,11 +193,12 @@
 					<a href="<?php echo site_url('pelanggan') ?>"><center><i class="fa fa-user" style="font-size:48px;color:#3c8dbc"></i><center></a>					
 				  </div>
 				</div>
-				<!-- /.col -->
+				<!-- /.row -->
+			  <div class="row">
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">PERSETUJUAN LKP</span></h4>
+				  <h4 class="text-center"><span class="info-box-text"><b>KATEGORI IZIN PEGAWAI<b></span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('model') ?>"><center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php echo site_url('kategori') ?>"><center><i class="fa fa-server" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
 				</div>
 				<!-- /.col -->
@@ -224,13 +225,12 @@
         	<!-- /.col -->
 				<!-- /.col -->
 			  </div>
-			  <br /><br />
-			  <!-- /.row -->
-			  <div class="row">
+        <br /><br />
+        <!-- /.col -->
 				<div class="col-sm-4 col-md-3">
-				  <h4 class="text-center"><span class="info-box-text"><b>KATEGORI IZIN PEGAWAI<b></span></h4>
+				  <h4 class="text-center"><span class="info-box-text">PERSETUJUAN LKP</span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('kategori') ?>"><center><i class="fa fa-server" style="font-size:48px;color:#3c8dbc"></i><center></a>	
+					<a href="<?php echo site_url('model') ?>"><center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 				<!-- /.col -->
