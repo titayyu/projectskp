@@ -1,7 +1,7 @@
 
 <section class="content-header">
       <h1>
-        POLIPANKGKEP - E-KINERJA
+        POLIPANGKEP - E-KINERJA
         <small>PRESENSI PEGAWAI</small>
       </h1>
       <ol class="breadcrumb">
@@ -34,9 +34,9 @@
             <thead>
                 <tr>
                     <th width="80px">No</th>
-                    <th>ID Produk</th>	
-                    <th>Kategori</th>	
-                    <th>Nama Produk</th>
+                    <th>NIP Pegawai</th>	
+                    <th>Kategori Izin</th>	
+                    <th>Alasan Izin</th>
 					<th width="200px">Action</th>
                 </tr>
             </thead>

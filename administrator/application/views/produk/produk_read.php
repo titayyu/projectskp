@@ -1,7 +1,7 @@
 <section class="content-header">
       <h1>
-        Tita Jaya
-        <small>My Customer My Number One Priority</small>
+        E-KINERJA POLIPANGKEP
+        <small>Izin Kehadiran Pegawai</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -24,10 +24,10 @@
 			<a href="<?php echo site_url('items') ?>" class="btn btn-warning">Cancel</a>
 			<p></p>
 			<table class="table table-striped table-bordered">
-				<tr><td>ID Produk</td><td><?php echo $kode_items; ?></td></tr>
-				<tr><td>Nama Produk</td><td><?php echo $nama_items; ?></td></tr>
+				<tr><td>NIK Pegawai</td><td><?php echo $kode_items; ?></td></tr>
+				<tr><td>Alasan Izin</td><td><?php echo $nama_items; ?></td></tr>
 				<tr>
-					<td>Kategori</td>
+					<td>Divisi</td>
 					<td><?php echo $id_kategori; ?></td>
 				</tr>
 					<tr><td></td><td><a href="<?php echo site_url('items') ?>" class="btn btn-default">Cancel</a></td></tr>

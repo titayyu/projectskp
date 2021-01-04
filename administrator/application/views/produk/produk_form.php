@@ -1,8 +1,8 @@
 
 <section class="content-header">
       <h1>
-        Tita Jaya
-        <small>My Customer My Number One Priority</small>
+        E-KINERJA POLIPANGKEP
+        <small>Izin Kehadiran Pegawai</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -23,7 +23,7 @@
     <input type="hidden" class="form-control" name="id_produk" id="id_produk"  value="<?php echo $id_produk; ?>" />
 
         <div class="form-group">
-              <label class="col-sm-2" for="char">ID Produk</label>
+              <label class="col-sm-2" for="char">NIK Pegawai</label>
               <div class="col-sm-4">
                 <input type="text"   class="form-control" name="id_produk" id="id_produk" placeholder="id_produk" value="<?php echo $id_produk; ?>" />
                 <?php echo form_error('id_produk'); ?>
@@ -31,7 +31,7 @@
             </div>
         
         <div class="form-group"> 
-					<label class="col-sm-2" for="int">Kategori Produk</label>
+					<label class="col-sm-2" for="int">Kategori Izin</label>
 					<div class="col-sm-4">
 						 <?php 
 							   $query = $this->db->query('SELECT id_kategori,nama_kategori FROM kategori'); 
@@ -49,7 +49,7 @@
         </div>
 
         <div class="form-group">
-          <div class="col-sm-2"><label for="varchar">Nama Produk <?php echo form_error('nama_produk') ?></label></div>
+          <div class="col-sm-2"><label for="varchar">Alasan Izin <?php echo form_error('nama_produk') ?></label></div>
             <div class="col-sm-4">
             <input type="text" class="form-control" name="nama_produk" id="nama_produk" placeholder="Nama Produk" value="<?php echo $nama_produk; ?>" />
             </div>
