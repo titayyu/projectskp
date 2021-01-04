@@ -187,7 +187,7 @@
 			<div class="box-body">
 			  <div class="row">
 				<div class="col-sm-4 col-md-3">
-				  <h4 class="text-center"><span class="info-box-text">Pelanggan</span></h4>
+				  <h4 class="text-center"><span class="info-box-text">LKP</span></h4>
 				 
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('pelanggan') ?>"><center><i class="fa fa-user" style="font-size:48px;color:#3c8dbc"></i><center></a>					
@@ -195,7 +195,7 @@
 				</div>
 				<!-- /.col -->
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Model</span></h4>
+				  <h4 class="text-center"><span class="info-box-text">PERSETUJUAN LKP</span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('model') ?>"><center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
