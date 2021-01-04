@@ -22,10 +22,6 @@
 					<h4 style="margin-top:0px">Amriliani Hambali S.Pd, M.Pd</h4>
 				</div>
 				<!-- Menampilkan Data Pegawai -->
-			<div class="col-md-4">
-				<h3 style="margin-top:0px">Amriliani Hambali S.Pd, M.Pd</h3>
-			</div>
-		<div>
 			<table class="table table-bordered table-striped" id="">
 				<tr>
 						<th width="50px"><center>No</center></th>
