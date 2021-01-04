@@ -1,7 +1,7 @@
 <section class="content-header">
       <h1>
-        Tita Jaya
-        <small>My Customer My Number One Priority</small>
+        E-KINERJA
+        <small>POLIPANGKEP</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -18,7 +18,7 @@
 		<!-- Tampil Data Kategori -->
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
-                <h2 style="margin-top:0px">Kategori Produk</h2>
+                <h2 style="margin-top:0px">Kategori Izin Kehadiran</h2>
             </div>
             <div class="col-md-4 text-center">
                 <div style="margin-top: 4px"  id="message">
@@ -35,7 +35,7 @@
                 <tr>
                     <th width="80px">No</th>
                     <th>ID Kategori</th>		    
-                    <th>Nama Kategori</th>	
+                    <th>Jenis Kategori Izin Kehadiran</th>	
                     <th width="200px">Action</th>	  
                     
                     </tr>

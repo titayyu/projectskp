@@ -17,7 +17,7 @@
         <div class="box-body">
 		
 			<!-- Tampil Data items -->   
-			<legend><?php echo $button ?> Produk</legend>
+			<legend><?php echo $button ?> PRESENSI PEGAWAI</legend>
 			<!-- Button untuk melakukan update -->
 			<a href="<?php echo site_url('items/update/'.$kode_items) ?>" class="btn btn-primary">Update</a>
 			<!-- Button cancel untuk kembali ke halaman  list -->

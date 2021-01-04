@@ -1,12 +1,12 @@
 
 <section class="content-header">
       <h1>
-        POLIPANGKEP - E-KINERJA
-        <small>PRESENSI PEGAWAI</small>
+        E-KINERJA
+        <small>{POLIPANGKEP}</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Produk</li>
+        <li class="active">Izin Kehadiran Pegawai</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -19,7 +19,7 @@
 		<!-- Tampil Data Produk -->
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
-                <h2 style="margin-top:0px">Produk </h2>
+                <h2 style="margin-top:0px">Izin Kehadiran Pegawai </h2>
             </div>
             <div class="col-md-4 text-center">
                 <div style="margin-top: 4px"  id="message">

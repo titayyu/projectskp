@@ -1,13 +1,13 @@
 
 <section class="content-header">
       <h1>
-        E-KINERJA POLIPANGKEP
-        <small>Izin Kehadiran Pegawai</small>
+        E-KINERJA 
+        <small>POLIPANGKEP</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="<?php echo $back ?>">Produk</a></li>
-        <li class="active"><?php echo $button ?> Produk</li>
+        <li><a href="<?php echo $back ?>">Izin Kehadiran Pegawai</a></li>
+        <li class="active"><?php echo $button ?> Izin Kehadiran Pegawai</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -18,7 +18,7 @@
         <div class="box-body">
 		
 		<!-- Form input dan edit Produk-->
-		<legend><?php echo $button ?> Produk</legend>
+		<legend><?php echo $button ?> Izin Kehadiran Pegawai</legend>
         <form role="form" class="form-horizontal" action="<?php echo $action; ?>" method="post">
     <input type="hidden" class="form-control" name="id_produk" id="id_produk"  value="<?php echo $id_produk; ?>" />
 

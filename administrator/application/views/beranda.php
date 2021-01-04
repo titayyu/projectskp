@@ -202,7 +202,7 @@
 				</div>
 				<!-- /.col -->
 				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Produk</span></h4>
+				  <h4 class="text-center"><span class="info-box-text"><b>IZIN KEHADIRAN</b></span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('produk') ?>"><center><i class="fa fa-edit" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
@@ -228,7 +228,7 @@
 			  <!-- /.row -->
 			  <div class="row">
 				<div class="col-sm-4 col-md-3">
-				  <h4 class="text-center"><span class="info-box-text">Kategori Produk</span></h4>
+				  <h4 class="text-center"><span class="info-box-text"><b>KATEGORI IZIN PEGAWAI<b></span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('kategori') ?>"><center><i class="fa fa-server" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
