@@ -149,22 +149,12 @@
                         <th><center>No</th>
                         <th><center>Kegiatan</th>
                         <th><center>Deskripsi</th>
-                        <th><center>Angka Kredit</th>
-                        <th><center>Kuantitas</th>
-                        <th><center>Kualitas</th>
-                        <th><center>Waktu</th>
-                        <th><center>Biaya</th>
                     </tr>
                 </thead>
                 <thead class="">
                         <td><center>1</td>
                         <td><center>Anggota kegiatan</td>
                         <td><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
                         
                 </thead>
         </table>
