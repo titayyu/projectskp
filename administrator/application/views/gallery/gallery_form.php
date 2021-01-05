@@ -91,7 +91,7 @@
 				<thead>
 					<tr>
                         <th><center>No</th>
-                        <th><center>Kegiatan</th>
+                        <th class="col-sm-2"><center>Kegiatan</th>
                         <th><center>Deskripsi</th>
                         <th><center>Angka Kredit</th>
                         <th><center>Kuantitas</th>
@@ -102,7 +102,7 @@
                 </thead>
                 <thead class="">
                         <td><center>1</td>
-                        <td><center>RKT</td>
+                        <td class="col-sm-2"><center>RKT</td>
                         <td><center>Menyusun Rencana Kegiatan Tahunan (RKT)</td>
                         <td><center>0</td>
                         <td><center>1 Kegiatan</td>
@@ -113,7 +113,7 @@
                 </thead>
                 <thead class="">
                         <td><center>2</td>
-                        <td><center>RAB</td>
+                        <td class="col-sm-2"><center>RAB</td>
                         <td><center>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
                         <td><center>0</td>
                         <td><center>1 Kegiatan</td>
@@ -124,7 +124,7 @@
                 </thead>
                 <thead class="">
                         <td><center>3</td>
-                        <td><center>Pengusulan SK</td>
+                        <td class="col-sm-2"><center>Pengusulan SK</td>
                         <td><center>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
                         <td><center>0</td>
                         <td><center>60 Usulan SK</td>
@@ -147,13 +147,13 @@
                 <thead>
                     <tr>
                         <th><center>No</th>
-                        <th><center>Kegiatan</th>
+                        <th class="col-sm-2"><center>Kegiatan</th>
                         <th><center>Deskripsi</th>
                     </tr>
                 </thead>
                 <thead class="">
                         <td><center>1</td>
-                        <td><center>Anggota kegiatan</td>
+                        <td class="col-sm-2"><center>Anggota kegiatan</td>
                         <td><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
                         
                 </thead>
