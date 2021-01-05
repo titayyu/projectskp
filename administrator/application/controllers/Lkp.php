@@ -3,13 +3,13 @@ if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
 // Deklarasi pembuatan class Pelanggan
-class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder controller
+class Lkp extends CI_Controller //dilihat dari sini letaknya di folder controller
 {
 	// Konstruktor			
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Pelanggan_model'); // Memanggil Pelanggan_model yang terdapat pada models
+		$this->load->model('Lkp_model'); // Memanggil Pelanggan_model yang terdapat pada models
 		$this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada models
 		$this->load->library('form_validation'); // Memanggil form_validation yang terdapat pada library
 		$this->load->helper(array('form', 'url')); // Memanggil form dan url yang terdapat pada helper
@@ -36,7 +36,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		);
 
 		$this->load->view('header_list', $dataAdm); // Menampilkan bagian header dan object data users 
-		$this->load->view('pelanggan/pelanggan_list'); // Menampilkan halaman utama pelanggan
+		$this->load->view('Lkp/Lkp_list'); // Menampilkan halaman utama pelanggan
 		$this->load->view('footer_list'); // Menampilkan bagian footer
 	}
 
@@ -82,7 +82,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 				'telp' => $row->telp,
 			);
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users
-			$this->load->view('pelanggan/pelanggan_read', $data); // Menampilkan halaman detail pelanggan
+			$this->load->view('Lkp/Lkp_read', $data); // Menampilkan halaman detail pelanggan
 			$this->load->view('footer'); // Menampilkan bagian footer
 		}
 		// Jika data pelanggan tidak tersedia maka akan ditampilkan informasi 'Record Not Found'
@@ -90,7 +90,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users
 			$this->session->set_flashdata('message', 'Record Not Found');
 			$this->load->view('footer'); // Menampilkan bagian footer
-			redirect(site_url('pelanggan'));
+			redirect(site_url('Lkp'));
 		}
 	}
 
@@ -116,7 +116,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		// Menampung data yang diinputkan
 		$data = array(
 			'button' => 'Create',
-			'action' => site_url('pelanggan/create_action'),
+			'action' => site_url('Lkp/create_action'),
 			'id_pelanggan' => set_value('id_pelanggan'),
 			'nama' => set_value('nama'),
 			'alamat' => set_value('alamat'),
@@ -128,7 +128,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		// var_dump($data['a']);
 
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 	 
-		$this->load->view('pelanggan/pelanggan_form', $data); // Menampilkan halaman form pelanggan
+		$this->load->view('Lkp/Lkp_form', $data); // Menampilkan halaman form pelanggan
 		$this->load->view('footer'); // Menampilkan bagian footer
 	}
 
@@ -159,7 +159,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 			
 			 $this->Pelanggan_model->insert($data);
 			 $this->session->set_flashdata('message', 'Create Record Success');
-			 redirect(site_url('pelanggan'));
+			 redirect(site_url('Lkp'));
 		 }
 	 }
 	// Fungsi menampilkan form Update Pelanggan
@@ -189,21 +189,21 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		if ($row) {
 			$data = array(
 				'button' => 'Update',
-				'back'   => site_url('pelanggan'),
-				'action' => site_url('pelanggan/update_action'),
+				'back'   => site_url('Lkp'),
+				'action' => site_url('Lkp/update_action'),
 				'id_pelanggan' => set_value('id_pelanggan', $row->id_pelanggan),
 				'nama' => set_value('nama', $row->nama),
 				'alamat' => set_value('alamat', $row->alamat),
 				'telp' => set_value('telp', $row->telp),
 			);
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
-			$this->load->view('pelanggan/pelanggan_form', $data); // Menampilkan form pelanggan
+			$this->load->view('Lkp/Lkp_form', $data); // Menampilkan form pelanggan
 			$this->load->view('footer'); // Menampilkan bagian footer
 		}
 		// Jika id-nya yang dipilih tidak ada maka akan menampilkan pesan 'Record Not Found'
 		else {
 			$this->session->set_flashdata('message', 'Record Not Found');
-			redirect(site_url('pelanggan'));
+			redirect(site_url('Lkp'));
 		}
 	}
 
@@ -256,7 +256,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 				}
 
 				$this->session->set_flashdata('message', 'Update Record Success');
-				redirect(site_url('pelanggan'));
+				redirect(site_url('Lkp'));
 			}
 			// Jika file photo kosong 
 			else {
@@ -270,7 +270,7 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 
 				$this->Pelanggan_model->update($this->input->post('id_pelanggan', TRUE), $data);
 				$this->session->set_flashdata('message', 'Update Record Success');
-				redirect(site_url('pelanggan'));
+				redirect(site_url('Lkp'));
 			}
 		}
 	}
@@ -289,12 +289,12 @@ class Pelanggan extends CI_Controller //dilihat dari sini letaknya di folder con
 		if ($row) {
             $this->Pelanggan_model->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
-            redirect(site_url('pelanggan'));
+            redirect(site_url('Lkp'));
         } 
 		// jika data tidak ada yang dihapus maka akan menampilkan 'Can not Delete This Record !'
 		else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('pelanggan'));
+            redirect(site_url('Lkp'));
         }
 	}
 

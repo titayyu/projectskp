@@ -3,7 +3,7 @@ if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
 // Deklarasi pembuatan class Pelanggan_model
-class Pelanggan_model extends CI_Model
+class Lkp_model extends CI_Model
 {
 	// Property yang bersifat public   
 	public $table = 'pelanggan';

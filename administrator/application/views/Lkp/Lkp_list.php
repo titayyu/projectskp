@@ -148,7 +148,7 @@
 			<div>
 			<center>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-			<?php if($_SESSION['level'] == 'manager'){}else{echo anchor(site_url('pelanggan/create'), 'Simpan Document', 'class="btn btn-success"');} ?></center>
+			<?php if($_SESSION['level'] == 'manager'){}else{echo anchor(site_url('Lkp/create'), 'Simpan Document', 'class="btn btn-success"');} ?></center>
 			</div>
 			<br><br>
 			<!-- Memanggil jQuery data tables -->
