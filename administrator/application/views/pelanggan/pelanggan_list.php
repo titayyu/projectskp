@@ -117,27 +117,27 @@
 					<td><center>3</center></td>
 					<td>SK Direktur</td>
 					<td><input type="file" name="nama_file"></td>
-					<td><button type="submit" class="btn btn-primary">Upload</button>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn btn-default">Edit</a></td>
-					<td><center>0 Document</center></td>
-					<td><center><a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#modal_add_new">Gagal Upload</a></center></td>
+					<td><button type="submit" class="btn btn-primary">Upload</button>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn btn-primary">Edit</a></td>
+					<td><center>1 Document</center></td>
+					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>17/07/2020</center></td>
 				</tr>
 				<tr>
 					<td><center>4</center></td>
 					<td>Jurnal</td>
 					<td><input type="file" name="nama_file"></td>
-					<td><button type="submit" class="btn btn-primary">Upload</button>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn btn-default">Edit</a></td>
-					<td><center>0 Document</center></td>
-					<td><center><a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modal_add_new">Belum Upload</a></center></td>
+					<td><button type="submit" class="btn btn-primary">Upload</button>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn btn-primary">Edit</a></td>
+					<td><center>1 Document</center></td>
+					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>17/07/2020</center></td>
 				</tr>
 				<tr>
 					<td><center>5</center></td>
 					<td>Sertifikat</td>
 					<td><input type="file" name="nama_file"></td>
-					<td><button type="submit" class="btn btn-primary">Upload</button>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn btn-default">Edit</a></td>
-					<td><center>0 Document</center></td>
-					<td><center><a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modal_add_new">Belum Upload</a></center></td>
+					<td><button type="submit" class="btn btn-primary">Upload</button>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn btn-primary">Edit</a></td>
+					<td><center>1 Document</center></td>
+					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>17/07/2020</center></td>
 				</tr>
 			</table>
