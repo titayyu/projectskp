@@ -3,12 +3,12 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 // Deklarasi pembuatan class Gallery
-class Gallery extends CI_Controller
+class Persetujuanskp extends CI_Controller
 {
      // Konstruktor	
 	function __construct(){
         parent::__construct();
-        $this->load->model('Gallery_model'); // Memanggil Gallery_model yang terdapat pada models
+        $this->load->model('Persetujuanskp_model'); // Memanggil Gallery_model yang terdapat pada models
         $this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada models
         $this->load->library('form_validation'); // Memanggil form_validation yang terdapat pada library     
 		$this->load->helper(array('form', 'url')); // Memanggil form dan url yang terdapat pada helper
@@ -33,7 +33,7 @@ class Gallery extends CI_Controller
 		);
 		
 		$this->load->view('header_list', $dataAdm); // Menampilkan bagian header dan object data users 
-        $this->load->view('gallery/gallery_list'); // Menampilkan halaman utama gallery
+        $this->load->view('persetujuanskp/persetujuanskp_list'); // Menampilkan halaman utama gallery
 		$this->load->view('footer_list'); // Menampilkan bagian footer
     } 
     
@@ -85,15 +85,15 @@ class Gallery extends CI_Controller
 		// Menampung data yang diinputkan	  
         $data = array(
             'button' => 'Create',
-            'action' => site_url('gallery/create_action'),
-			'back'   => site_url('gallery'),
+            'action' => site_url('persetujuanskp/create_action'),
+			'back'   => site_url('persetujuanskp'),
 			'id_gallery' => set_value('id_gallery'),
 			'judul_gallery' => set_value('judul_gallery'),
 			'gambar' => set_value('gambar'),
 			'aktif' => set_value('aktif'),
 		);
 		$this->load->view('header',$dataAdm ); // Menampilkan bagian header dan object data users 	
-        $this->load->view('gallery/gallery_form', $data); // Menampilkan halaman form gallery
+        $this->load->view('persetujuanskp/persetujuanskp_form', $data); // Menampilkan halaman form gallery
 		$this->load->view('footer'); // Menampilkan bagian footer
     }
     
@@ -140,7 +140,7 @@ class Gallery extends CI_Controller
 				}
 				
 				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('gallery'));
+				redirect(site_url('persetujuanskp'));
 				
 			}
 			// Jika file gambar kosong 
@@ -154,7 +154,7 @@ class Gallery extends CI_Controller
 			   
 				$this->Gallery_model->insert($data);
 				$this->session->set_flashdata('message', 'Create Record Success');
-				redirect(site_url('gallery'));
+				redirect(site_url('persetujuanskp'));
 			}
         }
     }
@@ -182,20 +182,20 @@ class Gallery extends CI_Controller
         if ($row) {
             $data = array(
                 'button' => 'Update',
-				'action' => site_url('gallery/update_action'),
-				'back'   => site_url('gallery'),
+				'action' => site_url('persetujuanskp/update_action'),
+				'back'   => site_url('persetujuanskp'),
 				'id_gallery' => set_value('id_gallery', $row->id_gallery),
 				'judul_gallery' => set_value('judul_gallery', $row->judul_gallery),
 				'gambar' => set_value('gambar', $row->gambar),
 				'aktif' => set_value('aktif', $row->aktif),
 				);
 			$this->load->view('header',$dataAdm); // Menampilkan bagian header dan object data users 	
-            $this->load->view('gallery/gallery_form', $data); // Menampilkan form 
+            $this->load->view('persetujuanskp/persetujuanskp_form', $data); // Menampilkan form 
 			$this->load->view('footer'); // Menampilkan bagian footer
         } 
 		else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('gallery'));
+            redirect(site_url('persetujuanskp'));
         }
     }
     
@@ -244,7 +244,7 @@ class Gallery extends CI_Controller
 					$this->Gallery_model->update($this->input->post('id_gallery', TRUE), $data);
 				}
 					$this->session->set_flashdata('message', 'Update Record Success');
-					redirect(site_url('gallery'));
+					redirect(site_url('persetujuanskp'));
 			}			
 			// Jika file gambar kosong 
 			else{
@@ -257,7 +257,7 @@ class Gallery extends CI_Controller
 
 				$this->Gallery_model->update($this->input->post('id_gallery', TRUE), $data);
 				$this->session->set_flashdata('message', 'Update Record Success');
-				redirect(site_url('gallery'));	
+				redirect(site_url('persetujuanskp'));	
 			}	
             
         }
@@ -280,10 +280,10 @@ class Gallery extends CI_Controller
 			
 			// menghapus file gambar
 			unlink("../images/gallery/".$row->gambar);
-            redirect(site_url('gallery'));
+            redirect(site_url('persetujuanskp'));
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('gallery'));
+            redirect(site_url('persetujuanskp'));
         }
     }
 

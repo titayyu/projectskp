@@ -2,14 +2,14 @@
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
-class Transaksi extends CI_Controller
+class Skp extends CI_Controller
 {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Transaksi_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
+		$this->load->model('Skp_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('Produk_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
-		$this->load->model('Pelanggan_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
+		$this->load->model('Lkp_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('Detail_Transaksi_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('SalesTrend_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada transaksi
@@ -38,7 +38,7 @@ class Transaksi extends CI_Controller
 		);
 
 		$this->load->view('header_list', $dataAdm); 
-		$this->load->view('transaksi/transaksi_list');
+		$this->load->view('skp/skp_list');
 		$this->load->view('footer_list');
 	}
 
@@ -104,7 +104,7 @@ class Transaksi extends CI_Controller
 		if ($row) {
 			$data = array(
 				'button' => 'Read',
-				'back'   => site_url('transaksi'),
+				'back'   => site_url('skp'),
 				'id_transaksi' => $row->id_transaksi,
 				'id_pelanggan' => $row->id_pelanggan,
 				'id_produk' => $row->id_produk,
@@ -112,13 +112,13 @@ class Transaksi extends CI_Controller
 			);
 
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users
-			$this->load->view('transaksi/transaksi_read', $data); // Menampilkan halaman detail model
+			$this->load->view('skp/skp_read', $data); // Menampilkan halaman detail model
 			$this->load->view('footer'); // Menampilkan bagian footer
 		} else {
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users
 			$this->session->set_flashdata('message', 'Record Not Found');
 			$this->load->view('footer'); // Menampilkan bagian footer
-			redirect(site_url('transaksi'));
+			redirect(site_url('skp'));
 		}
 	}
 
@@ -144,7 +144,7 @@ class Transaksi extends CI_Controller
 		);
 
 		// $detail_transaksi = $this->Transaksi_model->get_transaksi();	
-		$pelanggan = $this->Pelanggan_model->get_all();
+		$pelanggan = $this->Lkp_model->get_all();
 		$produk = $this->Produk_model->get_all();
 		// echo json_encode($detail_transaksi);die;	
 		// $dataTransaksiBarang = array(
@@ -156,8 +156,8 @@ class Transaksi extends CI_Controller
 		
 		$data = array(
 			'button' => 'Create',
-			'action' => site_url('transaksi/create_action'),
-			'back'   => site_url('transaksi'),
+			'action' => site_url('skp/create_action'),
+			'back'   => site_url('skp'),
 			'id_transaksi' => set_value('id_transaksi'),
 			'id_pelanggan' => set_value('id_pelanggan'),
 			'id_produk' => set_value('id_produk'),
@@ -184,7 +184,7 @@ class Transaksi extends CI_Controller
     );
 
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
-		$this->load->view('transaksi/transaksi_form', $data); // Menampilkan halaman form transaksi
+		$this->load->view('skp/skp_form', $data); // Menampilkan halaman form transaksi
 		// $this->load->view('footer'); // Menampilkan bagian footer
 	}
 
@@ -265,7 +265,7 @@ class Transaksi extends CI_Controller
 				}
 				//-------------------------Hapus shopping cart--------------------------
 				$this->cart->destroy();
-				redirect(site_url("transaksi"));
+				redirect(site_url("skp"));
 			}
 			
 		}
@@ -295,7 +295,7 @@ class Transaksi extends CI_Controller
 		if ($row) {
 			$data = array(
 				'button' => 'Update',
-				'action' => site_url('transaksi/update_action'),
+				'action' => site_url('skp/update_action'),
 				'back'   => site_url('transaksi'),
 				'id_transaksi' => set_value('id_transaksi', $row->id_transaksi),
 				'id_pelanggan' => set_value('id_pelanggan', $row->id_pelanggan),
@@ -304,11 +304,11 @@ class Transaksi extends CI_Controller
 			);
 
 			$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
-			$this->load->view('transaksi/transaksi_form', $data); // Menampilkan form transaksi
+			$this->load->view('skp/skp_form', $data); // Menampilkan form transaksi
 			$this->load->view('footer'); // Menampilkan bagian footer
 		} else {
 			$this->session->set_flashdata('message', 'Record Not Found');
-			redirect(site_url('transaksi'));
+			redirect(site_url('skp'));
 		}
 	}
 
@@ -402,7 +402,7 @@ class Transaksi extends CI_Controller
 
 
 		$this->load->view('header', $dataAdm); // Menampilkan bagian header dan object data users 
-			$this->load->view('transaksi/transaksi_analisa',$data); // Menampilkan form transaksi
+			$this->load->view('skp/skp_analisa',$data); // Menampilkan form transaksi
 			$this->load->view('footer'); // Menampilkan bagian footer
 	}
 
@@ -425,12 +425,12 @@ class Transaksi extends CI_Controller
 
 			$this->Transaksi_model->delete($id);
 			$this->session->set_flashdata('message', 'Delete Record Success');
-			redirect(site_url('transaksi'));
+			redirect(site_url('skp'));
 		}
 		//jika id yang dipilih tidak tersedia maka akan muncul pesan 'Record Not Found'
 		else {
 			$this->session->set_flashdata('message', 'Record Not Found');
-			redirect(site_url('transaksi'));
+			redirect(site_url('skp'));
 		}
 	}
 

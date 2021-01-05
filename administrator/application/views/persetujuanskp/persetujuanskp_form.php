@@ -164,7 +164,7 @@
     </div>
     
     <div class="box-body">
-	    <center><a href="<?php echo site_url('gallery') ?>" class="btn btn-primary">Approve</a>
+    <div class="pull-right"><a href="<?php echo site_url('persetujuanskp/create') ?>" class="btn btn-primary">Approve</a>
         </div>
     </div>
 	</form>				

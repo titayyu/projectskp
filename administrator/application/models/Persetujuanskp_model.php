@@ -3,7 +3,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 // Deklarasi pembuatan class Gallery_model
-class Gallery_model extends CI_Model
+class Persetujuanskp_model extends CI_Model
 {
    
     // Property yang bersifat public

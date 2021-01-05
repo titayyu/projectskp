@@ -3,7 +3,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 // Deklarasi pembuatan class Transaksi_model
-class Transaksi_model extends CI_Model
+class Skp_model extends CI_Model
 {
    
     // bagian properti   

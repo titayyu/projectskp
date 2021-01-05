@@ -4,18 +4,18 @@
         <small>Politeknik Negeri Pangkajene Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="admin"><i class="fa fa-dashboard"></i>Home</a></li>
-        <li class="active">SKP</li>
+        <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Persetujuan SKP</li>
       </ol>
     </section>
-    
     <!-- Main content -->
     <section class="content">
-    
-    <!-- Default box -->
-    <div class="box">        
-        <div class="box-body">		
-		<!-- Tampil Data transaksi -->
+
+      <!-- Default box -->
+      <div class="box">        
+        <div class="box-body">
+		
+		<!-- Menampilkan Data Gallery -->
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
                 <h2 style="margin-top:0px"></h2>
@@ -25,46 +25,46 @@
                     <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                 </div>
             </div>
-            <div class="col-md-4 text-right">
-	    </div>
-        </div>
-        
+            
         <table class="table table-bordered table-striped" id="mytable"><center>
             <thead>
                 <tr>
-                    <th class="col-md-1"><center>No</th>
-                    <th><center>Periode</th>
-                    <th><center>Keterangan</th>		
-					<th class="col-md-2"><center>Action</th>
+                    <th><center>No</th>
+                    <th><center>Pegawai</th> 
+                    <th><center>Keterangan</th> 
+          <th><center>Action</th>
                 </tr>
             </thead>
+
             <thead class="">
-                      <td class="col-md-1"><center>1</td>
-                      <td><center>2019</td>
-                      <td><center>Tidak Aktif</td>
+                      <td><center>1</td>
+                      <td><center>Jayadi Pebwanartha, S.Si</td>
+                      <td><center>Disetujui</td>
                       <td class="col-md-2"><center>
-                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
+            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
                       </td>
             </thead>
+            
             <thead class="">
-                      <td class="col-md-1"><center>2</td>
-                      <td><center>2020</td>
-                      <td><center>Tidak Aktif</td>
-                     <td class="col-md-2"><center>
-                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
-                      </td>
-          </thead>
-          <thead class="">
-                      <td><center>3</td>
-                      <td><center>2021</td>
-                      <td><center>Aktif</td>
+                      <td><center>2</td>
+                      <td><center>Siti Marufah, S.Pd</td>
+                      <td><center>Disetujui</td>
                       <td class="col-md-2"><center>
-                      <?php echo anchor(site_url('transaksi/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
+            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
                       </td>
-          </thead>	    
+            </thead>
+
+            <thead class="">
+                      <td><center>3</td>
+                      <td><center>Saifuddin, S.Sos.I., M.Pd</td>
+                      <td><center>Belum disetujui</td>
+                      <td class="col-md-2"><center>
+            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
+                      </td>
+            </thead>      
         </table>
 
-<script src="<?php echo base_url('assets/js/jquery-1.11.2.min.js') ?>"></script>
+        <script src="<?php echo base_url('assets/js/jquery-1.11.2.min.js') ?>"></script>
         <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js') ?>"></script>
         <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js') ?>"></script>
         <script type="text/javascript">
@@ -80,5 +80,7 @@
                         "iPage": Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
                         "iTotalPages": Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
                     };
-                };          
+                };
+            });
         </script>
+		<!-- // Menampilkan Data Gallery -->

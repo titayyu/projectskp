@@ -186,18 +186,18 @@
 			</div>
 			<div class="box-body">
 			  <div class="row">
-				<div class="col-sm-4 col-md-3">
+      <!-- /.col -->
+      <div class="col-sm-4 col-md-2">
+				  <h4 class="text-center"><span class="info-box-text">SKP</span></h4>
+				  <div class="color-palette-set">
+					<a href="<?php echo site_url('skp') ?>"><center><i class="fa fa-th-list" style="font-size:48px;color:#3c8dbc"></i><center></a>	
+				  </div>
+        </div>
+
+				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text">LKP</span></h4>
-				 
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('Lkp') ?>"><center><i class="fa fa-user" style="font-size:48px;color:#3c8dbc"></i><center></a>					
-				  </div>
-				</div>
-				<!-- /.col -->
-				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">PERSETUJUAN LKP</span></h4>
-				  <div class="color-palette-set">
-					<a href="<?php echo site_url('model') ?>"><center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 				<!-- /.col -->
@@ -205,6 +205,13 @@
 				  <h4 class="text-center"><span class="info-box-text"><b>IZIN KEHADIRAN</b></span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('produk') ?>"><center><i class="fa fa-edit" style="font-size:48px;color:#3c8dbc"></i><center></a>	
+				  </div>
+        </div>
+        <!-- /.col -->
+				<div class="col-sm-4 col-md-2">
+				  <h4 class="text-center"><span class="info-box-text">Rekapitulasi SKP</span></h4>
+				  <div class="color-palette-set">
+					<a href="<?php echo site_url('rekap') ?>"><center><i class="fa fa-folder-open" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 				<!-- /.col -->
@@ -214,20 +221,30 @@
 					<a href="<?php echo site_url('jadwal') ?>"><center><i class="fa fa-file-text-o" style="font-size:48px;color:#3c8dbc"></i><center></a>	
 				  </div>
 				</div>
-				<!-- /.col -->
-				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">SKP</span></h4>
-				  <div class="color-palette-set">
-					<a href="<?php echo site_url('transaksi') ?>"><center><i class="fa fa-th-list" style="font-size:48px;color:#3c8dbc"></i><center></a>	
-				  </div>
-        </div>
+				
         	<!-- /.col -->
 				<!-- /.col -->
 			  </div>
 			  <br /><br />
 			  <!-- /.row -->
 			  <div class="row">
-				<div class="col-sm-4 col-md-3">
+
+	      <!-- /.col -->
+        <div class="col-sm-4 col-md-2">
+				  <h4 class="text-center"><span class="info-box-text">Persetujuan SKP</span></h4>
+				  <div class="color-palette-set">
+					<a href="<?php echo site_url('persetujuanskp') ?>"><center><i class="fa fa-th-list" style="font-size:48px;color:#3c8dbc"></i><center></a>
+				  </div>
+        </div>
+	      <!-- /.col -->
+        <div class="col-sm-4 col-md-2">
+				  <h4 class="text-center"><span class="info-box-text">PERSETUJUAN LKP</span></h4>
+				  <div class="color-palette-set">
+					<a href="<?php echo site_url('model') ?>"><center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
+				  </div>
+				</div>
+       	<!-- /.col --> 
+				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text"><b>KATEGORI IZIN PEGAWAI<b></span></h4>
 				  <div class="color-palette-set">
 					<a href="<?php echo site_url('kategori') ?>"><center><i class="fa fa-server" style="font-size:48px;color:#3c8dbc"></i><center></a>	
@@ -247,20 +264,7 @@
 					<a href="<?php echo site_url('kontak') ?>"><center><i class="fa fa-vcard-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
-				<!-- /.col -->
-				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Rekapitulasi SKP</span></h4>
-				  <div class="color-palette-set">
-					<a href="<?php echo site_url('rekap') ?>"><center><i class="fa fa-folder-open" style="font-size:48px;color:#3c8dbc"></i><center></a>
-				  </div>
-				</div>
-				<!-- /.col -->
-				<div class="col-sm-4 col-md-2">
-				  <h4 class="text-center"><span class="info-box-text">Persetujuan SKP</span></h4>
-				  <div class="color-palette-set">
-					<a href="<?php echo site_url('gallery') ?>"><center><i class="fa fa-th-list" style="font-size:48px;color:#3c8dbc"></i><center></a>
-				  </div>
-				</div>
+			
 				<!-- /.col -->
 			  </div>
 			  <!-- /.row -->
