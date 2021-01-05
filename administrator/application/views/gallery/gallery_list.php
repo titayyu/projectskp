@@ -56,7 +56,7 @@
 
             <thead class="">
                       <td><center>3</td>
-                      <td><center>Abyan Nandana, M.SI</td>
+                      <td><center>Saifuddin, S.Sos.I., M.Pd</td>
                       <td><center>Belum disetujui</td>
                       <td class="col-md-2"><center>
             <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('gallery/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
