@@ -17,86 +17,87 @@
 		
 			<!-- Menampilkan Data Pegawai -->
 			<div class="col-md-4">
-				<h3 style="margin-top:0px">Amriliani Hambali S.Pd, M.Pd</h3>
+				<h3 style="margin-top:0px">Saifuddin, S.Sos.I.,M.Pd</h3>
 			</div>
 		<div>
 			<table class="table table-bordered table-striped" id="">
 				<tr>
-						<th width="50px">No</th>
+						<th width="30px">No</th>
 						<th >PEJABAT PENILAI</th>
-						<th width="50px">No</th>
+						<th width="30px">No</th>
 						<th >PEGAWAI YANG DINILAI</th>	
 				</tr>
 				<tr>
-						<td width="50px">1</td>
+						<td width="30px"><center>1</center></td>
 						<td >Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Ir. Miss Rahmayanti, M.Si</td>
-						<td width="50px">1</td>
+						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Saifuddin, S.Sos.I.,M.Pd</td>
+						<td width="30px"><center>1</center></td>
 						<td >Nama&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Amriliani Hambali S.Pd, M.Pd</td>
+						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Drs. Subki</td>
 				</tr>
 				<tr>
-						<td width="50px">2</td>
+						<td width="30px"><center>2</center></td>
 						<td >NIP&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;198106252014041001</td>
-						<td width="50px">2</td>
+						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;196705222001121001</td>
+						<td width="30px"><center>2</center></td>
 						<td >NIP&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;197209181999031005</td>
+						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;196808051993031003</td>
 				</tr>
 				<tr>
-						<td width="50px">3</td>
-						<td >Pangkat/Golongan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Penata Gol.III/C</td>
-						<td width="50px">3</td>
-						<td >Pangkat/Golongan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Pengatur Tingkat I Gol.II/d</td>
+						<td width="30px"><center>3</center></td>
+						<td >Pangkat/Golongan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Penata / (IIIc)</td>
+						<td width="30px"><center>3</center></td>
+						<td >Pangkat/Golongan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Pengatur / (IV/a)</td>
 				</tr>
 				<tr>
-						<td width="50px">4</td>
+						<td width="30px"><center>4</center></td>
 						<td >Jabatan&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Ketua Jurusan Budidaya Tanaman Perkebunan</td>
-						<td width="50px">4</td>
+						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Kasubbag. Organisasi dan Tata Laksana</td>
+						<td width="30px"><center>4</center></td>
 						<td >Jabatan&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;:&nbsp;Pengelola Lab. Tanaman</td>
+						&nbsp;&nbsp;&nbsp;:&nbsp;Kasubbag. Organisasi dan Kepegawaian</td>
 				</tr>
 				<tr>
-						<td width="50px">5</td>
+						<td width="30px"><center>5</center></td>
 						<td >Unit Kerja&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Budidaya Tanaman Perkebunan</td>
-						<td width="50px">5</td>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Bagian Organisasi dan Kepegawaian</td>
+						<td width="30px"><center>5</center></td>
 						<td >Unit Kerja&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Budidaya Tanaman Perkebunan</td>
+						&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Biro BAUK Polipangkep</td>
 				</tr>
 			</table>
 		</div>
+		<label>Tugas Jabatan</label>
 			<table class="table table-bordered table-striped" id="">
 				<tr>
-					<th width="50px"><center>No</center></th> 
+					<th width="30px"><center>No</center></th> 
 					<th><center>Kegiatan Jabatan</center></th>  
 					<th width="100px"><center>Input Berkas</center></th>               
                     <th><center>Kuantitas</center></th>
-                    <th width="150px"><center>Aksi</center></th>
+                    <th width="90px"><center>Aksi</center></th>
 					<th><center>Tanggal_Upload</center></th>
 				</tr>
 				<tr>
 					<td><center>1</center></td>
-					<td>Laporan Pengabdian Masyarakat</td>
+					<td>Menyusun Kegiatan Rencana Tahunan (RKT)</td>
 					<td><input type="file" name="nama_file"></td>
 					<td><center>1 Document</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
@@ -104,7 +105,7 @@
 				</tr>
 				<tr>
 					<td><center>2</center></td>
-					<td>SK Mengajar</td>
+					<td>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
 					<td><input type="file" name="nama_file"></td>
 					<td><center>1 Document</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
@@ -112,31 +113,36 @@
 				</tr>
 				<tr>
 					<td><center>3</center></td>
-					<td>SK Direktur</td>
-					<td><input type="file" name="nama_file"></td>
-					<td><center>1 Document</center></td>
-					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
-					<td><center>17/07/2020</center></td>
-				</tr>
-				<tr>
-					<td><center>4</center></td>
-					<td>Jurnal</td>
-					<td><input type="file" name="nama_file"></td>
-					<td><center>1 Document</center></td>
-					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
-					<td><center>17/07/2020</center></td>
-				</tr>
-				<tr>
-					<td><center>5</center></td>
-					<td>Sertifikat</td>
+					<td>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
 					<td><input type="file" name="nama_file"></td>
 					<td><center>1 Document</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>17/07/2020</center></td>
 				</tr>
 			</table>
+			<br>
 			<!-- button tambah data -->
 			<a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new"> + Tambah Document</a>
+			<br><br>
+			<label>Tugas Tambahan</label>
+			<table class="table table-bordered table-striped" id="">
+				<tr>
+					<th width="30px"><center>No</center></th> 
+					<th><center>Kegiatan Jabatan</center></th>  
+					<th width="100px"><center>Input Berkas</center></th>               
+                    <th><center>Kuantitas</center></th>
+                    <th width="90px"><center>Aksi</center></th>
+					<th><center>Tanggal_Upload</center></th>
+				</tr>
+				<tr>
+					<td><center>1</center></td>
+					<td size="5">Menjadi Anggota dalam berbagai kegiatan diluar tupoksi</td>
+					<td><input type="file" name="nama_file"></td>
+					<td><center>1 Document</center></td>
+					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
+					<td><center>17/07/2020</center></td>
+				</tr>
+			</table>
 			<!-- CSS untuk Button -->
 			<style>
 				.btn_blue{
@@ -144,7 +150,7 @@
 				}
 			
 			</style>
-			<br><br><br><br><br><br>
+			<br><br><br><br>
 			<div>
 			<center>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
