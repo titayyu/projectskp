@@ -9,7 +9,7 @@ class Skp extends CI_Controller
 		parent::__construct();
 		$this->load->model('Skp_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('Produk_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
-		$this->load->model('Pelanggan_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
+		$this->load->model('Lkp_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('Detail_Transaksi_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('SalesTrend_model'); // Memanggil Transaksi_model yang terdapat pada transaksi
 		$this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada transaksi
@@ -144,7 +144,7 @@ class Skp extends CI_Controller
 		);
 
 		// $detail_transaksi = $this->Transaksi_model->get_transaksi();	
-		$pelanggan = $this->Pelanggan_model->get_all();
+		$pelanggan = $this->Lkp_model->get_all();
 		$produk = $this->Produk_model->get_all();
 		// echo json_encode($detail_transaksi);die;	
 		// $dataTransaksiBarang = array(
