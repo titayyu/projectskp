@@ -191,7 +191,7 @@
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                <h3 class="modal-title" id="myModalLabel">Tambah Tugas Tambahan</h3>
+                <h3 class="modal-title" id="myModalLabel">Tambah Tugas Jabatan</h3>
             </div>
             <form class="form-horizontal" method="POST">
                 <div class="modal-body">
