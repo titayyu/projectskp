@@ -163,11 +163,6 @@
                         <th><center>No</th>
                         <th><center>Kegiatan</th>
                         <th><center>Deskripsi</th>
-                        <th><center>AK</th>
-                        <th><center>Kuantitas</th>
-                        <th><center>Kualitas</th>
-                        <th><center>Waktu</th>
-                        <th><center>Biaya</th>
                         <th><center>Action</th>
                     </tr>
                 </thead>
@@ -175,11 +170,6 @@
                         <td><center>1</td>
                         <td><center>Anggota kegiatan</td>
                         <td><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
-                        <td><center>0</td>
                         <td class="col-md-2"><center>
                         <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-pencil"></i></a>  
                         <a class="btn btn-social-icon btn-danger" href=""><i class="fa fa-remove"></i></a>  
