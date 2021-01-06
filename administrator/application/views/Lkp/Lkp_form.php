@@ -5,8 +5,8 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="<?php echo $back ?>">Pelanggan</a></li>
-        <li class="active"><?php echo $button ?> Pelanggan</li>
+        <li><a href="">Upload Data Lkp</a></li>
+        <li class="active">Finalisasi Lkp</li>
       </ol>
     </section>
     <!-- Main content -->
