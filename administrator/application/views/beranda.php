@@ -240,7 +240,7 @@
         <div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text">PERSETUJUAN LKP</span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('model') ?>"><center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php echo site_url('persetujuanlkp') ?>"><center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
        	<!-- /.col --> 
