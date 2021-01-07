@@ -115,12 +115,12 @@
 					<td><center>1</center></td>
 					<td>Menyusun Kegiatan Rencana Tahunan (RKT)</td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
 					<td><center>1 Bulan</center></td>
 					<td><center>0</center></td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
 					<td><center>3 Bulan</center></td>
 					<td><center>0</center></td>
@@ -129,12 +129,12 @@
 					<td><center>2</center></td>
 					<td>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
 					<td><center>1 Bulan</center></td>
 					<td><center>0</center></td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
 					<td><center>3 Bulan</center></td>
 					<td><center>0</center></td>
@@ -144,12 +144,12 @@
 					<td><center>3</center></td>
 					<td>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>60 Usulan SK</center></td>
 					<td><center>100</center></td>
-					<td><center>3 Bulan</center></td>
+					<td><center>6 Bulan</center></td>
 					<td><center>0</center></td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>60 Usukan SK</center></td>
 					<td><center>100</center></td>
 					<td><center>6 Bulan</center></td>
 					<td><center>0</center></td>
@@ -189,14 +189,14 @@
 					<td><center>1</center></td>
 					<td>Menjadi Anggota dalam Berbagai kegiatan Diluar Tupoksi</td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
 					<td><center>1 Bulan</center></td>
 					<td><center>0</center></td>
 					<td><center>0</center></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
-					<td><center>3 Bulan</center></td>
+					<td><center>2 Bulan</center></td>
 					<td><center>0</center></td>
 				</tr>
 			</table>
