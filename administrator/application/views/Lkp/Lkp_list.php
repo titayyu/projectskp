@@ -99,7 +99,7 @@
 					<td><center>1</center></td>
 					<td>Menyusun Kegiatan Rencana Tahunan (RKT)</td>
 					<td><input type="file" name="nama_file"></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>10/01/2021</center></td>
 				</tr>
@@ -107,7 +107,7 @@
 					<td><center>2</center></td>
 					<td>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
 					<td><input type="file" name="nama_file"></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>10/01/2021</center></td>
 				</tr>
@@ -115,7 +115,7 @@
 					<td><center>3</center></td>
 					<td>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
 					<td><input type="file" name="nama_file"></td>
-					<td><center>1 Document</center></td>
+					<td><center>60 Usulan SK</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>10/01/2021</center></td>
 				</tr>
@@ -138,7 +138,7 @@
 					<td><center>1</center></td>
 					<td size="5">Menjadi Anggota dalam berbagai kegiatan diluar tupoksi</td>
 					<td><input type="file" name="nama_file"></td>
-					<td><center>1 Document</center></td>
+					<td><center>1 kegiatan</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
 					<td><center>10/01/2021</center></td>
 				</tr>
