@@ -23,9 +23,9 @@
 			<table class="table table-bordered table-striped" id="">
 				<tr>
 						<th width="30px">No</th>
-						<th >PEJABAT PENILAI</th>
+						<th >PEGAWAI YANG DINILAI</th>
 						<th width="30px">No</th>
-						<th >PEGAWAI YANG DINILAI</th>	
+						<th >PEJABAT PENILAI</th>	
 				</tr>
 				<tr>
 						<td width="30px"><center>1</center></td>
