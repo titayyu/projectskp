@@ -98,35 +98,38 @@
 				<tr>
 					<td><center>1</center></td>
 					<td>Menyusun Rencana Kegiatan Tahunan (RKT)</td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>10/01/2021</center></td>
 					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
 				</tr>
 				<tr>
 					<td><center>2</center></td>
 					<td>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>10/01/2021</center></td>
 					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
 				</tr>
 				<tr>
 					<td><center>3</center></td>
 					<td>Melaksanakan Pengusulan SK Tugas Belajar/Izin</td>
-					<td><center>1 Document</center></td>
+					<td><center>60 Usulan SK</center></td>
 					<td><center>10/01/2021</center></td>
 					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
 				</tr>
+		</table>
+		<label>Tugas Tambahan</label>
+		<table class="table table-bordered table-striped" id="">
 				<tr>
-					<td>Tugas Tambahan</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<th width="50px"><center>No</center></th> 
+					<th><center>Kegiatan Jabatan</center></th>                 
+					<th><center>Kuantitas</center></th>
+					<th><center>Tanggal_Upload</center></th>
+                    <th width="300px"><center>Aksi</center></th>	
 				</tr>
 				<tr>
-					<td><center>5</center></td>
+					<td><center>1</center></td>
 					<td>Menjadi Anggota Didalam Berbagai Kegiatan Diluar Tupoksi</td>
-					<td><center>1 Document</center></td>
+					<td><center>1 Kegiatan</center></td>
 					<td><center>10/01/2021</center></td>
 					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
 				</tr>
