@@ -69,7 +69,7 @@ class Lkp extends CI_Controller //dilihat dari sini letaknya di folder controlle
 		);
 
 		// Menampilkan data pelanggan yang ada di database berdasarkan id-nya yaitu id_pelanggan
-		$row = $this->Pelanggan_model->get_by_id($id);
+		$row = $this->Lkp_model->get_by_id($id);
 
 		// Jika data pelanggan tersedia maka akan ditampilkan
 		if ($row) {
