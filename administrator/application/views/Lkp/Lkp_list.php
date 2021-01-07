@@ -101,7 +101,7 @@
 					<td><input type="file" name="nama_file"></td>
 					<td><center>1 Document</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
-					<td><center>17/07/2020</center></td>
+					<td><center>10/01/2021</center></td>
 				</tr>
 				<tr>
 					<td><center>2</center></td>
@@ -109,7 +109,7 @@
 					<td><input type="file" name="nama_file"></td>
 					<td><center>1 Document</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
-					<td><center>17/07/2020</center></td>
+					<td><center>10/01/2021</center></td>
 				</tr>
 				<tr>
 					<td><center>3</center></td>
@@ -117,7 +117,7 @@
 					<td><input type="file" name="nama_file"></td>
 					<td><center>1 Document</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
-					<td><center>17/07/2020</center></td>
+					<td><center>10/01/2021</center></td>
 				</tr>
 			</table>
 			<br>
@@ -140,7 +140,7 @@
 					<td><input type="file" name="nama_file"></td>
 					<td><center>1 Document</center></td>
 					<td><center><a class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_add_new">Berhasil Upload</a></center></td>
-					<td><center>17/07/2020</center></td>
+					<td><center>10/01/2021</center></td>
 				</tr>
 			</table>
 			<!-- CSS untuk Button -->
