@@ -13,7 +13,8 @@
 
       <!-- Default box -->
       <div class="box">        
-        <div class="box-body">
+      <div class="box-body">
+      <div class="box-body">
 		
 		<!-- Menampilkan Data Gallery -->
         <div class="row" style="margin-bottom: 10px">
@@ -30,16 +31,16 @@
             <thead>
                 <tr>
                     <th><center>No</th>
-                    <th><center>Pegawai</th> 
-                    <th><center>Keterangan</th> 
-          <th><center>Action</th>
+                    <th class="col-sm-5"><center>Pegawai</th> 
+                    <th class="col-sm-5"><center>Keterangan</th> 
+                    <th class="col-sm-2"><center>Action</th>
                 </tr>
             </thead>
 
             <thead class="">
                       <td><center>1</td>
-                      <td><center>Jayadi Pebwanartha, S.Si</td>
-                      <td><center>Disetujui</td>
+                      <td class="col-sm-5"><center>Jayadi Pebwanartha, S.Si</td>
+                      <td class="col-sm-5"><center>Disetujui</td>
                       <td class="col-md-2"><center>
             <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
                       </td>
@@ -47,8 +48,8 @@
             
             <thead class="">
                       <td><center>2</td>
-                      <td><center>Siti Marufah, S.Pd</td>
-                      <td><center>Disetujui</td>
+                      <td class="col-sm-5"><center>Siti Marufah, S.Pd</td>
+                      <td class="col-sm-5"><center>Disetujui</td>
                       <td class="col-md-2"><center>
             <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
                       </td>
@@ -56,8 +57,8 @@
 
             <thead class="">
                       <td><center>3</td>
-                      <td><center>Saifuddin, S.Sos.I., M.Pd</td>
-                      <td><center>Belum disetujui</td>
+                      <td class="col-sm-5"><center>Saifuddin, S.Sos.I., M.Pd</td>
+                      <td class="col-sm-5"><center>Belum disetujui</td>
                       <td class="col-md-2"><center>
             <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
                       </td>
