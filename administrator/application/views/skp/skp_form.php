@@ -95,8 +95,8 @@
 				<thead>
 					<tr>
                         <th><center>No</th>
-                        <th class="col-sm-2"><center>Kegiatan</th>
-                        <th><center>Deskripsi</th>
+                        <th class="col-sm-2"><center>Tugas</th>
+                        <th><center>Kegiatan</th>
                         <th><center>AK</th>
                         <th><center>Kuantitas</th>
                         <th><center>Kualitas</th>
@@ -161,15 +161,25 @@
                 <thead>
                     <tr>
                         <th><center>No</th>
-                        <th class="col-sm-2"><center>Kegiatan</th>
-                        <th class="col-sm-8"><center>Deskripsi</th>
+                        <th class="col-sm-2"><center>Tugas</th>
+                        <th><center>Kegiatan</th>
+                        <th><center>AK</th>
+                        <th><center>Kuantitas</th>
+                        <th><center>Kualitas</th>
+                        <th><center>Waktu</th>
+                        <th><center>Biaya</th>
                         <th><center>Action</th>
                     </tr>
                 </thead>
                 <thead class="">
                         <td><center>1</td>
                         <td class="col-sm-2"><center>Anggota kegiatan</td>
-                        <td class="col-sm-8"><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
+                        <td><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
+                        <td><center>0</td>
+                        <td><center>1 Kegiatan</td>
+                        <td><center>100</td>
+                        <td><center>1 Bulan</td>
+                        <td><center>0</td>
                         <td class="col-md-2"><center>
                         <a class="btn btn-social-icon btn-primary" href=""><i class="fa fa-pencil"></i></a>  
                         <a class="btn btn-social-icon btn-danger" href=""><i class="fa fa-remove"></i></a>  
