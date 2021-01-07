@@ -85,11 +85,11 @@
 			 <table class="table table-striped table-bordered">
        <tr><td width="30px"><center>No</center></td><td><center>Laporan</center></td><td><center>Tahun</center></td><td><center>Status</center></td><td><center>Action</center></td></tr>
        <tr><td width="30px"><center>1</center></td><td><center>Laporan LKP</center></td><td><center>2019</center></td>
-       <td><center>Disetujui</center></td><td><center><a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modal_add_new"> Update Berkas</a></center></td></tr>
+       <td><center>Disetujui</center></td><td><center><a class="btn btn-sm btn-default" data-toggle="Lkp" data-target="#modal_add_new"> Update Berkas</a></center></td></tr>
        <tr><td width="30px"><center>2</center></td><td><center>Laporan LKP</center></td><td><center>2020</center></td>
-       <td><center>Disetujui</center></td><td><center><a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modal_add_new"> Update Berkas</a></center></td></tr>
+       <td><center>Disetujui</center></td><td><center><a class="btn btn-sm btn-default" data-toggle="Lkp" data-target="#modal_add_new"> Update Berkas</a></center></td></tr>
        <tr><td width="30px"><center>3</center></td><td><center>Laporan LKP</center></td><td><center>2021</center></td>
-       <td><center>Belum Disetujui</center></td><td><center><?php if($_SESSION['level'] == 'manager'){}else{echo anchor(site_url('pelanggan/create'), 'Update Berkas', 'class="btn-sm btn-primary"');} ?></center></td></tr>
+       <td><center>Belum Disetujui</center></td><td><center><?php if($_SESSION['level'] == 'manager'){}else{echo anchor(site_url('Lkp/create'), 'Update Berkas', 'class="btn-sm btn-primary"');} ?></center></td></tr>
       
 			 </table>
       
