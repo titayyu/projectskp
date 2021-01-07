@@ -20,7 +20,7 @@
 		
 			<!-- tabel nama pegawai-->
 		<div>
-			<legend>Amriliani Hambali S.Pd, M.Pd</legend>		 
+			<legend>Saifuddin, S.Sos.I.,M.Pd</legend>		 
 			<table class="table table-bordered table-striped" id="">
 				<tr>
 						<th width="30px">No</th>
@@ -132,7 +132,7 @@
 				</tr>
 			</table>
 		</div><br><br><br>
-			<center><?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('Lkp/read/1697120652101'), 'Finalisasi', 'class="btn btn-primary"'); }?>
+			<center><?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('Lkp/read/10001'), 'Finalisasi', 'class="btn btn-primary"'); }?>
 					<a href="<?php echo site_url('Lkp') ?>" class="btn btn-default">Cancel</a></center>		
 				</form>
 				 <!-- Memanggil jQuery -->
