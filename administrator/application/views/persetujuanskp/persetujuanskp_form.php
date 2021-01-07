@@ -91,46 +91,46 @@
 				<thead>
 					<tr>
                         <th><center>No</th>
-                        <th class="col-sm-2"><center>Kegiatan</th>
-                        <th><center>Deskripsi</th>
-                        <th><center>Angka Kredit</th>
-                        <th><center>Kuantitas</th>
-                        <th><center>Kualitas</th>
-                        <th><center>Waktu</th>
-                        <th><center>Biaya</th>
+                        <th class="col-sm-2"><center>Tugas</th>
+                        <th class="col-sm-5"><center>Kegiatan</th>
+                        <th><center>AK</th>
+                        <th class="col-sm-2"><center>Kuantitas</th>
+                        <th class="col-sm-1"><center>Kualitas</th>
+                        <th class="col-sm-1"><center>Waktu</th>
+                        <th class="col-sm-1"><center>Biaya</th>
                     </tr>
                 </thead>
                 <thead class="">
                         <td><center>1</td>
                         <td class="col-sm-2"><center>RKT</td>
-                        <td><center>Menyusun Rencana Kegiatan Tahunan (RKT)</td>
+                        <td class="col-sm-5"><center>Menyusun Rencana Kegiatan Tahunan (RKT)</td>
                         <td><center>0</td>
-                        <td><center>1 Kegiatan</td>
-                        <td><center>100</td>
-                        <td><center>1 Bulan</td>
-                        <td><center>0</td>
+                        <td class="col-sm-2"><center>1 Kegiatan</td>
+                        <td class="col-sm-1"><center>100</td>
+                        <td class="col-sm-1"><center>1 Bulan</td>
+                        <td class="col-sm-1"><center>0</td>
                         
                 </thead>
                 <thead class="">
                         <td><center>2</td>
                         <td class="col-sm-2"><center>RAB</td>
-                        <td><center>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
+                        <td class="col-sm-5"><center>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
                         <td><center>0</td>
-                        <td><center>1 Kegiatan</td>
-                        <td><center>100</td>
-                        <td><center>1 Bulan</td>
-                        <td><center>0</td>
+                        <td class="col-sm-2"><center>1 Kegiatan</td>
+                        <td class="col-sm-1"><center>100</td>
+                        <td class="col-sm-1"><center>1 Bulan</td>
+                        <td class="col-sm-1"><center>0</td>
                         
                 </thead>
                 <thead class="">
                         <td><center>3</td>
                         <td class="col-sm-2"><center>Pengusulan SK</td>
-                        <td><center>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
+                        <td class="col-sm-5"><center>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
                         <td><center>0</td>
-                        <td><center>60 Usulan SK</td>
-                        <td><center>100</td>
-                        <td><center>6 Bulan</td>
-                        <td><center>0</td>
+                        <td class="col-sm-2"><center>60 Usulan SK</td>
+                        <td class="col-sm-1"><center>100</td>
+                        <td class="col-sm-1"><center>6 Bulan</td>
+                        <td class="col-sm-1"><center>0</td>
                         
                 </thead>
         </tbody>
@@ -147,15 +147,26 @@
                 <thead>
                     <tr>
                         <th><center>No</th>
-                        <th class="col-sm-2"><center>Kegiatan</th>
-                        <th><center>Deskripsi</th>
+                        <th class="col-sm-2"><center>Tugas</th>
+                        <th class="col-sm-5"><center>Kegiatan</th>
+                        <th><center>AK</th>
+                        <th class="col-sm-2"><center>Kuantitas</th>
+                        <th class="col-sm-1"><center>Kualitas</th>
+                        <th class="col-sm-1"><center>Waktu</th>
+                        <th class="col-sm-1"><center>Biaya</th>
+
                     </tr>
                 </thead>
                 <thead class="">
                         <td><center>1</td>
                         <td class="col-sm-2"><center>Anggota kegiatan</td>
-                        <td><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
-                        
+                        <td class="col-sm-5"><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
+                        <td><center>0</td>
+                        <td class="col-sm-2"><center>1 Kegiatan</td>
+                        <td class="col-sm-1"><center>100</td>
+                        <td class="col-sm-1"><center>1 Bulan</td>
+                        <td class="col-sm-1"><center>0</td>
+
                 </thead>
         </table>
 
