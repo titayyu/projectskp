@@ -5,8 +5,10 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
-         <li><a href="<?php echo $back ?>">Pelanggan</a></li>
-        <li class="active"><?php echo $button ?> Pelanggan</li>
+         <li class="active">LKP</li>
+        <li class="active">Upload Data LKP</li>
+        <li class="active">Finalisasi Data LKP</li>
+        <li class="active">Daftar LKP</li>
       </ol>
     </section>
     <!-- Main content -->
