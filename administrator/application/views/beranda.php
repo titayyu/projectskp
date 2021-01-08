@@ -211,7 +211,7 @@
 				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text"><b>Rekapitulasi SKP<b></span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('rekap') ?>"><center><i class="fa fa-folder-open" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php if($_SESSION['level'] == 'admin'){}else echo site_url('rekap') ?>"><center><i class="fa fa-folder-open" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 				<!-- /.col -->
