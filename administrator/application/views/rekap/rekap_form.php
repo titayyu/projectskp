@@ -1,6 +1,6 @@
 <section class="content-header">
       <h1>
-        E-KINERJA
+        REKAPITULASI SKP
         <small>Politeknik Negeri Pangkajene Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
@@ -84,6 +84,8 @@
 
         <!-- Tabel tugas jabatan -->       
             <div class="box-body">
+            <label class="col-sm-12" for="char">SKP</center></label>
+            <div class="box-body">
             <label class="col-sm-12" for="char">Tugas Jabatan</center></label>
 
         <div class="box-body">
@@ -140,6 +142,100 @@
 
     <!-- Tabel tugas tambahan -->       
             <div class="box-body">
+            <label class="col-sm-12" for="char">Tugas Tambahan</center></label>
+
+        <div class="box-body">
+        <table class="table table-bordered table-striped" id="mytable">
+                <thead>
+                    <tr>
+                        <th><center>No</th>
+                        <th><center>Kegiatan</th>
+                        <th><center>Deskripsi</th>
+                        <th><center>Angka Kredit</th>
+                        <th><center>Kuantitas</th>
+                        <th><center>Kualitas</th>
+                        <th><center>Waktu</th>
+                        <th><center>Biaya</th>
+                    </tr>
+                </thead>
+                <thead class="">
+                        <td><center>1</td>
+                        <td><center>Anggota kegiatan</td>
+                        <td><center>Menjadi anggota dalam berbagai kegiatan diluar tupoksi</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        <td><center>0</td>
+                        
+                </thead>
+        </table>
+
+        <div class="pull-left">
+        </div>
+    </div>
+
+     <!-- Tabel tugas jabatan -->       
+     <div class="box-body">
+            <label class="col-sm-12" for="char">LKP</center></label>
+            <div class="box-body">
+            <label class="col-sm-12" for="char">Tugas Jabatan</center></label>
+
+        <div class="box-body">
+        <table class="table table-bordered table-striped" id="mytable">
+				<thead>
+					<tr>
+                        <th><center>No</th>
+                        <th><center>Kegiatan</th>
+                        <th><center>Deskripsi</th>
+                        <th><center>Angka Kredit</th>
+                        <th><center>Kuantitas</th>
+                        <th><center>Kualitas</th>
+                        <th><center>Waktu</th>
+                        <th><center>Biaya</th>
+                    </tr>
+                </thead>
+                <thead class="">
+                        <td><center>1</td>
+                        <td><center>RKT</td>
+                        <td><center>Menyusun Rencana Kegiatan Tahunan (RKT)</td>
+                        <td><center>0</td>
+                        <td><center>1 Kegiatan</td>
+                        <td><center>100</td>
+                        <td><center>1 Bulan</td>
+                        <td><center>0</td>
+                        
+                </thead>
+                <thead class="">
+                        <td><center>2</td>
+                        <td><center>RAB</td>
+                        <td><center>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
+                        <td><center>0</td>
+                        <td><center>1 Kegiatan</td>
+                        <td><center>100</td>
+                        <td><center>1 Bulan</td>
+                        <td><center>0</td>
+                        
+                </thead>
+                <thead class="">
+                        <td><center>3</td>
+                        <td><center>Pengusulan SK</td>
+                        <td><center>Melaksanakan Pengusulan SK Tugas Belajar/Izin Belajar</td>
+                        <td><center>0</td>
+                        <td><center>60 Usulan SK</td>
+                        <td><center>100</td>
+                        <td><center>6 Bulan</td>
+                        <td><center>0</td>
+                        
+                </thead>
+        </tbody>
+		</table>
+        </div>
+        </div>          
+    
+
+    <!-- Tabel tugas tambahan -->       
+    <div class="box-body">
             <label class="col-sm-12" for="char">Tugas Tambahan</center></label>
 
         <div class="box-body">
