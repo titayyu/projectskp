@@ -254,7 +254,7 @@
 				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text"><b>APPROVE SURAT PERMOHONAN<b></span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('kontak') ?>"><center><i class="fa fa-check-circle-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php echo site_url('kontak') ?>"><center><i class="fa fa-folder-open" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 			  </div>
