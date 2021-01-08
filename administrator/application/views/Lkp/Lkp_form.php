@@ -100,21 +100,21 @@
 					<td>Menyusun Rencana Kegiatan Tahunan (RKT)</td>
 					<td><center>1 Kegiatan</center></td>
 					<td><center>10/01/2021</center></td>
-					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
+					<td><center><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></center></td>
 				</tr>
 				<tr>
 					<td><center>2</center></td>
 					<td>Menyusun Rencana Anggaran Biaya (RAB) Sub Bagian</td>
 					<td><center>1 Kegiatan</center></td>
 					<td><center>10/01/2021</center></td>
-					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
+					<td><center><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></center></td>
 				</tr>
 				<tr>
 					<td><center>3</center></td>
 					<td>Melaksanakan Pengusulan SK Tugas Belajar/Izin</td>
 					<td><center>60 Usulan SK</center></td>
 					<td><center>10/01/2021</center></td>
-					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
+					<td><center><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Perbaharui Document</a></center></td>
 				</tr>
 		</table>
 		<label>Tugas Tambahan</label>
@@ -131,7 +131,7 @@
 					<td>Menjadi Anggota Didalam Berbagai Kegiatan Diluar Tupoksi</td>
 					<td><center>1 Kegiatan</center></td>
 					<td><center>10/01/2021</center></td>
-					<td><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn-sm btn-primary">Perbaharui Document</a></td>
+					<td><center><a href="<?php echo site_url('Lkp') ?>" class="btn-sm btn-primary">Lihat Document</a>&nbsp;<a href="<?php echo site_url('transaksi') ?>" class="btn-sm btn-primary">Perbaharui Document</a></center></td>
 				</tr>
 			</table>
 		</div><br><br><br>
