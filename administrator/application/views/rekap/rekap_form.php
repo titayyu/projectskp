@@ -302,6 +302,74 @@
         <div class="pull-left">
         </div>
     </div>
+
+     <!-- Tabel tugas jabatan -->   
+            <div class="box-body">
+            <label class="col-sm-12" for="char">Izin Kehadiran</center></label>
+            
+            <div class="box-body">
+			<table class="table table-bordered table-striped" id="">
+				<tr>
+					<th width="30px"><center>No</center></th> 
+					<th><center>NIP Pegawai</center></th>
+					<th><center>Kategori Izin</center></th>               
+					<th><center>Alasan Izin</center></th>
+					<th><center>Kualitas</center></th>  
+                    <th><center>Waktu</center></th>
+					<th><center>Biaya</center></th>
+					<th><center>AK</center></th>               
+					<th><center>Kuantitas</center></th>
+					<th><center>Kualitas</center></th>  
+                    <th><center>Waktu</center></th>
+					<th><center>Biaya</center></th>
+				</tr>
+				<tr>
+					<td><center>1</center></td>
+					<td>1988080920</td>
+					<td><center>4</center></td>
+					<td><center>Sakit Demam</center></td>
+					<td><center>100</center></td>
+					<td><center>1 Bulan</center></td>
+					<td><center>0</center></td>
+					<td><center>0</center></td>
+					<td><center>1 Kegiatan</center></td>
+					<td><center>100</center></td>
+					<td><center>3 Bulan</center></td>
+					<td><center>0</center></td>
+				</tr>
+				<tr>
+					<td><center>2</center></td>
+					<td>1983080220</td>
+					<td><center>5</center></td>
+					<td><center>Pandemi Covid-19</center></td>
+					<td><center>100</center></td>
+					<td><center>1 Bulan</center></td>
+					<td><center>0</center></td>
+					<td><center>0</center></td>
+					<td><center>1 Kegiatan</center></td>
+					<td><center>100</center></td>
+					<td><center>3 Bulan</center></td>
+					<td><center>0</center></td>
+				</tr>
+				</tr>
+				<tr>
+					<td><center>3</center></td>
+					<td>1977080519</td>
+					<td><center>2</center></td>
+					<td><center>Cuti tahunan</center></td>
+					<td><center>100</center></td>
+					<td><center>6 Bulan</center></td>
+					<td><center>0</center></td>
+					<td><center>0</center></td>
+					<td><center>60 Usukan SK</center></td>
+					<td><center>100</center></td>
+					<td><center>6 Bulan</center></td>
+					<td><center>0</center></td>
+				</tr>
+				</tr>
+			</table>
+			<table class="table table-bordered table-striped" id="">
+			</table>
     
     <div class="box-body">
 	    <center><a href="<?php echo site_url('rekap') ?>" class="btn btn-primary">Diverifikasi</a>
