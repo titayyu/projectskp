@@ -96,6 +96,7 @@
 					<th><center>Realisasi</center></th>  
                     <th><center></center></th>
 					<th><center></center></th>
+					<th><center></center></th>
 				</tr>
 				<tr>
 					<th width="30px"><center>No</center></th> 
@@ -110,6 +111,7 @@
 					<th><center>Kualitas</center></th>  
                     <th><center>Waktu</center></th>
 					<th><center>Biaya</center></th>
+					<th><center>Nilai Capaian LKP</center></th>
 				</tr>
 				<tr>
 					<td><center>1</center></td>
@@ -119,11 +121,12 @@
 					<td><center>100</center></td>
 					<td><center>1 Bulan</center></td>
 					<td><center>0</center></td>
-					<td><center>0</center></td>
+					<td><center>1</center></td>
 					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
 					<td><center>3 Bulan</center></td>
 					<td><center>0</center></td>
+					<td><center>87,00</center></td>
 				</tr>
 				<tr>
 					<td><center>2</center></td>
@@ -133,11 +136,12 @@
 					<td><center>100</center></td>
 					<td><center>1 Bulan</center></td>
 					<td><center>0</center></td>
-					<td><center>0</center></td>
+					<td><center>1</center></td>
 					<td><center>1 Kegiatan</center></td>
 					<td><center>100</center></td>
 					<td><center>3 Bulan</center></td>
 					<td><center>0</center></td>
+					<td><center>87,00</center></td>
 				</tr>
 				</tr>
 				<tr>
@@ -148,11 +152,12 @@
 					<td><center>100</center></td>
 					<td><center>6 Bulan</center></td>
 					<td><center>0</center></td>
-					<td><center>0</center></td>
+					<td><center>6</center></td>
 					<td><center>60 Usukan SK</center></td>
-					<td><center>100</center></td>
+					<td><center>90</center></td>
 					<td><center>6 Bulan</center></td>
 					<td><center>0</center></td>
+					<td><center>90,00</center></td>
 				</tr>
 				</tr>
 			</table>
@@ -170,6 +175,7 @@
 					<th><center>Realisasi</center></th>  
                     <th><center></center></th>
 					<th><center></center></th>
+					<th><center></center></th>
 				</tr>
 				<tr>
 					<th width="30px"><center>No</center></th> 
@@ -184,6 +190,7 @@
 					<th><center>Kualitas</center></th>  
                     <th><center>Waktu</center></th>
 					<th><center>Biaya</center></th>
+					<th><center>Nilai Capaian LKP</center></th>
 				</tr>
 				<tr>
 					<td><center>1</center></td>
@@ -193,11 +200,12 @@
 					<td><center>100</center></td>
 					<td><center>1 Bulan</center></td>
 					<td><center>0</center></td>
-					<td><center>0</center></td>
+					<td><center>1</center></td>
 					<td><center>1 Kegiatan</center></td>
-					<td><center>100</center></td>
+					<td><center>90</center></td>
 					<td><center>2 Bulan</center></td>
 					<td><center>0</center></td>
+					<td><center>87,00</center></td>
 				</tr>
 			</table>
 		</div>	<br><br>
