@@ -41,7 +41,7 @@
                       <td><center>Jayadi Pebwanartha, S.Si</td>
                       <td><center>Disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"'); }?>
+            <?php echo anchor(site_url('persetujuanskp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"'); ?>
                       </td>
             </thead>
             
@@ -50,7 +50,7 @@
                       <td><center>Siti Marufah, S.Pd</td>
                       <td><center>Disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"'); }?>
+            <?php echo anchor(site_url('persetujuanskp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"');?>
                       </td>
             </thead>
 
@@ -59,7 +59,8 @@
                       <td><center>Saifuddin, S.Sos.I., M.Pd</td>
                       <td><center>Belum disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('Persetujuanlkp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"'); }?>
+            <?php echo anchor(site_url('Persetujuanlkp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"'); ?>
+        <!--    < ?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('Persetujuanlkp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"'); }?> -->
                       </td>
             </thead>      
         </table>
