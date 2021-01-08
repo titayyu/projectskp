@@ -174,7 +174,7 @@
     </div>
     
     <div class="box-body">
-	    <center><a href="<?php echo site_url('rekap') ?>" class="btn btn-primary">Approve</a>
+	    <center><a href="<?php echo site_url('rekap') ?>" class="btn btn-primary">Diverifikasi</a>
         </div>
     </div>
 	</form>				
