@@ -1,11 +1,11 @@
 <section class="content-header">
       <h1>
-        Tita Jaya
-        <small>My Customer My Number One Priority</small>
+        E-KINERJA
+        <small>Politeknik Negeri Pangkajenne Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="manager"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Kontak</li>
+        <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Daftar Pengajuan LKP</li>
       </ol>
     </section>
     <!-- Main content -->
@@ -15,33 +15,57 @@
       <div class="box">        
         <div class="box-body">
 		
-		<!-- Menampilkan Data Kontak -->
-        <div class="row" style="margin-bottom: 10px">
-            <div class="col-md-4">
-                <h2 style="margin-top:0px">Surat Permohonan</h2>
-            </div>
-            <div class="col-md-4 text-center">
+			<!-- Menampilkan Data Model -->
+        
+           -<!--<div class="col-md-4 text-center">
                 <div style="margin-top: 4px"  id="message">
                     <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
                 </div>
-            </div>
-            
+            </div> -->
         </div>
-        <table class="table table-bordered table-striped" id="mytable">
+        <table class="table table-bordered table-striped" id="mytable"><center>
             <thead>
                 <tr>
-                    <th width="50px">No</th>		    
-					<th>Nama</th>
-					<th>Email</th>
-					<th>Telp</th>
-					<th>Dokumen</th>
-					<th width="300px">Action</th>
+                    <th><center>No</th>
+                    <th><center>NIP Pegawai</th> 
+                    <th><center>Nama Pegawai</th> 
+          <th><center>Action</th>
                 </tr>
             </thead>
-	    
+
+            <thead class="">
+                      <td><center>1</td>
+                      <td><center>1988080920</td>
+                      <td><center>Jayadi Pebwanartha, S.Si</td>
+                      <td class="col-md-2"><center>
+            <?php echo anchor(site_url('persetujuanlkp/create'), 'Lihat Surat Permohonan', 'class="btn-sm btn-primary"'); ?>
+                      </td>
+            </thead>
+            
+            <thead class="">
+                      <td><center>2</td>
+                      <td><center>1983080220</td>
+                      <td><center>Siti Marufah, S.Pd</td>
+                      <td class="col-md-2"><center>
+            <?php echo anchor(site_url('persetujuanlkp/create'), 'Lihat Surat Permohonan', 'class="btn-sm btn-primary"');?>
+                      </td>
+            </thead>
+
+            <thead class="">
+                      <td><center>3</td>
+                      <td><center>	1977080519</td>
+                      <td><center>Saifuddin, S.Sos.I., M.Pd</td>
+                      <td class="col-md-2"><center>
+            <?php echo anchor(site_url('Persetujuanlkp/create'), 'Lihat Surat Permohonan', 'class="btn-sm btn-primary"'); ?>
+        <!--    < ?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('Persetujuanlkp/create'), 'Lihat Pengajuan', 'class="btn-sm btn-primary"'); }?> -->
+                      </td>
+            </thead>      
         </table>
-        <script src="<?php echo base_url('assets/js/jquery-1.11.2.min.js') ?>"></script>
-        <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js') ?>"></script>
+          <!-- <div class="col-md-4 text-right">
+          <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('Persetujuanlkp/create'), 'Create', 'class="btn btn-primary"'); }?>
+	    </div> -->
+     <!--    <script src="<?php echo base_url('assets/js/jquery-1.11.2.min.js') ?>"></script> -->
+     <!--   <script src="<?php echo base_url('assets/datatables/jquery.dataTables.js') ?>"></script> -->
         <script src="<?php echo base_url('assets/datatables/dataTables.bootstrap.js') ?>"></script>
         <script type="text/javascript">
             $(document).ready(function() {
@@ -74,16 +98,13 @@
                     },
                     processing: true,
                     serverSide: true,
-                    ajax: {"url": "kontak/json", "type": "POST"},
+                    ajax: {"url": "model/json", "type": "POST"},
                     columns: [
                         {
-                            "data": "id_kontak",
+                            "data": "id_model",
                             "orderable": false
-                        },						
-						{"data": "nama"},
-						{"data": "email"},
-						{"data": "telp"},
-						{"data": "pesan"},
+                        },					
+						{"data": "nama_model"},				
                         {
                             "data" : "action",
                             "orderable": false,
@@ -101,4 +122,4 @@
                 });
             });
         </script>
-    
+		<!--// Tampil Data Model -->  
