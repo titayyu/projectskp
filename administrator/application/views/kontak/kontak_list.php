@@ -38,7 +38,7 @@
                       <td><center>1988080920</td>
                       <td><center>Jayadi Pebwanartha, S.Si</td>
                       <td class="col-md-2"><center>
-            <?php echo anchor(site_url('persetujuanlkp/create'), 'Lihat Surat Permohonan', 'class="btn-sm btn-primary"'); ?>
+            <?php echo anchor(site_url('informasi/create'), 'Lihat Surat Permohonan', 'class="btn-sm btn-primary"'); ?>
                       </td>
             </thead>
             
@@ -47,7 +47,7 @@
                       <td><center>1983080220</td>
                       <td><center>Siti Marufah, S.Pd</td>
                       <td class="col-md-2"><center>
-            <?php echo anchor(site_url('persetujuanlkp/create'), 'Lihat Surat Permohonan', 'class="btn-sm btn-primary"');?>
+            <?php echo anchor(site_url('informasi/create'), 'Lihat Surat Permohonan', 'class="btn-sm btn-primary"');?>
                       </td>
             </thead>
 
