@@ -4,7 +4,7 @@
         <small>My Customer My Number One Priority</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="manager"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Kontak</li>
       </ol>
     </section>
@@ -18,7 +18,7 @@
 		<!-- Menampilkan Data Kontak -->
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
-                <h2 style="margin-top:0px">Kontak</h2>
+                <h2 style="margin-top:0px">Surat Permohonan</h2>
             </div>
             <div class="col-md-4 text-center">
                 <div style="margin-top: 4px"  id="message">
@@ -30,12 +30,12 @@
         <table class="table table-bordered table-striped" id="mytable">
             <thead>
                 <tr>
-                    <th width="80px">No</th>		    
+                    <th width="50px">No</th>		    
 					<th>Nama</th>
 					<th>Email</th>
 					<th>Telp</th>
-					<th>Pesan</th>
-					<th width="200px">Action</th>
+					<th>Dokumen</th>
+					<th width="300px">Action</th>
                 </tr>
             </thead>
 	    
