@@ -219,7 +219,7 @@
 				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text"><b>PEGAWAI<b></span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php if($_SESSION['level'] == 'manager'){}else echo site_url('pelanggan') ?>"><center><i class="fa fa-address-book-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php if($_SESSION['level'] == 'manager'){}else echo site_url('pegawai') ?>"><center><i class="fa fa-address-book-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
         <!-- /.col -->
