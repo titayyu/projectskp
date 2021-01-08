@@ -42,7 +42,7 @@
                       <td class="col-sm-5"><center>Jayadi Pebwanartha, S.Si</td>
                       <td class="col-sm-5"><center>Disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
+            <?php echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
                       </td>
             </thead>
             
@@ -51,7 +51,7 @@
                       <td class="col-sm-5"><center>Siti Marufah, S.Pd</td>
                       <td class="col-sm-5"><center>Disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
+            <?php echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
                       </td>
             </thead>
 
@@ -60,7 +60,8 @@
                       <td class="col-sm-5"><center>Saifuddin, S.Sos.I., M.Pd</td>
                       <td class="col-sm-5"><center>Belum disetujui</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?>
+            <?php echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); ?>
+      <!--      < ?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('persetujuanskp/create'), '<i class="fa fa-eye"></i>', 'class="btn btn-primary"'); }?> -->
                       </td>
             </thead>      
         </table>
