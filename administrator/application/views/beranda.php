@@ -216,6 +216,13 @@
 				</div>
 				<!-- /.col -->
         <!-- /.col -->
+				<div class="col-sm-4 col-md-2">
+				  <h4 class="text-center"><span class="info-box-text"><b>KEPEGAWAIAN<b></span></h4>
+				  <div class="color-palette-set">
+					<a href="<?php if($_SESSION['level'] == 'admin'){}else echo site_url('rekap') ?>"><center><i class="fa fa-address-book-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
+				  </div>
+				</div>
+        <!-- /.col -->
 
 	      
 				<!-- /.col -->
@@ -226,7 +233,7 @@
         <div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text"><b>Persetujuan SKP<b></span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('persetujuanskp') ?>"><center><i class="fa fa-th-list" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php echo site_url('persetujuanskp') ?>"><center><i class="fa fa-file-text-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
         </div>
 	      
@@ -247,7 +254,7 @@
 				<div class="col-sm-4 col-md-2">
 				  <h4 class="text-center"><span class="info-box-text"><b>APPROVE SURAT PERMOHONAN<b></span></h4>
 				  <div class="color-palette-set">
-					<a href="<?php echo site_url('kontak') ?>"><center><i class="fa fa-file-text-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
+					<a href="<?php echo site_url('kontak') ?>"><center><i class="fa fa-check-circle-o" style="font-size:48px;color:#3c8dbc"></i><center></a>
 				  </div>
 				</div>
 			  </div>
