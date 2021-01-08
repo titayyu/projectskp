@@ -153,8 +153,9 @@
 			<br><br><br><br>
 			<div>
 			<center>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-			<?php if($_SESSION['level'] == 'manager'){}else{echo anchor(site_url('Lkp/create'), 'Simpan Document', 'class="btn btn-success"');} ?></center>
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			<a href="<?php echo site_url('Lkp/read/10001') ?>" class="btn btn-primary">Daftar LKP</a>
+			<?php if($_SESSION['level'] == 'manager'){}else{echo anchor(site_url('Lkp/create'), 'Simpan Document', 'class="btn btn-success"');} ?> <a href="<?php echo site_url('admin') ?>" class="btn btn-default">Cancel</a> </center>
 			</div>
 			<br><br>
 			<!-- Memanggil jQuery data tables -->
