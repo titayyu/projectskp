@@ -4,7 +4,7 @@
         <small>Politeknik Negeri Pangkajene Kepulauan</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="manager"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Rekapitulasi SKP</li>
       </ol>
     </section>
@@ -41,7 +41,7 @@
                       <td><center>Jayadi Pebwanartha, S.Si</td>
                       <td><center>Diverifikasi</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('rekap/create'), '<i class="fa fa-check"></i>', 'class="btn btn-primary"'); }?>
+            <?php if($_SESSION['level'] == 'admin'){}else{ echo anchor(site_url('rekap/create'), '<i class="fa fa-check"></i>', 'class="btn btn-primary"'); }?>
                       </td>
             </thead>
             
@@ -50,7 +50,7 @@
                       <td><center>Siti Marufah, S.Pd</td>
                       <td><center>Diverifikasi</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('rekap/create'), '<i class="fa fa-check"></i>', 'class="btn btn-primary"'); }?>
+            <?php if($_SESSION['level'] == 'admin'){}else{ echo anchor(site_url('rekap/create'), '<i class="fa fa-check"></i>', 'class="btn btn-primary"'); }?>
                       </td>
             </thead>
 
@@ -59,7 +59,7 @@
                       <td><center>Abyan Nandana, M.SI</td>
                       <td><center>Belum diverifikasi</td>
                       <td class="col-md-2"><center>
-            <?php if($_SESSION['level'] == 'manager'){}else{ echo anchor(site_url('rekap/create'), '<i class="fa fa-close"></i>', 'class="btn btn-danger"'); }?>
+            <?php if($_SESSION['level'] == 'admin'){}else{ echo anchor(site_url('rekap/create'), '<i class="fa fa-close"></i>', 'class="btn btn-danger"'); }?>
                       </td>
             </thead>      
         </table>
