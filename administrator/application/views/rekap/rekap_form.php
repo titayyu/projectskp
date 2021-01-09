@@ -372,7 +372,7 @@
 			</table>
     
     <div class="box-body">
-	    <center><a href="<?php echo site_url('rekap') ?>" class="btn btn-primary">Diverifikasi</a>
+	    <center><a href="<?php echo site_url('rekap') ?>" class="btn btn-primary">Belum Diverifikasi</a>
         </div>
     </div>
 	</form>				
